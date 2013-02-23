@@ -1,0 +1,1264 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Class 1 (Sass, Girl Develop It)</title>
+
+		<meta name="description" content="This is the official Girl Develop It Intro to Sass course. Materials by Catherine Farman.
+
+    The course is meant to be taught in 2 two-hour sections. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
+		<meta name="author" content="Girl Develop It">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+		<link rel="stylesheet" href="reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="reveal.js/css/theme/gdisunny.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<!-- light editor--><link rel="stylesheet" href="reveal.js/lib/css/light.css">
+		<!-- dark editor<link rel="stylesheet" href="reveal.js/lib/css/dark.css"> -->
+
+		<!-- If use the PDF print sheet so students can print slides-->
+		
+		<link rel="stylesheet" href="reveal.js/css/print/pdf.css" type="text/css" media="print">
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+			  <!-- Opening slide -->
+        <section>
+          <img src = "images/gdi_logo_badge.png" class="badge">
+          <h3>Intro to Sass</h3>
+          <h4>Class 1</h4>
+        </section>
+
+        <!-- Opening slide -->
+        <section>
+          <h3>Download Class 1 Files:</h3>
+          <p class="blue" style="font-size: 3em; text-decoration: underline;">cfarm.co/sass1</p>
+        </section>
+
+
+
+        <!-- Welcome-->
+        <section>
+          <h3>Welcome!</h3>
+          <div>
+          <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
+          <p class ="green">Some "rules"</p>
+          <ul>
+            <li>We are here for you!</li>
+            <li>Every question is important</li>
+            <li>Help each other</li>
+            <li>Have fun</li>
+          </ul>
+          </div>
+        </section>
+
+        <section>
+          <h3>Welcome!</h3>
+          <div class = "left-align">
+          <p>I'm Catherine Farman</p>
+          <ul>
+            <li>Front End Developer at WebLinc in Old City</li>
+            <li>I write HTML, CSS and Javascript for eCommerce sites</li>
+            <li>Some of our clients are Free People, BHLDN, Sanrio, The Sak, Brooklyn Industries, The Strand Bookstore...</li>
+          </ul>
+          </div>
+        </section>
+        
+        <section>
+          <h3>Welcome!</h3>
+          <div class = "left-align">
+          <p class = "blue">Tell us about yourself.</p>
+          <ul>
+            <li>Who are you?</li>
+            <li>What do you hope to get out of the class?</li>
+            <li>What's something no one in this room knows about you?</li>
+          </ul>
+          </div>
+        </section>
+        
+        
+        <!-- Terms-->
+        <section>
+         <h3>Terms</h3>
+         <ul>
+           <li>
+            <div class = "green">Ruby</div>
+            <div>A programming language</div>
+           </li>
+           <li>
+            <div class = "green">Ruby on Rails</div>
+            <div>A framework written in Ruby for programming dynamic web applications</div>
+           </li>
+           <li>
+            <div class = "green">Preprocessor</div>
+            <div>A computer program that modifies data to conform with the input requirements of another program.
+            <span class ="blue">(Sass is a preprocessor)</span></div>
+           </li>
+           <li>
+            <div class = "green">CSS3</div>
+            <div>The output of Sass. Sass compiles into CSS!</div>
+           </li>
+         </ul>
+        </section>
+        
+        <!-- Nitty gritty 1 - Clients and servers -->
+        <section>
+          <h3>Sass and CSS</h3>
+          <p>How Sass compiles into CSS</p>
+          <img src = "images/client-server.png"/>
+          <p class = "fragment">You write Sass (.scss files)</p>
+          <p class = "fragment">You run Sass watch on the command line </p>
+          <p class = "fragment">.scss files compile into .css files</p>
+        </section>
+        
+        <!-- Nitty gritty 2 - Tools -->
+        <section>
+          <h3>Tools</h3>
+          <ul>
+            <li>
+              <div class = "yellow">Browser:</div>
+              <div>Chrome</div>
+              <div>Firefox</div>
+             </li>
+             <li>
+              <div class = "yellow">Development Toolkit:</div>
+              <div>Chrome - Inspector</div>
+              <div>Firefox - Firebug</div>
+              <div>Terminal (Mac: Applications> Utilities)</div>
+              <div>Command Prompt (Windows: Programs> Accessories)</div>
+             </li>
+             <li>
+              <div class = "yellow">Text Editor:</div>
+              <div><a href="http://www.sublimetext.com/2">Sublime Text - Mac or Windows</a><br>
+                <a href="http://www.sublimetext.com/2">sublimetext.com/2</a></div>
+             </li>
+          </ul>
+        </section>
+        
+        <!-- History-->
+        <section>
+          <h3>History of JavaScript</h3>
+          <ul>
+            <li class = "fragment">Developed by Brendan Eich of Netscape in 1995</li>
+            <li class = "fragment">Standardized in 1997</li>
+            <li class = "fragment">Java -- Actually JavaScript has nothing to do with the language Java. <span class="blue">Java : Javascript as Ham : Hamster</blue></li>
+            <li class = "fragment">Script -- Instructions that a computer can run one line at a time</li>
+          </ul>
+        </section>
+        
+        <!-- History-->
+        <section>
+          <h3>History of JavaScript</h3>
+          <ul>
+            <li class = "fragment">"AJAX" -- a way to communicate to servers was created in 2005</li>
+            <li class = "fragment">jQuery -- a super-popular JavaScript Library 2006</li>
+            <li class = "fragment">Node.js -- a way for JavaScript to perform back end functions in 2010</li>
+            <li class = "fragment">2012 -- spec for JavaScript "nearly" finished</li>
+          </ul>
+        </section>
+        
+        <!--What does JavaScript do -->
+        <section>
+          <h3>What does JavaScript do?</h3>
+          <ul>
+            <li><a href = "http://leandrovieira.com/projects/jquery/lightbox/" target = '_blank'>Image Galleries and Lightboxes</a></li>
+            <li><a href = "https://www.google.com/doodles/30th-anniversary-of-pac-man" target = '_blank'>Games and all sorts of Google Doodles</a></li>
+            <li><a href = "http://www.girldevelopit.com/materials" target = '_blank'>Interactions, like show/hide and accordians</a></li>
+            <li><a href = "http://www.girldevelopit.com/classes" target = '_blank'>Retrieving data from other websites (through APIs)</a></li>
+            <li>All sorts of awesomeness, including this slideshow!</li>
+          </ul>
+        </section>
+        
+        <!--Statements -->
+        <section>
+          <h3>Statements/Script</h3>
+          <div>Each line in JavaScript is an instruction or a script</div>
+          <div>When the browser reads it, it "executes the script"</div>
+          <div>Let's try it out in <span class="blue">the console</span></div>
+          <pre><code contenteditable class ="javascript">
+            console.log('Hello World!');
+          </code></pre>
+        </section>
+        
+        <!-- Variables-->
+        <section>
+          <h3>Variables</h3>
+          <div class = " left-align">
+            <p>Variables hold content</p>
+            <p>Words, numbers, true/false, basically any kind of content</p>
+          </div>
+          <div class = "fragment">
+            <p>Declare a variable (Give it a name)</p>
+            <pre><code contenteditable class ="javascript">
+              var bananas;
+            </code></pre>
+          </div>
+          <div class = "fragment">
+            <p>Initialize variable (Give it a value)</p>
+            <pre><code contenteditable class ="javascript">
+              bananas = 5;
+            </code></pre>
+          </div>
+        </section>
+        
+        <section>
+          <h3>Variables</h3>
+          <div>
+            <p>Declare and initialize at the same time!</p>
+            <pre><code contenteditable class ="javascript">
+              var bananas = 5;
+            </code></pre>
+          </div>
+          <div class = "fragment">
+            <p>Change value of variable</p>
+            <pre><code contenteditable class ="javascript">
+              bananas = 4;
+            </code></pre>
+            <p>(I ate a banana)</p>
+          </div>
+        </section>
+        
+        <!-- Data Types-->
+        <section>
+          <h3>Data types</h3>
+          <div class = "fragment">
+            <p>string -- a group of characters in quotes</p>
+            <pre><code contenteditable class ="javascript">
+              var fruit = "banana";
+            </code></pre>
+          </div>
+          <div class = "fragment">
+            <p>number -- (well, a number)</p>
+            <pre><code contenteditable class ="javascript">
+              var pi = 3.14;
+              var year = 2012;
+            </code></pre>
+          </div>
+          <div class = "fragment">
+            <p>boolean -- yes or no</p>
+            <pre><code contenteditable class ="javascript">
+              var skyIsBlue = true;
+              var grassIsPink = false;
+            </code></pre>
+          </div>
+        </section>
+        
+        <!-- Data Types-->
+        <section>
+          <h3>Data types</h3>
+          <div class = "fragment">
+            <p>undefined -- no value yet</p>
+            <pre><code contenteditable class ="javascript">
+              var favoriteDinosaur;
+            </code></pre>
+          </div>
+          <div class = "fragment">
+            <p>null -- a purposely empty value (not the same as 0)</p>
+            <pre><code contenteditable class ="javascript">
+              var myTigersName = null;
+            </code></pre>
+          </div>
+          <!--div class = "fragment">
+            In nerd speak, JavaScript variables are "loosely typed". You don't know the kind of value a variable will have until you assign it.
+          </div-->
+        </section>
+        
+        <!-- Naming rules-->
+        <section>
+          <h3>Naming rules</h3>
+          <div>
+            <p>Begin with a letter, _, or $</p>
+            <p>Contain letters, numbers, _ and $</p>
+            <pre><code contenteditable class ="javascript">
+              var hello;
+              var _hello;
+              var $hello;
+              var hello2;
+            </code></pre>
+          </div>
+          <div class = "fragment">
+            <p>Names are case sensitive</p>
+            <pre><code contenteditable class ="javascript">
+              var hello;
+              var Hello;
+              var heLLO;
+            </code></pre>
+          </div>
+        </section>
+        
+        <!-- Expressions -->
+        <section class="present">
+          <h3>Expressions</h3>
+          <div>
+            <p>Math-y expressions!</p>
+            <pre><code contenteditable class ="javascript">
+          var bananas = 5;
+          var oranges = 2;
+          var fruit = bananas + oranges;
+            </code></pre>
+          </div>
+          <div>
+            <table style="display: block;margin: 0 auto; width: 300px;">
+              <!--tr><th>Symbol</th><th>Meaning</th></tr-->
+              <tr><td>+</td><td>Addition</td></tr>
+              <tr><td>-</td><td>Subtraction</td></tr>
+              <tr><td>*</td><td>Multiplication</td></tr>
+              <tr><td>/</td><td>Division</td></tr>
+              <tr><td>%</td><td>Modulus</td></tr>
+              <tr><td>++</td><td>Increment</td></tr>
+              <tr><td>--</td><td>Decrement</td></tr>
+            </table>
+          </div>
+        </section>
+        
+        <!-- -->
+        <section>
+          <h3>Expressions</h3>
+          <div>
+            <p>Word-y expressions!</p>
+            <pre><code contenteditable class ="javascript">
+var name = "Fluffy";
+var furColor = "orange";
+var sentence = "My cat is " + furColor + " and its name is " + name + ".";
+            </code></pre>
+          </div>
+        </section>
+        
+        <!-- Exercise-->
+        <section>
+          <h3>Let's Develop It</h3>
+          <p>Create a new html file</p>
+          <p>Save it in our <span class="blue">/gdiJS/</span> folder</p>
+          <pre><code class ="html">
+&lt;html>
+  &lt;head>
+    &lt;title>My Site!&lt;/title>
+  &lt;/head>
+  &lt;body>
+    My site!
+  &lt;/body>
+&lt;/html>
+</code></pre>
+        </section>
+        
+        <section>
+          <h3>Let's Develop It</h3>
+          <p>Create a new javascript file (a file that ends in .js)</p>
+          <p>Link it to your html file</p>
+          <pre><code class ="html">
+&lt;html>
+  &lt;head>
+    &lt;title>My Site!&lt;/title>
+    &lt;script src="myjavascriptfile.js">&lt;/script>
+  &lt;/head>
+  &lt;body>
+    My site!
+  &lt;/body>
+&lt;/html>
+</code></pre>
+        </section>
+        
+        <section>
+          <h3>Let's Develop It</h3>
+          <h4>Lifetime Supply Calculator</h4>
+          <p>Ever wonder how much a lifetime supply of your favorite snack or drink is?</p>
+          <ul>
+            <li>Store your age in a variable</li>
+            <li>Store your maximum in a variable</li>
+            <li>Store an estimated amount per day in a variable</li>
+            <li>Calculate how many you would eat/drink for the rest of your life.</li>
+            <li>Output the result in an alert(see below) like so: "You will need X _____s to last you until your old age of N"</li>
+          </ul>
+          
+          <pre><code contenteditable class ="javascript">
+          alert(answer);
+</code></pre>
+          
+        </section>
+        
+        <!-- If statement-->
+        <section>
+          <h3>The if statement</h3>
+          <p>Javascript can run through code based on conditions</p>
+          <div class = "fragment">
+          <pre><code contenteditable class ="javascript">
+          if (condition here){
+            // statement to execute
+          }
+</code></pre>
+          </div>
+          <div class = "fragment">
+<pre><code contenteditable class ="javascript">
+          var bananas = 1;
+          if (bananas < 2){
+            console.log("You should buy more bananas!")
+          }
+</code></pre>
+        </div>
+        <div class = "fragment">
+        Note: you can write comments that only you, not the browser reads
+        <pre><code contenteditable class ="javascript">
+            // comment on one line
+            /* comment on 
+              multiple lines
+              */
+        </code></pre>
+        </div>
+        </section>
+        
+        <!-- Comparison-->
+        <section>
+          <h3>Comparisons</h3>
+          <table>
+            <tr class = "fragment"><td> === </td><td> Equality </td></tr>
+            <tr class = "fragment"><td> !== </td><td> Inequality </td></tr>
+            <tr class = "fragment"><td> > </td><td> Greater than </td></tr>
+            <tr class = "fragment"><td> >= </td><td> Greater than or equal to </td></tr>
+            <tr class = "fragment"><td> < </td><td> Less than </td></tr>
+            <tr class = "fragment"><td> <= </td><td> Less than or equal to </td></tr>
+          </table>
+          <p class = "fragment green"> Don't confuse = (assign a value) <br/>with === (compare a value)</p>
+          <pre><code contenteditable class ="javascript">
+          if (bananas === 2){
+            console.log("You have two bananas")
+          }
+</code></pre>
+        </section>
+        
+        <!-- Logic-->
+        <section>
+          <h3>Logic</h3>
+          <table>
+            <tr class = "fragment"><td> && </td><td> AND </td></tr>
+            <tr class = "fragment"><td> || </td><td> OR </td></tr>
+            <tr class = "fragment"><td> ! </td><td> NOT </td></tr>
+          </table>
+          <div class = "fragment"> 
+            <pre><code contenteditable class ="javascript">
+        var bananas = 5;
+        var oranges = 2;
+        if (bananas > 3 && oranges > 3){
+          console.log('Eat fruit!');
+        }
+        if (bananas < 2 || oranges < 2){
+          console.log('Buy fruit!');
+        }
+        if !(bananas >= 0){
+          console.log('How do you have negative bananas?');
+        }
+            </code></pre>
+          </div>
+        </section>
+        
+        <!-- If/else-->
+        <section>
+          <h3>If/Else Statement</h3>
+          <p>You can use else to perform an alternative action if the "if" fails</p>
+          <pre><code contenteditable class ="javascript">
+          var bananas = 5;
+          if (bananas > 3){
+            console.log('Eat a banana!');
+          } else {
+            console.log('Buy a banana!');
+          }
+          </code></pre>
+        </section>
+        
+        <section>
+          <h3>If/Else Statement</h3>
+          <p>You can use else if to have multiple choices</p>
+          <pre><code contenteditable class ="javascript">
+var age = 20;
+if (age >= 35) {
+  console.log('You can vote AND hold any place in government!');
+} else if (age >= 25) {
+  console.log('You can vote AND run for the Senate!');
+} else if (age >= 18) {
+  console.log('You can vote!');
+} else {
+  console.log('You have no voice in government (yet)!');
+}
+          </code></pre>
+        </section>
+        
+        <!-- Exercise-->
+        <section>
+            <h3>Let's Develop It!</h3>
+            <p class = "left-align">Add an if/else statement to our lifetime supply calculator so that if the lifetime supply is greater than 40,000, you say "Wow! That's a lot!" otherwise, say "You seem pretty reasonable!"</p>
+        </section>
+        
+        <!-- Functions-->
+        <section>
+          <h3>Functions</h3>
+          <p class = "fragment">Functions are re-usable collections of statements</p>
+          <div class = "fragment">
+            Declare a function
+         <pre><code contenteditable class ="javascript">
+            function sayHi(){
+              console.log('Hi!');
+            }
+          </code></pre>
+          </div>
+          <div class = "fragment">
+            Call the function
+         <pre><code contenteditable class ="javascript">
+            sayHi();
+          </code></pre>
+          </div>
+        </section>
+        
+        <!-- Functions cont.-->
+        <section>
+          <h3>Arguments</h3>
+          <p class = "fragment">Functions can take named arguments</p>
+          <div class = "fragment">
+         <pre><code contenteditable class ="javascript">
+            function sayHi(name){
+              console.log('Hi' + name + '!');
+            }
+            sayHi('Mitch, the dinosaur');
+            sayHi('Harold, the hippo');
+            
+            var name = 'Fluffy, the cat';
+            sayHi(name);
+          </code></pre>
+          </div>
+        </section>
+        
+        <!-- Functions cont.-->
+        <section>
+          <h3>Arguments</h3>
+          <p class = "fragment">Functions can take MULTIPLE named arguments</p>
+          <div class = "fragment">
+         <pre><code contenteditable class ="javascript">
+            function addNumbers(num1, num2){
+              var result = num1 + num2;
+              console.log(result);
+            }
+          
+            addNumbers(5, 6);
+            
+            var number1 = 12;
+            var number2 = 15;
+            addNumbers(number1, number2);
+          </code></pre>
+          </div>
+        </section>
+        
+        <!-- Functions cont.-->
+        <section>
+          <h3>Return values</h3>
+          <p class = "fragment">Functions can return a value</p>
+          <div class = "fragment">
+         <pre><code contenteditable class ="javascript">
+    function addNumbers(num1, num2){
+      var result = num1 + num2;
+      return result; //Anything after this line won't be read
+    }
+    var sum  = addNumbers(5, 6);
+          </code></pre>
+          </div>
+        </section>
+        
+        <!-- Functions cont.-->
+        <section>
+          <h3>Variable Scope</h3>
+          <p>JavaScript variables have "function scope". They are only visible in the function where they are defined</p>
+          <div>
+            A variable with <strong>"local"</strong> scope:
+         <pre><code contenteditable class ="javascript">
+  function addNumbers(num1, num2){
+    var result = num1 + num2;
+    return result; //Anything after this line won't be read
+  }
+  var sum  = addNumbers(5, 6);
+  console.log(result); //will return undefined because result only exists inside the addNumbers function
+          </code></pre>
+          </div>
+        </section>
+        
+        <!-- Functions cont.-->
+        <section>
+          <h3>Variable Scope</h3>
+          <p>JavaScript variables have "function scope". They are visible in the function where they are defined</p>
+          <div>
+            A variable with <strong>"global"</strong> scope:
+         <pre><code contenteditable class ="javascript">
+   var result;
+    function addNumbers(num1, num2){
+      result = num1 + num2;
+      return result; //Anything after this line won't be read
+    }
+    var sum  = addNumbers(5, 6);
+    console.log(result); //will return 11 because the variable was defined outside the function
+          </code></pre>
+          </div>
+        </section>
+        
+        <!-- Exercise-->
+        <section>
+          <h3>Let's Develop It</h3>
+          <div>
+            <p>Wrap the lifetime supply calculator in a function called calculate()</p>
+            <p>Add a link to the html that calls the function when it is clicked</p>
+        <pre><code contenteditable class ="html">
+ &lt;a href = "#" onclick="calculate()">
+ Calculate life time supply
+ &lt;/a>
+         </code></pre>
+          </div>
+        </section>
+        
+        <!-- BREAK before Part 2 -->
+        <section>
+          <h3>Break Time!</h3>
+          <div>
+            <p>Stand up and stretch - we'll resume in 10 minutes</p>
+            <img src="images/stretchbreak.jpg">
+          </div>
+        </section>
+
+<!-- Loops-->
+        <section>
+          <h3>Loops</h3>
+          <p>Sometimes you want to go through a piece of code multiple times</p>
+          <p class = "fragment">Why?</p>
+          <ul>
+            <li class = "fragment">Showing a timer count down</li>
+            <li class = "fragment">Displaying the results of a search</li>
+            <li class = "fragment">Adding images to a slideshow</li>
+          </ul>
+        </section>
+        
+         <section>
+          <h3>The while loop</h3>
+          <p>The while loop tells JS to repeat statements until a condition is true:</p>
+          <pre><code contenteditable class = "javascript">
+      while (expression) {
+        // statements to repeat
+      }
+          </code></pre>
+          <pre><code contenteditable class = "javascript">
+      var x = 0;
+      while (x < 5) {
+        console.log(x);
+        x++;
+      }
+          </code></pre>
+          <div class = "fragment">
+            Review: '++' means increment by 1!
+          </div>
+          <div class = "fragment">
+            <div class = "yellow">Danger!!</div>
+            <p>What happens if we forget x++;?</p>
+            <p>The loop will never end!!</p>
+          </div>
+        </section>
+        
+        <section>
+          <h3>The for loop</h3>
+          <p>The for loop is a safer way of looping</p>
+          <pre><code contenteditable class = "javascript">
+          for (initialize; condition; update) {
+            // statements to repeat
+          }
+          </code></pre>
+          <pre><code contenteditable class = "javascript">
+          for (var i = 0; i < 5; i++) {
+            console.log(i);
+          }
+          </code></pre>
+          <div class = "fragment">
+            Less danger of an infinite loop. All conditions are at the top!
+          </div>
+        </section>
+          
+        <!-- Arrays -->
+        <section>
+          <h3>Array</h3>
+          <p>An array is a data-type that holds an ordered list of values, of any type:</p>
+          <div>
+            <pre><code contenteditable class = "javascript">
+          var arrayName = [element0, element1, ...];
+            </code></pre>
+          </div>
+          <div class = "fragment">
+            <pre><code contenteditable class = "javascript">
+var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet'];
+var favoriteNumbers = [16, 27, 88];
+var luckyThings = ['Rainbows', 7, 'Horseshoes'];
+            </code></pre>
+          </div>
+          <div class = "fragment">
+            The length property reports the size of the array:
+            <pre><code contenteditable class = "javascript">
+          console.log(rainbowColors.length);
+            </code></pre>
+          </div>
+        </section>
+        
+        <section>
+          <h3>Arrays -- returning values</h3>
+          <p>You can access items with "bracket notation".</p> 
+          <div>
+            The number inside the brackets is called an "index"
+            <pre><code contenteditable class = "javascript">
+          var arrayItem = arrayName[indexNum];
+            </code></pre>
+          </div>
+          <div class = "fragment">
+            Javascript is weird, so we start counting at 0.
+            <pre><code contenteditable class = "javascript">
+      var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet'];
+      var firstColor = rainbowColors[0];
+      var lastColor = rainbowColors[6];
+            </code></pre>
+          </div>
+        </section>
+        
+        <section>
+          <h3>Arrays -- updating values</h3>
+          <div class = "fragment">
+          You can also use bracket notation to change the item in an array:
+            <pre><code contenteditable class = "javascript">
+        var awesomeAnimals = ['Corgis', 'Otters', 'Octopi'];
+        awesomeAnimals[0] = 'Bunnies';
+            </code></pre>
+          </div>
+          <div class = "fragment">
+          Or to add to an array:
+            <pre><code contenteditable class = "javascript">
+          awesomeAnimals[4] = 'Corgis';
+            </code></pre>
+          </div>
+          
+          <div class = "fragment">
+         You can also use the push method:
+            <pre><code contenteditable class = "javascript">
+          awesomeAnimals.push('Ocelots');
+            </code></pre>
+          </div>
+        </section>
+        
+        <section>
+          <h3>Loops and Arrays</h3>
+          Use a for loop to easily look at each item in an array:
+          <pre><code contenteditable class = "javascript">
+var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet'];
+for (var i = 0; i < rainbowColors.length; i++) {
+  console.log(rainbowColors[i]);
+}
+          </code></pre>
+        </section>
+        
+        <!-- Exercise -->
+        <section>
+          <h3>Let's Develop It</h3>
+          <ul>
+            <li>Add a new link to the last exercise</li>
+            <li>Add an onclick to the link for a function called favoriteThings()</li>
+            <li>Create a new function called favoriteThings() in the javascript file</li>
+            <li>In the function, create an array and loop through the results</li>
+            <li>Post the results in an alert "My favorite things are XX, YY, ZZ'</li>
+          </ul>
+        </section>
+        
+        <!-- Objects-->
+        <section>
+          <h3>Objects</h3>
+          <p>Objects are a data type that let us store a collection of properties and methods.</p>
+          <pre><code contenteditable class = "javascript">
+          var objectName = { 
+            propertyName: propertyValue,
+            propertyName: propertyValue,
+            ...
+          };
+          </code></pre>
+          <div class = "fragment">
+            <pre><code contenteditable class = "javascript">
+      var charlie = {
+        age: 8,
+        name: "Charlie Brown",
+        likes: ["baseball", "The little red-haired girl"],
+        pet: "Snoopy"
+      };
+          </code></pre>
+          </div>
+        </section>
+        
+        <section>
+          <h3>Objects -- returning values</h3>
+          <p>Access values of "properties" using "dot notation":</p>
+          <div class = "fragment">
+            <pre><code contenteditable class = "javascript">
+      var charlie = {
+        age: 8,
+        name: "Charlie Brown",
+        likes: ["baseball", "The little red-haired girl"],
+        pet: "Snoopy"
+      };
+      </code></pre>
+          </div> 
+          <div class = "fragment">
+            <pre><code contenteditable class = "javascript">
+          var pet = charlie.pet;
+            </code></pre>
+          </div>
+        </section>
+        
+        <section>
+          <h3>Objects -- returning values</h3>
+          <div class = "fragment">
+            Or using "bracket notation" (like arrays):
+            <pre><code contenteditable class = "javascript">
+          var name = charlie['name'];
+            </code></pre>
+          </div>
+          <div class = "fragment">
+            Non-existent properties will return undefined:
+            <pre><code contenteditable class = "javascript">
+          var gender = charlie.gender
+            </code></pre>
+          </div>
+        </section>
+        
+        <section>
+          <h3>Objects -- changing values</h3>
+          <p>Use dot or bracket notation with the assignment operator to change objects.</p>
+          <div class = "fragment">
+          Change existing properties:
+          <pre><code contenteditable class = "javascript">
+          charlie.name = "Chuck";
+          </code></pre>
+          </div>
+          <div class = "fragment">
+            Or add new properties:
+            <pre><code contenteditable class = "javascript">
+          charlie.gender = "male";
+            </code></pre>
+          </div>
+          <div class ="fragment">
+          You can also delete properties:
+          <pre><code contenteditable class = "javascript">
+          delete charlie.gender;
+          </code></pre>
+          </div>
+        </section>
+        
+        <section>
+          <h3>Arrays of Objects</h3>
+          <p>Arrays can hold objects too!</p>
+          <div class = "fragment">
+            <pre><code contenteditable class = "javascript">
+          var peanuts = [
+            {name: "Charlie Brown", 
+             pet: "Snoopy"},
+            {name: "Linus van Pelt",
+             pet: "Blue Blanket"}
+          ];
+            </code></pre>
+          </div>
+          <div class = "fragment">
+            That means we can use a for loop!
+            <pre><code contenteditable class = "javascript">
+  for (var i = 0; i < peanuts.length; i++) {
+    var peanut = peanuts[i];
+    console.log(peanut.name + ' has a pet named ' + peanut.pet + '.');
+  }
+          </code></pre>
+          </div>
+        </section>
+        
+        <section>
+          <h3>Objects in functions</h3>
+          <p>You can pass an object into a function as a parameter</p>
+          <pre><code contenteditable class = "javascript">
+        var peanut ={
+          name: "Charlie Brown", 
+          pet: "Snoopy"
+          };
+          </code></pre>
+          <div class = "fragment">
+            <pre><code contenteditable class = "javascript">
+  function describeCharacter(character){
+    console.log(character.name + ' has a pet named ' + character.pet + '.');
+  }
+            </code></pre>
+          </div>
+         <div class = "fragment">
+            <pre><code contenteditable class = "javascript">
+              describeCharacter(peanut);
+            </code></pre>
+          </div>
+        </section>
+        
+        <!-- Exercise -->
+        <section>
+          <h3>Let's Develop It</h3>
+          <ul>
+            <li>Add another link that calls the function myFriends() onclick</li>
+            <li>Add a new function to the javascript myFriends</li>
+            <li>In the function, create an array of friends objects, with their names and hair colors</li>
+            <li>Use a for loop to go through each friend and describe them</li>
+            <li>Alert the results</li>
+            <li>Bonus -- make a separate functions that describe the friends</li>
+          </ul>
+        </section>
+        
+        <!-- DOM -->
+        <section>
+          <h3>DOM</h3>
+          <ul>
+            <li class = "fragment">"Document Object Model"</li>
+            <li class = "fragment">A way to interact with the HTML elements on a webpage</li>
+            <li class = "fragment">Chrome and Firefox -- Right click --> Inspect Element</li>
+          </ul>
+          <img src = "images/dom.png" class = "fragment">
+        </section>
+        
+        <section>
+          <h3>DOM Interaction</h3>
+          <p class = "fragment">On every webpage, the document object gives us ways of accessing and changing the DOM.</p>
+          <p class = "fragment left-align">Every DOM "node" has properties. They are connected like a family tree.</p>   
+          <p class = "fragment left-align"> Parent (parentNode), children (childNodes, firstChild), siblings (prevSibling, nextSibling)</p> 
+          <div class = "fragment">
+            <pre><code contenteditable class = "javascript">
+  var bodyNode = document.body; // &lt;body>
+  var htmlNode = document.body.parentNode; // &lt;html>
+  for (var i = 0; i < document.body.childNodes.length; i++) {
+    var childNode = document.body.childNodes[i];
+    //could be &lt;p>, &lt;h1>, etc.
+    //any html element
+  }
+          </code></pre>
+          </div>
+        </section>
+        
+        <section>
+          <h3>DOM Interaction: Easier</h3>
+          <p class = "fragment blue">Finding every element on the page by siblings and children is time consuming!</p>
+          <p class = "fragment">The document object also provides methods for finding DOM nodes without going one by one</p>
+          <div class = "fragment">
+            Find element by id
+            <pre><code contenteditable class = "html">
+&lt;img id="mainpicture" src="http://girldevelopit.com/assets/pink-logo.png">
+            </code></pre>
+            <pre><code contenteditable class = "javascript">
+var img = document.getElementById('mainpicture');            
+            </code></pre>
+          </div>
+        </section>
+        
+        <section>
+          <h3>DOM Interaction: Easier</h3>
+          <div>
+            Find element by tag name (p, li, div, etc.)
+            <pre><code contenteditable class = "html">
+          &lt;li class="peanut">Charlie Brown&lt;/li>
+          &lt;li class="peanut">Linus van Pelt&lt;/li>
+            </code></pre>
+          <pre><code contenteditable class = "javascript">
+      var listItems = document.getElementsByTagName('li');
+      for (var i =0; i < listItems.length; i++) {
+        var listItem = listItems[i];
+      }
+          </code></pre>
+          </div>
+        </section>
+        
+        <section>
+          <h3>DOM Interaction: Easiest - use jQuery</h3>
+          <div>
+            Find element by tag name (p, li, div, etc.) using jQuery!
+            <pre><code contenteditable class = "html">
+          &lt;li class="peanut">Charlie Brown&lt;/li>
+          &lt;li class="peanut">Linus van Pelt&lt;/li>
+            </code></pre>
+          <pre><code contenteditable class = "javascript">
+      var listItems = $('li');
+      for (var i =0; i < listItems.length; i++) {
+        var listItem = listItems[i];
+      }
+          </code></pre>
+          </div>
+        </section>
+
+        <!-- Methods-->
+        <section>
+          <h3>Methods</h3>
+          <ul>
+            <li>Methods are special functions</li>
+            <li>They affect or return a value for a specific object</li>
+            <li>Used with dot notation</li>
+          </ul>
+          <div class = "fragment">
+            Previously seen example:
+            <pre><code contenteditable class = "javascript">
+  var candy = ['Gummy Bears', 'Sour Patch Kids', 'Swedish Fish'];
+  var length = candy.length;
+            </code></pre>
+          </div>
+        </section>
+        
+        <!-- Attributes-->
+        <!--section>
+          <h3>DOM Nodes -- Attributes</h3>
+          <p>We can use node methods to set and retrieve attributes</p>
+          <div class = "fragment">
+            getAttribute/setAttribute
+            <pre><code contenteditable class = "javascript">
+ var img = document.getElementById('mainpicture');
+ img.getAttribute('src');
+ img.setAttribute('src', 'http://girldevelopit.com/assets/pink-logo.png');
+            </code></pre>
+            
+            <pre><code contenteditable class = "javascript">
+ var img = document.getElementById('mainpicture');
+ img.getAttribute('class');
+ img.setAttribute('class', 'picture-class');
+            </code></pre>
+          </div>
+        </section-->
+        
+        <!-- Inner HTML-->
+        <!--section>
+          <h3>DOM innerHTML</h3>
+          <p>Each DOM node has an innerHTML property:</p>
+        <div class = "fragment">
+          <pre><code contenteditable class = "javascript">
+        document.body.innerHTML;
+          </code></pre>
+        </div>
+        <div class = "fragment">
+        You can set innerHTML yourself to change the contents of the node:
+          <pre><code contenteditable class = "javascript">
+document.body.innerHTML = '&lt;p>I changed the whole page!&lt;/p>';
+          </code></pre>
+        </div>
+        <div class = "fragment">
+        You can also just add to the innerHTML instead of replace everything:
+          <pre><code contenteditable class = "javascript">
+document.body.innerHTML += "...just adding this bit at the end of the page.";
+          </code></pre>
+        </div>
+        </section-->
+        
+        <!-- Create element and append child-->
+        <!--section>
+          <h3>DOM Modifying</h3>
+          <p>The document object can create new nodes:</p>
+          <div class = "fragment">
+            <pre><code contenteditable class = "javascript">
+              document.createElement(tagName);
+              document.createTextNode(text);
+              document.appendChild();
+            </code></pre>
+          </div>
+          <div class = "fragment">
+            <pre><code contenteditable class = "javascript">
+var newImg = document.createElement('img');
+newImg.src = 'http://girldevelopit.com/assets/pink-logo.png';
+document.body.appendChild(newImg);
+            </code></pre>
+          </div>
+          <div class = "fragment">
+            <pre><code contenteditable class = "javascript">
+var newParagraph = document.createElement('p');
+var paragraphText = document.createTextNode('New Paragraph!');
+newParagraph.appendChild(paragraphText);
+document.body.appendChild(newParagraph);
+      </code></pre>
+          </div>
+          
+        </section-->
+        <!-- Including jquery-->
+        <section>
+          <h3>Including jQuery</h3>
+          Two ways to include jQuery on your page:
+          <div class = "fragment">
+            Download the library, store it locally:
+          <pre><code contenteditable class = "html">
+  &lt;head>
+    &lt;script type="text/javascript" src="jquery.js">&lt;/script>
+  &lt;/head>
+          </code></pre>
+          </div>
+          <div class = "fragment">
+          Include the the live library:
+          <pre><code contenteditable class = "html">
+  &lt;head>
+    &lt;script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js">
+    &lt;/script>
+  &lt;/head>
+          </code></pre>
+          </div>
+          <div class = "fragment">
+            Note: live code can change! It's always best to download
+          </div>
+        </section>
+        
+        <!-- Selectors-->
+        <section>
+          <h3>jQuery Selectors</h3>
+          <p>Instead of document.getElementById() and document.getElementsByTagName()... </p>
+          <p> jQuery selectors let you get elements by: </p>
+          <ul>
+            <li>Element name (div, img)
+            <pre><code contenteditable class = "javascript">
+      var divs = $("div"); // All divs on page
+      var pics = $("img"); // All images on page
+            </code></pre>
+            </li>
+            <li class = "fragment">ID name (#logo)
+            <pre><code contenteditable class = "javascript">
+var logo = $("#logo"); //img with id logo
+            </code></pre>
+            </li>
+            <li class = "fragment">Class name (.drawing)
+            <pre><code contenteditable class = "javascript">
+var drawings = $(".drawing"); //All images with class drawing 
+            </code></pre> 
+            </li>
+          </ul>
+        </section>
+        <!-- Actions-->
+        <section>
+          <h3>jQuery Actions</h3>
+          <div class = "left-align">
+            <p class = "fragment">jQuery has hundreds of actions that can be performed on any element</p>
+            <p class = "fragment">All the actions are methods</p>
+            <p class = "fragment">As methods they are called with dot notation</p>
+          </div>
+          <div class = "fragment">
+            Action format
+            <pre><code contenteditable class = "javascript">
+        $(selector).action();     
+            </code></pre>
+          </div>
+        </section>
+        
+        <!-- Attributes and css-->
+        <section>
+          <h3>Updating HTML attributes</h3>
+          <div>
+            <pre><code contenteditable class = "html">
+  &lt;img id="logo" src="http://girldevelopit.com/assets/pink-logo.png">         
+            </code></pre>
+          </div>
+          <div>
+            Attribute get and set
+            <pre><code contenteditable class = "javascript">
+  var img = $('#logo');
+  img.attr('src');
+  img.attr('src', 'http://girldevelopit.com/assets/pink-logo.png');
+            </code></pre>
+          </div>
+          <!--div class = "fragment">
+            CSS property get and set
+            <pre><code contenteditable class = "javascript">
+  var img = $('#logo');
+  img.css('width');
+  img.css('width', '200px');
+            </code></pre>
+          </div-->
+        </section>
+
+   <!-- Append and prepend-->
+        <section>
+          <h3>Append and Prepend</h3>
+          <div>
+            <pre><code contenteditable class = "html">
+  &lt;div class = "results">Boo!&lt;/div>         
+            </code></pre>
+          </div>
+          <div class = "fragment">
+            Append html
+            <pre><code contenteditable class = "javascript">
+    var div = $('#results');
+    div.append('Additional html');
+            </code></pre>
+          </div>
+          <div class = "fragment">
+            Prepend html
+            <pre><code contenteditable class = "javascript">
+    var div = $('#results');
+    div.prepend('Additional html (on top)');
+            </code></pre>
+          </div>
+        </section>
+
+        <!-- Exercise-->
+        <section>
+          <h3>Let's Develop It</h3>
+          <ul>
+            <li>Put it all together</li>
+            <li>Add jQuery file to your page</li>
+            <li>Modify your existing three functions to add new elements to the screen instead of firing an alert</li>
+            <li>Keep in mind how to find an element, how to append an element, and how to change an html attribute of an element</li>
+            <li>There are lots of possible solutions! Be creative!</li>
+          </ul>
+        </section>
+
+
+        <!-- -->
+        <section>
+          <h2>Questions?</h2>
+          <div style = "font-size:1200%; height:100%; margin-top:40%" class ="blue">?
+            <div class ="clear"></div></div>
+        </section>
+			</div>
+  		<footer>
+        <div class="copyright">
+          Javascript ~ Girl Develop It ~
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+        </div>
+      </footer>
+		</div>
+
+
+		<script src="reveal.js/lib/js/head.min.js"></script>
+		<script src="reveal.js/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'reveal.js/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
