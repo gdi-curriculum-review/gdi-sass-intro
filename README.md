@@ -26,9 +26,10 @@ You will write your own functions to extend your Sass, using programming concept
 
 #### Part 3: Sass Tips & Tricks
 Sass extends CSS3, and there are also tools that extend Sass! We'll look at the following Sass helpers:
-* Compass, which gives you open source mix-ins and functions to use in your own code; 
-* CodeKit & LiveReload, applications for compiling Sass for your projects (without the command line)
-* Sass Sleuth, for debugging code in the browser inspector
+* [Compass](http://compass-style.org/), which gives you open source mix-ins and functions to use in your own code
+* [CodeKit](http://incident57.com/codekit/) & [LiveReload](http://livereload.com/), applications for compiling Sass for your projects (without the command line)
+* [Sass Sleuth](http://www.mobify.com/dev/sass-sleuth-debugging-sass-in-webkit-browsers/), for debugging code in the browser inspector
+* [Codepen.io](http://www.codepen.io) for sharing code a la JSFiddle
 
 ## Theme customization
 
