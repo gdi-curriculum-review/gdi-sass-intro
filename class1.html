@@ -98,33 +98,29 @@
          <h3>Terms</h3>
          <ul>
            <li>
-            <div class = "green">Ruby</div>
-            <div>A programming language</div>
+            <div><span class="green">Ruby:</span> A programming language</div><br>
            </li>
            <li>
-            <div class = "green">Ruby on Rails</div>
-            <div>A framework written in Ruby for programming dynamic web applications</div>
+            <div><span class="green">Preprocessor:</span> A computer program that modifies data to conform with the input requirements of another program.
+            <span class ="blue">(Sass is a preprocessor)</span></div><br>
+           </li>
+            <li>
+            <div><span class="green">Compile:</span> The act of converting one computer program into another programming language.</div><br>
            </li>
            <li>
-            <div class = "green">Preprocessor</div>
-            <div>A computer program that modifies data to conform with the input requirements of another program.
-            <span class ="blue">(Sass is a preprocessor)</span></div>
-           </li>
-           <li>
-            <div class = "green">CSS3</div>
-            <div>The output of Sass. Sass compiles into CSS!</div>
+            <div><span class="green">CSS3:</span> The output of Sass. Sass compiles into CSS!</div>
            </li>
          </ul>
         </section>
         
-        <!-- Nitty gritty 1 - Clients and servers -->
+        <!-- Nitty gritty 1 - Sass to CSS -->
         <section>
           <h3>Sass and CSS</h3>
           <p>How Sass compiles into CSS</p>
-          <img src = "images/client-server.png"/>
-          <p class = "fragment">You write Sass (.scss files)</p>
-          <p class = "fragment">You run Sass watch on the command line </p>
-          <p class = "fragment">.scss files compile into .css files</p>
+          <img src = "images/sass-compile.png"/>
+          <div class="left-align">1. You write Sass (.scss files)<br>
+          2 .You run Sass watch on the command line <br>
+          3. .scss files compile into .css files</div>
         </section>
         
         <!-- Nitty gritty 2 - Tools -->
@@ -132,16 +128,11 @@
           <h3>Tools</h3>
           <ul>
             <li>
-              <div class = "yellow">Browser:</div>
-              <div>Chrome</div>
-              <div>Firefox</div>
+              <div><span class = "yellow">Browser:</span> Chrome or Firefox</div>
              </li>
              <li>
-              <div class = "yellow">Development Toolkit:</div>
-              <div>Chrome - Inspector</div>
-              <div>Firefox - Firebug</div>
-              <div>Terminal (Mac: Applications> Utilities)</div>
-              <div>Command Prompt (Windows: Programs> Accessories)</div>
+              <div><span class = "yellow">Development Toolkit:</span> Chrome Inspector or Firebug for Firefox</div>
+              <div><span class="yellow">Command Line</span> Terminal for Mac (Find in Applications> Utilities), Git for Windows (download at <a href="https://code.google.com/p/msysgit/downloads/list?q=net+installer">Google Code</a></div>
              </li>
              <li>
               <div class = "yellow">Text Editor:</div>
@@ -151,15 +142,20 @@
           </ul>
         </section>
         
-        <!-- History-->
+        <!-- Command Line -->
         <section>
-          <h3>History of JavaScript</h3>
-          <ul>
-            <li class = "fragment">Developed by Brendan Eich of Netscape in 1995</li>
-            <li class = "fragment">Standardized in 1997</li>
-            <li class = "fragment">Java -- Actually JavaScript has nothing to do with the language Java. <span class="blue">Java : Javascript as Ham : Hamster</blue></li>
-            <li class = "fragment">Script -- Instructions that a computer can run one line at a time</li>
-          </ul>
+          <h3>Command Line Tips</h3>
+          <div class="left-align">
+            Up one level:
+            <pre><code contenteditable class="command-line"><span class="variable">$</span> cd ../</code></pre>
+            Go to your home directory:
+            <pre><code contenteditable class="command-line"><span class="variable">$</span> cd /</code></pre>
+            Go to a specific folder:
+            <pre><code contenteditable class="command-line"><span class="variable">$</span> <span class="identifier">cd Users/cfarman/Sites/gdi-sass</span></pre></code>
+            List files in a directory:
+            <pre><code contenteditable class="command-line">$ ls</pre></code>
+            </div>
+            <span class="blue"><a href="http://files.fosswire.com/2007/08/fwunixref.pdf">Cheat Sheet!!!</a></span>
         </section>
         
         <!-- History-->
