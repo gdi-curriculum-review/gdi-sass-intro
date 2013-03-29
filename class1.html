@@ -91,7 +91,55 @@
           </ul>
           </div>
         </section>
-        
+
+        <!--What does Sass do? -->
+        <section>
+          <h3>What does Sass do?</h3>
+          <div class="left-align">
+            Variables:
+            <pre><code contenteditable class="sass css">$brandColor: #f90000;
+$accentColor: #fff;
+header {
+  background-color: $brandColor;
+  color: $accentColor;
+}
+header a { color: $accentColor; }</code></pre>  
+</div>
+        </section>
+
+        <!--What does Sass do 2? -->
+        <section>
+          <h3>What does Sass do?</h3>
+          <div class="left-align">
+            Nesting:          
+            <pre><code contenteditable class="sass css">header {
+  background-color: $brandColor;
+  color: $accentColor;
+  a {
+    color: $accentColor;
+  }
+}</code></pre>
+</div>
+        </section>
+
+        <!-- Tools -->
+        <section>
+          <h3>Tools</h3>
+          <ul>
+            <li>
+              <div><span class = "green">Browser:</span> Chrome or Firefox</div>
+             </li>
+             <li>
+              <div><span class = "green">Development Toolkit:</span> Chrome Inspector or Firebug for Firefox</div>
+              <div><span class="green">Command Line</span> Terminal for Mac (Find in Applications> Utilities), Git for Windows (download at <a href="https://code.google.com/p/msysgit/downloads/list?q=full+installer+official+git">Google Code</a></div>
+             </li>
+             <li>
+              <div class = "green">Text Editor:</div>
+              <div><a href="http://www.sublimetext.com/2">Sublime Text - Mac or Windows</a><br>
+                <a href="http://www.sublimetext.com/2">sublimetext.com/2</a></div>
+             </li>
+          </ul>
+        </section>        
         
         <!-- Terms-->
         <section>
@@ -113,36 +161,17 @@
          </ul>
         </section>
         
-        <!-- Nitty gritty 1 - Sass to CSS -->
+        <!-- Process: Sass to CSS -->
         <section>
           <h3>Sass and CSS</h3>
           <p>How Sass compiles into CSS</p>
           <img src = "images/sass-compile.png"/>
           <div class="left-align">1. You write Sass (.scss files)<br>
-          2 .You run Sass watch on the command line <br>
+          2 .You run a command (sass --watch) on the command line <br>
           3. .scss files compile into .css files</div>
         </section>
         
-        <!-- Nitty gritty 2 - Tools -->
-        <section>
-          <h3>Tools</h3>
-          <ul>
-            <li>
-              <div><span class = "yellow">Browser:</span> Chrome or Firefox</div>
-             </li>
-             <li>
-              <div><span class = "yellow">Development Toolkit:</span> Chrome Inspector or Firebug for Firefox</div>
-              <div><span class="yellow">Command Line</span> Terminal for Mac (Find in Applications> Utilities), Git for Windows (download at <a href="https://code.google.com/p/msysgit/downloads/list?q=full+installer+official+git">Google Code</a></div>
-             </li>
-             <li>
-              <div class = "yellow">Text Editor:</div>
-              <div><a href="http://www.sublimetext.com/2">Sublime Text - Mac or Windows</a><br>
-                <a href="http://www.sublimetext.com/2">sublimetext.com/2</a></div>
-             </li>
-          </ul>
-        </section>
-        
-        <!-- Command Line -->
+        <!-- Practice: Command Line -->
         <section>
           <h3>Command Line Tips</h3>
           <div class="left-align">
@@ -155,148 +184,101 @@
             List files in a directory:
             <pre><code contenteditable class="command-line">$ ls</pre></code>
             </div>
-            <span class="blue"><a href="http://files.fosswire.com/2007/08/fwunixref.pdf">Cheat Sheet!!!</a></span>
+            <span class="blue"><a href="http://files.fosswire.com/2007/08/fwunixref.pdf">Command Line Cheat Sheet!!! (In class1-exercises folder)</a></span>
         </section>
         
-        <!-- History-->
+        <!-- Install Sass -->
         <section>
-          <h3>History of JavaScript</h3>
+          <h3>Installing Sass</h3>
+          <div class="left-align">First, we need to install <span class="red">Ruby</span>:
           <ul>
-            <li class = "fragment">"AJAX" -- a way to communicate to servers was created in 2005</li>
-            <li class = "fragment">jQuery -- a super-popular JavaScript Library 2006</li>
-            <li class = "fragment">Node.js -- a way for JavaScript to perform back end functions in 2010</li>
-            <li class = "fragment">2012 -- spec for JavaScript "nearly" finished</li>
+            <li>Download for Windows: <a href="http://rubyinstaller.org/">rubyinstaller.org</a></li>
+            <li>via the command line for Mac: <a href="http://cfarm.co/rubymac">cfarm.co/rubymac</a></li>
           </ul>
-        </section>
-        
-        <!--What does JavaScript do -->
-        <section>
-          <h3>What does JavaScript do?</h3>
-          <ul>
-            <li><a href = "http://leandrovieira.com/projects/jquery/lightbox/" target = '_blank'>Image Galleries and Lightboxes</a></li>
-            <li><a href = "https://www.google.com/doodles/30th-anniversary-of-pac-man" target = '_blank'>Games and all sorts of Google Doodles</a></li>
-            <li><a href = "http://www.girldevelopit.com/materials" target = '_blank'>Interactions, like show/hide and accordians</a></li>
-            <li><a href = "http://www.girldevelopit.com/classes" target = '_blank'>Retrieving data from other websites (through APIs)</a></li>
-            <li>All sorts of awesomeness, including this slideshow!</li>
-          </ul>
-        </section>
-        
-        <!--Statements -->
-        <section>
-          <h3>Statements/Script</h3>
-          <div>Each line in JavaScript is an instruction or a script</div>
-          <div>When the browser reads it, it "executes the script"</div>
-          <div>Let's try it out in <span class="blue">the console</span></div>
-          <pre><code contenteditable class ="javascript">
-            console.log('Hello World!');
-          </code></pre>
+          <pre><code contenteditable class ="command-line" style="color:#4d4d4c !important; width: 1150px;margin-left:-180px">\curl -#L https://get.rvm.io | bash -s stable --autolibs=3 --ruby</code></pre>
+          </div>
         </section>
         
         <!-- Variables-->
         <section>
-          <h3>Variables</h3>
+          <h3>Installing Sass</h3>
           <div class = " left-align">
-            <p>Variables hold content</p>
-            <p>Words, numbers, true/false, basically any kind of content</p>
-          </div>
-          <div class = "fragment">
-            <p>Declare a variable (Give it a name)</p>
-            <pre><code contenteditable class ="javascript">
-              var bananas;
-            </code></pre>
-          </div>
-          <div class = "fragment">
-            <p>Initialize variable (Give it a value)</p>
-            <pre><code contenteditable class ="javascript">
-              bananas = 5;
-            </code></pre>
+            <p>Now that Ruby is installed, we can install the Sass gem.</p>
+            <p>In Terminal or Git Bash:</p>
+            <pre><code contenteditable class ="command-line">gem install sass</code></pre>
           </div>
         </section>
         
         <section>
-          <h3>Variables</h3>
+          <h3>Setting up our stylesheets</h3>
           <div>
-            <p>Declare and initialize at the same time!</p>
-            <pre><code contenteditable class ="javascript">
-              var bananas = 5;
-            </code></pre>
+            <p>We need to structure our stylesheets before we can compile them.</p>
+            <ul>
+              <li>open <span class="blue">class1-exercises</span> folder</li>
+              <li>open <span class="blue">exercise1</span> in Sublime Text</li>
+              <li>go ahead and open <span class="blue">index.html</span> in a browser</li>
+            </ul>
           </div>
-          <div class = "fragment">
-            <p>Change value of variable</p>
-            <pre><code contenteditable class ="javascript">
-              bananas = 4;
-            </code></pre>
-            <p>(I ate a banana)</p>
+        </section>
+
+        <section>
+          <h3>Setting up our stylesheets</h3>
+          <div class="left-align">
+            <ul>
+              <li>rename CSS files to have a <span class="blue"><strong>.scss</strong></span> file extension</li>
+              <li>structure them inside the stylesheets folder like so:
+                <ul class="red">
+                  <li>/stylesheets/
+                    <ul>
+                      <li>/css/
+                        <ul>
+                          <li>empty for now</li>
+                        </ul>
+                      </li>
+                      <li>/scss/
+                        <ul>
+                          <li>/font/</li>
+                          <li>reset.scss</li>
+                          <li>styles.scss</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>Update your index.html stylesheet link to point to your /css/ folder.</li>
+            </ul>
           </div>
         </section>
         
-        <!-- Data Types-->
+        <!-- Sass Watch - Compiling -->
         <section>
-          <h3>Data types</h3>
-          <div class = "fragment">
-            <p>string -- a group of characters in quotes</p>
-            <pre><code contenteditable class ="javascript">
-              var fruit = "banana";
-            </code></pre>
-          </div>
-          <div class = "fragment">
-            <p>number -- (well, a number)</p>
-            <pre><code contenteditable class ="javascript">
-              var pi = 3.14;
-              var year = 2012;
-            </code></pre>
-          </div>
-          <div class = "fragment">
-            <p>boolean -- yes or no</p>
-            <pre><code contenteditable class ="javascript">
-              var skyIsBlue = true;
-              var grassIsPink = false;
-            </code></pre>
+          <h3>Compile with the Sass Watch Command</h3>
+          <div class = "left-align">
+            <p>Check out your index.html file in a browser. Looks funky, yes?</p>
+            <p class="fragment">We need to compile our .scss (Sass) files to make the CSS work in the browser.</p>
+            <p class="fragment">First, navigate via the command line to your /stylesheets directory in the exercise1 folder.</p>
+            <p class="fragment">Then type:</p>
+
+            <pre class="fragment"><code contenteditable class ="sass css">$ sass --watch scss:css</code></pre>
+
           </div>
         </section>
+
+        <!-- Sass Watch - Compiling -->
+        <section>
+          <h3>Compile with the Sass Watch Command</h3>
+          <div class = "left-align">
+            <p>Let's break this command down - you're going to use it *a lot*!</p>
+            <pre><code contenteditable class ="sass css">$ sass --watch scss:css</code></pre>
+            <p class="fragment"><strong>--watch</strong> tells Sass to look for changes to our .scss files, and to compile them to css if they have updates.</p>
+            <p class="fragment">The <strong>scss</strong> bit is the folder where our .scss files live. We edit these files only.</p>
+            <p class="fragment">The <strong>css</strong> part is the folder where our .css files will be. These files are the compiled output of our Sass, and are only created when we run the above command.</p>
+
+          </div>
+        </section>        
         
-        <!-- Data Types-->
-        <section>
-          <h3>Data types</h3>
-          <div class = "fragment">
-            <p>undefined -- no value yet</p>
-            <pre><code contenteditable class ="javascript">
-              var favoriteDinosaur;
-            </code></pre>
-          </div>
-          <div class = "fragment">
-            <p>null -- a purposely empty value (not the same as 0)</p>
-            <pre><code contenteditable class ="javascript">
-              var myTigersName = null;
-            </code></pre>
-          </div>
-          <!--div class = "fragment">
-            In nerd speak, JavaScript variables are "loosely typed". You don't know the kind of value a variable will have until you assign it.
-          </div-->
-        </section>
-        
-        <!-- Naming rules-->
-        <section>
-          <h3>Naming rules</h3>
-          <div>
-            <p>Begin with a letter, _, or $</p>
-            <p>Contain letters, numbers, _ and $</p>
-            <pre><code contenteditable class ="javascript">
-              var hello;
-              var _hello;
-              var $hello;
-              var hello2;
-            </code></pre>
-          </div>
-          <div class = "fragment">
-            <p>Names are case sensitive</p>
-            <pre><code contenteditable class ="javascript">
-              var hello;
-              var Hello;
-              var heLLO;
-            </code></pre>
-          </div>
-        </section>
+
         
         <!-- Expressions -->
         <section class="present">
@@ -323,19 +305,7 @@
           </div>
         </section>
         
-        <!-- -->
-        <section>
-          <h3>Expressions</h3>
-          <div>
-            <p>Word-y expressions!</p>
-            <pre><code contenteditable class ="javascript">
-var name = "Fluffy";
-var furColor = "orange";
-var sentence = "My cat is " + furColor + " and its name is " + name + ".";
-            </code></pre>
-          </div>
-        </section>
-        
+ 
         <!-- Exercise-->
         <section>
           <h3>Let's Develop It</h3>
@@ -370,54 +340,7 @@ var sentence = "My cat is " + furColor + " and its name is " + name + ".";
 </code></pre>
         </section>
         
-        <section>
-          <h3>Let's Develop It</h3>
-          <h4>Lifetime Supply Calculator</h4>
-          <p>Ever wonder how much a lifetime supply of your favorite snack or drink is?</p>
-          <ul>
-            <li>Store your age in a variable</li>
-            <li>Store your maximum in a variable</li>
-            <li>Store an estimated amount per day in a variable</li>
-            <li>Calculate how many you would eat/drink for the rest of your life.</li>
-            <li>Output the result in an alert(see below) like so: "You will need X _____s to last you until your old age of N"</li>
-          </ul>
-          
-          <pre><code contenteditable class ="javascript">
-          alert(answer);
-</code></pre>
-          
-        </section>
-        
-        <!-- If statement-->
-        <section>
-          <h3>The if statement</h3>
-          <p>Javascript can run through code based on conditions</p>
-          <div class = "fragment">
-          <pre><code contenteditable class ="javascript">
-          if (condition here){
-            // statement to execute
-          }
-</code></pre>
-          </div>
-          <div class = "fragment">
-<pre><code contenteditable class ="javascript">
-          var bananas = 1;
-          if (bananas < 2){
-            console.log("You should buy more bananas!")
-          }
-</code></pre>
-        </div>
-        <div class = "fragment">
-        Note: you can write comments that only you, not the browser reads
-        <pre><code contenteditable class ="javascript">
-            // comment on one line
-            /* comment on 
-              multiple lines
-              */
-        </code></pre>
-        </div>
-        </section>
-        
+       
         <!-- Comparison-->
         <section>
           <h3>Comparisons</h3>
@@ -462,164 +385,7 @@ var sentence = "My cat is " + furColor + " and its name is " + name + ".";
           </div>
         </section>
         
-        <!-- If/else-->
-        <section>
-          <h3>If/Else Statement</h3>
-          <p>You can use else to perform an alternative action if the "if" fails</p>
-          <pre><code contenteditable class ="javascript">
-          var bananas = 5;
-          if (bananas > 3){
-            console.log('Eat a banana!');
-          } else {
-            console.log('Buy a banana!');
-          }
-          </code></pre>
-        </section>
-        
-        <section>
-          <h3>If/Else Statement</h3>
-          <p>You can use else if to have multiple choices</p>
-          <pre><code contenteditable class ="javascript">
-var age = 20;
-if (age >= 35) {
-  console.log('You can vote AND hold any place in government!');
-} else if (age >= 25) {
-  console.log('You can vote AND run for the Senate!');
-} else if (age >= 18) {
-  console.log('You can vote!');
-} else {
-  console.log('You have no voice in government (yet)!');
-}
-          </code></pre>
-        </section>
-        
-        <!-- Exercise-->
-        <section>
-            <h3>Let's Develop It!</h3>
-            <p class = "left-align">Add an if/else statement to our lifetime supply calculator so that if the lifetime supply is greater than 40,000, you say "Wow! That's a lot!" otherwise, say "You seem pretty reasonable!"</p>
-        </section>
-        
-        <!-- Functions-->
-        <section>
-          <h3>Functions</h3>
-          <p class = "fragment">Functions are re-usable collections of statements</p>
-          <div class = "fragment">
-            Declare a function
-         <pre><code contenteditable class ="javascript">
-            function sayHi(){
-              console.log('Hi!');
-            }
-          </code></pre>
-          </div>
-          <div class = "fragment">
-            Call the function
-         <pre><code contenteditable class ="javascript">
-            sayHi();
-          </code></pre>
-          </div>
-        </section>
-        
-        <!-- Functions cont.-->
-        <section>
-          <h3>Arguments</h3>
-          <p class = "fragment">Functions can take named arguments</p>
-          <div class = "fragment">
-         <pre><code contenteditable class ="javascript">
-            function sayHi(name){
-              console.log('Hi' + name + '!');
-            }
-            sayHi('Mitch, the dinosaur');
-            sayHi('Harold, the hippo');
-            
-            var name = 'Fluffy, the cat';
-            sayHi(name);
-          </code></pre>
-          </div>
-        </section>
-        
-        <!-- Functions cont.-->
-        <section>
-          <h3>Arguments</h3>
-          <p class = "fragment">Functions can take MULTIPLE named arguments</p>
-          <div class = "fragment">
-         <pre><code contenteditable class ="javascript">
-            function addNumbers(num1, num2){
-              var result = num1 + num2;
-              console.log(result);
-            }
-          
-            addNumbers(5, 6);
-            
-            var number1 = 12;
-            var number2 = 15;
-            addNumbers(number1, number2);
-          </code></pre>
-          </div>
-        </section>
-        
-        <!-- Functions cont.-->
-        <section>
-          <h3>Return values</h3>
-          <p class = "fragment">Functions can return a value</p>
-          <div class = "fragment">
-         <pre><code contenteditable class ="javascript">
-    function addNumbers(num1, num2){
-      var result = num1 + num2;
-      return result; //Anything after this line won't be read
-    }
-    var sum  = addNumbers(5, 6);
-          </code></pre>
-          </div>
-        </section>
-        
-        <!-- Functions cont.-->
-        <section>
-          <h3>Variable Scope</h3>
-          <p>JavaScript variables have "function scope". They are only visible in the function where they are defined</p>
-          <div>
-            A variable with <strong>"local"</strong> scope:
-         <pre><code contenteditable class ="javascript">
-  function addNumbers(num1, num2){
-    var result = num1 + num2;
-    return result; //Anything after this line won't be read
-  }
-  var sum  = addNumbers(5, 6);
-  console.log(result); //will return undefined because result only exists inside the addNumbers function
-          </code></pre>
-          </div>
-        </section>
-        
-        <!-- Functions cont.-->
-        <section>
-          <h3>Variable Scope</h3>
-          <p>JavaScript variables have "function scope". They are visible in the function where they are defined</p>
-          <div>
-            A variable with <strong>"global"</strong> scope:
-         <pre><code contenteditable class ="javascript">
-   var result;
-    function addNumbers(num1, num2){
-      result = num1 + num2;
-      return result; //Anything after this line won't be read
-    }
-    var sum  = addNumbers(5, 6);
-    console.log(result); //will return 11 because the variable was defined outside the function
-          </code></pre>
-          </div>
-        </section>
-        
-        <!-- Exercise-->
-        <section>
-          <h3>Let's Develop It</h3>
-          <div>
-            <p>Wrap the lifetime supply calculator in a function called calculate()</p>
-            <p>Add a link to the html that calls the function when it is clicked</p>
-        <pre><code contenteditable class ="html">
- &lt;a href = "#" onclick="calculate()">
- Calculate life time supply
- &lt;/a>
-         </code></pre>
-          </div>
-        </section>
+ 
         
         <!-- BREAK before Part 2 -->
         <section>
@@ -630,171 +396,98 @@ if (age >= 35) {
           </div>
         </section>
 
-<!-- Loops-->
+<!-- Scripting! -->
         <section>
-          <h3>Loops</h3>
-          <p>Sometimes you want to go through a piece of code multiple times</p>
-          <p class = "fragment">Why?</p>
+          <h3>Variables</h3>
+          <p>Sometimes you want to reuse a value for a style - you use them frequently, they're hard to type or remember, such as</p>
           <ul>
-            <li class = "fragment">Showing a timer count down</li>
-            <li class = "fragment">Displaying the results of a search</li>
-            <li class = "fragment">Adding images to a slideshow</li>
+            <li class = "fragment">Colors
+<pre><code contenteditable class = "sass css">#2a79af</code></pre>
+            </li>
+            <li class = "fragment"><a href="http://cssfontstack.com/">Font stack styles</a>
+<pre><code contenteditable class = "sass css">Georgia, Times, "Times New Roman", serif;</code></pre>
+            </li>
+            <li class = "fragment">Font sizes
+<pre><code contenteditable class = "sass css">1.667em</code></pre>
+            </li>
           </ul>
         </section>
         
          <section>
-          <h3>The while loop</h3>
-          <p>The while loop tells JS to repeat statements until a condition is true:</p>
-          <pre><code contenteditable class = "javascript">
-      while (expression) {
-        // statements to repeat
-      }
-          </code></pre>
-          <pre><code contenteditable class = "javascript">
-      var x = 0;
-      while (x < 5) {
-        console.log(x);
-        x++;
-      }
-          </code></pre>
-          <div class = "fragment">
-            Review: '++' means increment by 1!
-          </div>
-          <div class = "fragment">
-            <div class = "yellow">Danger!!</div>
-            <p>What happens if we forget x++;?</p>
-            <p>The loop will never end!!</p>
-          </div>
+          <h3>Defining Variables</h3>
+          <p>Variables with Sass let us reuse values more than once, while only defining them in one place</p>
+          <pre><code contenteditable class = "sass css">//define using dollar sign
+$brandColor = #f90000;
+$mainTextcolor = #fff;
+$accentColor = #ccc;</code></pre>
+        <p class="blue">To create a variable you need a dollar sign before the name of your variable, and an equal sign to give it a <em>value</em></p>
+        <p class="fragment">Note that in Sass files, you can comment out a line with <span class="green">// two slashes</span></p>
+
         </section>
-        
-        <section>
-          <h3>The for loop</h3>
-          <p>The for loop is a safer way of looping</p>
-          <pre><code contenteditable class = "javascript">
-          for (initialize; condition; update) {
-            // statements to repeat
-          }
-          </code></pre>
-          <pre><code contenteditable class = "javascript">
-          for (var i = 0; i < 5; i++) {
-            console.log(i);
-          }
-          </code></pre>
-          <div class = "fragment">
-            Less danger of an infinite loop. All conditions are at the top!
-          </div>
-        </section>
-          
-        <!-- Arrays -->
-        <section>
-          <h3>Array</h3>
-          <p>An array is a data-type that holds an ordered list of values, of any type:</p>
-          <div>
-            <pre><code contenteditable class = "javascript">
-          var arrayName = [element0, element1, ...];
-            </code></pre>
-          </div>
-          <div class = "fragment">
-            <pre><code contenteditable class = "javascript">
-var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet'];
-var favoriteNumbers = [16, 27, 88];
-var luckyThings = ['Rainbows', 7, 'Horseshoes'];
-            </code></pre>
-          </div>
-          <div class = "fragment">
-            The length property reports the size of the array:
-            <pre><code contenteditable class = "javascript">
-          console.log(rainbowColors.length);
-            </code></pre>
-          </div>
-        </section>
-        
-        <section>
-          <h3>Arrays -- returning values</h3>
-          <p>You can access items with "bracket notation".</p> 
-          <div>
-            The number inside the brackets is called an "index"
-            <pre><code contenteditable class = "javascript">
-          var arrayItem = arrayName[indexNum];
-            </code></pre>
-          </div>
-          <div class = "fragment">
-            Javascript is weird, so we start counting at 0.
-            <pre><code contenteditable class = "javascript">
-      var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet'];
-      var firstColor = rainbowColors[0];
-      var lastColor = rainbowColors[6];
-            </code></pre>
-          </div>
-        </section>
-        
-        <section>
-          <h3>Arrays -- updating values</h3>
-          <div class = "fragment">
-          You can also use bracket notation to change the item in an array:
-            <pre><code contenteditable class = "javascript">
-        var awesomeAnimals = ['Corgis', 'Otters', 'Octopi'];
-        awesomeAnimals[0] = 'Bunnies';
-            </code></pre>
-          </div>
-          <div class = "fragment">
-          Or to add to an array:
-            <pre><code contenteditable class = "javascript">
-          awesomeAnimals[4] = 'Corgis';
-            </code></pre>
-          </div>
-          
-          <div class = "fragment">
-         You can also use the push method:
-            <pre><code contenteditable class = "javascript">
-          awesomeAnimals.push('Ocelots');
-            </code></pre>
-          </div>
-        </section>
-        
-        <section>
-          <h3>Loops and Arrays</h3>
-          Use a for loop to easily look at each item in an array:
-          <pre><code contenteditable class = "javascript">
-var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet'];
-for (var i = 0; i < rainbowColors.length; i++) {
-  console.log(rainbowColors[i]);
+
+
+
+ <section>
+<pre><code contenteditable class = "sass css">$brandColor = #f90000; 
+$mainTextcolor = #fff;
+$accentColor = #ccc;</code></pre>
+          <pre><code contenteditable class = "sass css">header {
+  color: $mainTextColor;
+  background-color: $brandColor;
 }
-          </code></pre>
+.content {
+  color: $mainTextColor;
+  background-color: $accentColor;
+}
+footer {
+  color: $accentColor;
+  background-color: $brandColor;
+}</code></pre>
+        </section>        
+        <section>
+          <h3>Keep em together</h3>
+          <p>Variables are easy to change if you keep them all in one stylesheet, and update or add to the styles as needed</p>
+<pre><code contenteditable class = "php">// Let's define some variables 
+// Colors
+$favoriteColor = #2a79af;
+$anotherColor = #f05b62;
+// Fonts
+$favoriteFont = Papyrus, fantasy;
+$aPracticalFont = "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+// Font sizes
+$aNiceBigFontSize = 16px;
+$finePrint = 10px;
+$giantLogo = 36px;
+// Margins and Padding
+$defaultMargin = 15px;
+$defaultPadding = $defaultMargin;
+</code></pre>          
         </section>
+          
         
         <!-- Exercise -->
         <section>
           <h3>Let's Develop It</h3>
           <ul>
-            <li>Add a new link to the last exercise</li>
-            <li>Add an onclick to the link for a function called favoriteThings()</li>
-            <li>Create a new function called favoriteThings() in the javascript file</li>
-            <li>In the function, create an array and loop through the results</li>
-            <li>Post the results in an alert "My favorite things are XX, YY, ZZ'</li>
+            <li>Copy your work to the exercise2 folder</li>
+            <li>Create a new Sass stylesheet called _utilities.scss</li>
+            <li>Don't forget to put it in the right folder</li>
+            <li>In your new stylesheet, create some variables</li>
+            <li>Make some new variables, and base some variables on your existing styles - look for colors, fonts, and size values</li>
           </ul>
         </section>
         
-        <!-- Objects-->
+        <!-- Syntax highlighting -->
         <section>
-          <h3>Objects</h3>
-          <p>Objects are a data type that let us store a collection of properties and methods.</p>
-          <pre><code contenteditable class = "javascript">
-          var objectName = { 
-            propertyName: propertyValue,
-            propertyName: propertyValue,
-            ...
-          };
-          </code></pre>
-          <div class = "fragment">
-            <pre><code contenteditable class = "javascript">
-      var charlie = {
-        age: 8,
-        name: "Charlie Brown",
-        likes: ["baseball", "The little red-haired girl"],
-        pet: "Snoopy"
-      };
-          </code></pre>
+          <h3>Syntax highlighting</h3>
+          <div class="left-align">
+          <p>You can download tools to highlight your Sass properly in Sublime Text:</p>
+          <ul>
+            <li><a href="http://wbond.net/sublime_packages/package_control/installation">Install Package Manager for Sublime Text 2</a></li>
+            <li>Go to Tools > Command Palette. Type "Package Control".</li>
+            <li>Click "Install Package"</li>
+            <li>Type "Sass" and click the first result</li>
+            <li>Click: View > Syntax > Sass</li> 
           </div>
         </section>
         
