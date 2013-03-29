@@ -122,6 +122,41 @@ header a { color: $accentColor; }</code></pre>
 </div>
         </section>
 
+        <!--What does Sass do 3? -->
+        <section>
+          <h3>What does Sass do?</h3>
+          <div class="left-align">
+            Mix-ins:          
+            <pre><code contenteditable class="sass css">@mixin visually-hidden {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.image-replace {
+  @include visually-hidden;
+  background: url(logo.png) no-repeat;
+}
+</code></pre>
+</div>
+        </section>
+
+        <!--What does Sass do 4? -->
+        <section>
+          <h3>What does Sass do?</h3>
+          <div class="left-align">
+            More examples:
+            <ul>       
+              <li><a target="_blank" href="http://codepen.io/cfarm/pen/jteAG">Cross-Browser CSS3 Gradients</a></li>
+              <li><a target="_blank" href="http://codepen.io/cfarm/pen/rkEIo">Cross-Browser Box-shadow (drop shadow) effects</a></li>
+              <li><a target="_blank" href="http://codepen.io/andrewboyd/pen/LmIxi">Inner Text Shadow effect</a></li>
+              <li><a target="_blank" href="http://codepen.io/krisbulman/pen/ACnHl">Animated CSS Progress Bars</a></li>
+              <li><a target="_blank" href="http://codepen.io/canarymason/details/BFlHD">Multiple CSS Animations in a sequence</a></li>
+              <li><a target="_blank" href="http://oddbird.net/demos/susy-off-canvas/">Off-Canvas Responsive Layout</a></li>
+
+            </ul>
+          </div>
+        </section>
+
         <!-- Tools -->
         <section>
           <h3>Tools</h3>
@@ -131,12 +166,12 @@ header a { color: $accentColor; }</code></pre>
              </li>
              <li>
               <div><span class = "green">Development Toolkit:</span> Chrome Inspector or Firebug for Firefox</div>
-              <div><span class="green">Command Line</span> Terminal for Mac (Find in Applications> Utilities), Git for Windows (download at <a href="https://code.google.com/p/msysgit/downloads/list?q=full+installer+official+git">Google Code</a></div>
+              <div><span class="green">Command Line</span> Terminal for Mac (Find in Applications> Utilities), Git for Windows (download at <a target="_blank" href="https://code.google.com/p/msysgit/downloads/list?q=full+installer+official+git">Google Code</a></div>
              </li>
              <li>
               <div class = "green">Text Editor:</div>
-              <div><a href="http://www.sublimetext.com/2">Sublime Text - Mac or Windows</a><br>
-                <a href="http://www.sublimetext.com/2">sublimetext.com/2</a></div>
+              <div><a target="_blank" href="http://www.sublimetext.com/2">Sublime Text - Mac or Windows</a><br>
+                <a target="_blank" href="http://www.sublimetext.com/2">sublimetext.com/2</a></div>
              </li>
           </ul>
         </section>        
@@ -184,7 +219,7 @@ header a { color: $accentColor; }</code></pre>
             List files in a directory:
             <pre><code contenteditable class="command-line">$ ls</pre></code>
             </div>
-            <span class="blue"><a href="http://files.fosswire.com/2007/08/fwunixref.pdf">Command Line Cheat Sheet!!! (In class1-exercises folder)</a></span>
+            <span class="blue"><a target="_blank" href="http://files.fosswire.com/2007/08/fwunixref.pdf">Command Line Cheat Sheet!!! (In class1-exercises folder)</a></span>
         </section>
         
         <!-- Install Sass -->
@@ -192,8 +227,8 @@ header a { color: $accentColor; }</code></pre>
           <h3>Installing Sass</h3>
           <div class="left-align">First, we need to install <span class="red">Ruby</span>:
           <ul>
-            <li>Download for Windows: <a href="http://rubyinstaller.org/">rubyinstaller.org</a></li>
-            <li>via the command line for Mac: <a href="http://cfarm.co/rubymac">cfarm.co/rubymac</a></li>
+            <li>Download for Windows: <a target="_blank" href="http://rubyinstaller.org/">rubyinstaller.org</a></li>
+            <li>via the command line for Mac: <a target="_blank" href="http://cfarm.co/rubymac">cfarm.co/rubymac</a></li>
           </ul>
           <pre><code contenteditable class ="command-line" style="color:#4d4d4c !important; width: 1150px;margin-left:-180px">\curl -#L https://get.rvm.io | bash -s stable --autolibs=3 --ruby</code></pre>
           </div>
@@ -214,8 +249,8 @@ header a { color: $accentColor; }</code></pre>
           <div>
             <p>We need to structure our stylesheets before we can compile them.</p>
             <ul>
-              <li>open <span class="blue">class1-exercises</span> folder</li>
-              <li>open <span class="blue">exercise1</span> in Sublime Text</li>
+              <li>open the <span class="blue">"class1-exercises"</span> folder</li>
+              <li>open the <span class="blue">"practice"</span> folder in Sublime Text</li>
               <li>go ahead and open <span class="blue">index.html</span> in a browser</li>
             </ul>
           </div>
@@ -257,7 +292,7 @@ header a { color: $accentColor; }</code></pre>
           <div class = "left-align">
             <p>Check out your index.html file in a browser. Looks funky, yes?</p>
             <p class="fragment">We need to compile our .scss (Sass) files to make the CSS work in the browser.</p>
-            <p class="fragment">First, navigate via the command line to your /stylesheets directory in the exercise1 folder.</p>
+            <p class="fragment">First, navigate via the command line to your /stylesheets directory in the "practice" folder.</p>
             <p class="fragment">Then type:</p>
 
             <pre class="fragment"><code contenteditable class ="sass css">$ sass --watch scss:css</code></pre>
@@ -278,111 +313,59 @@ header a { color: $accentColor; }</code></pre>
           </div>
         </section>        
         
-
         
-        <!-- Expressions -->
+        <!-- Nesting -->
         <section class="present">
-          <h3>Expressions</h3>
+          <h3>Nesting</h3>
           <div>
-            <p>Math-y expressions!</p>
-            <pre><code contenteditable class ="javascript">
-          var bananas = 5;
-          var oranges = 2;
-          var fruit = bananas + oranges;
-            </code></pre>
-          </div>
-          <div>
-            <table style="display: block;margin: 0 auto; width: 300px;">
-              <!--tr><th>Symbol</th><th>Meaning</th></tr-->
-              <tr><td>+</td><td>Addition</td></tr>
-              <tr><td>-</td><td>Subtraction</td></tr>
-              <tr><td>*</td><td>Multiplication</td></tr>
-              <tr><td>/</td><td>Division</td></tr>
-              <tr><td>%</td><td>Modulus</td></tr>
-              <tr><td>++</td><td>Increment</td></tr>
-              <tr><td>--</td><td>Decrement</td></tr>
-            </table>
+            <p>Sass input:</p>
+            <pre><code contenteditable class ="sass css">header { 
+  color: black;
+  nav { 
+    background: red; 
+    a { color: white; }
+}
+</code></pre>
+            <p>CSS output:</p>
+            <pre><code contenteditable class ="css sass">header { color: black; }
+header nav { background: red; }
+header nav a { color: white; }</code></pre>
           </div>
         </section>
         
  
-        <!-- Exercise-->
-        <section>
-          <h3>Let's Develop It</h3>
-          <p>Create a new html file</p>
-          <p>Save it in our <span class="blue">/gdiJS/</span> folder</p>
-          <pre><code class ="html">
-&lt;html>
-  &lt;head>
-    &lt;title>My Site!&lt;/title>
-  &lt;/head>
-  &lt;body>
-    My site!
-  &lt;/body>
-&lt;/html>
-</code></pre>
-        </section>
-        
-        <section>
-          <h3>Let's Develop It</h3>
-          <p>Create a new javascript file (a file that ends in .js)</p>
-          <p>Link it to your html file</p>
-          <pre><code class ="html">
-&lt;html>
-  &lt;head>
-    &lt;title>My Site!&lt;/title>
-    &lt;script src="myjavascriptfile.js">&lt;/script>
-  &lt;/head>
-  &lt;body>
-    My site!
-  &lt;/body>
-&lt;/html>
-</code></pre>
-        </section>
         
        
         <!-- Comparison-->
         <section>
-          <h3>Comparisons</h3>
-          <table>
-            <tr class = "fragment"><td> === </td><td> Equality </td></tr>
-            <tr class = "fragment"><td> !== </td><td> Inequality </td></tr>
-            <tr class = "fragment"><td> > </td><td> Greater than </td></tr>
-            <tr class = "fragment"><td> >= </td><td> Greater than or equal to </td></tr>
-            <tr class = "fragment"><td> < </td><td> Less than </td></tr>
-            <tr class = "fragment"><td> <= </td><td> Less than or equal to </td></tr>
-          </table>
-          <p class = "fragment green"> Don't confuse = (assign a value) <br/>with === (compare a value)</p>
-          <pre><code contenteditable class ="javascript">
-          if (bananas === 2){
-            console.log("You have two bananas")
-          }
+          <h3>Referencing Parent Selectors: &</h3>
+          <div>
+            <p>Sass input:</p>
+            <pre><code contenteditable class ="sass css">nav { 
+    background: red; 
+    a { 
+      color: white;
+      &:hover { text-decoration: underline; }
+    }
+}
 </code></pre>
+            <p>CSS output:</p>
+            <pre><code contenteditable class ="css sass">nav { background: red; }
+nav a { color: white; }
+nav a:hover { text-decoration: underline; }</code></pre>
+          </div>
         </section>
         
-        <!-- Logic-->
+        <!-- Exercise - #2? 3? -->
         <section>
-          <h3>Logic</h3>
-          <table>
-            <tr class = "fragment"><td> && </td><td> AND </td></tr>
-            <tr class = "fragment"><td> || </td><td> OR </td></tr>
-            <tr class = "fragment"><td> ! </td><td> NOT </td></tr>
-          </table>
-          <div class = "fragment"> 
-            <pre><code contenteditable class ="javascript">
-        var bananas = 5;
-        var oranges = 2;
-        if (bananas > 3 && oranges > 3){
-          console.log('Eat fruit!');
-        }
-        if (bananas < 2 || oranges < 2){
-          console.log('Buy fruit!');
-        }
-        if !(bananas >= 0){
-          console.log('How do you have negative bananas?');
-        }
-            </code></pre>
-          </div>
+          <h3>Let's Develop It!</h3>
+          <ul>
+            <li>Open your <span class="blue">styles.scss</span> file</li>
+            <li>Rewrite some styles to use nesting and referencing the parent</li>
+            <li>Look for selectors that share a common parent HTML element, like header, nav, footer, #main</li>
+            <li>Look for hover styles, or add some, to practice referencing the parent with &</li>
+            <li>There are lots of possible solutions! Be creative!</li>
+          </ul>
         </section>
         
  
@@ -404,7 +387,7 @@ header a { color: $accentColor; }</code></pre>
             <li class = "fragment">Colors
 <pre><code contenteditable class = "sass css">#2a79af</code></pre>
             </li>
-            <li class = "fragment"><a href="http://cssfontstack.com/">Font stack styles</a>
+            <li class = "fragment"><a target="_blank" href="http://cssfontstack.com/">Font stack styles</a>
 <pre><code contenteditable class = "sass css">Georgia, Times, "Times New Roman", serif;</code></pre>
             </li>
             <li class = "fragment">Font sizes
@@ -469,7 +452,6 @@ $defaultPadding = $defaultMargin;
         <section>
           <h3>Let's Develop It</h3>
           <ul>
-            <li>Copy your work to the exercise2 folder</li>
             <li>Create a new Sass stylesheet called _utilities.scss</li>
             <li>Don't forget to put it in the right folder</li>
             <li>In your new stylesheet, create some variables</li>
@@ -483,12 +465,71 @@ $defaultPadding = $defaultMargin;
           <div class="left-align">
           <p>You can download tools to highlight your Sass properly in Sublime Text:</p>
           <ul>
-            <li><a href="http://wbond.net/sublime_packages/package_control/installation">Install Package Manager for Sublime Text 2</a></li>
+            <li><a target="_blank" href="http://wbond.net/sublime_packages/package_control/installation">Install Package Manager for Sublime Text 2</a></li>
             <li>Go to Tools > Command Palette. Type "Package Control".</li>
             <li>Click "Install Package"</li>
             <li>Type "Sass" and click the first result</li>
             <li>Click: View > Syntax > Sass</li> 
           </div>
+        </section>
+
+<!-- Math -->
+        <section class="present">
+          <h3>Math Expressions</h3>
+          <div>
+            <p>With CSS you have to be explicit about everything, including numbers. With Sass, you can write math expressions to calculate numbers for you:</p>
+            <p>Sass input:</p>
+            <pre><code contenteditable class ="javascript">example</code></pre>
+            <p>CSS output:</p>
+            <pre><code contenteditable class ="javascript">example</code></pre>
+          </div>
+          <div>
+            <table style="display: block;margin: 0 auto; width: 300px;">
+              <!--tr><th>Symbol</th><th>Meaning</th></tr-->
+              <tr><td>+</td><td><a target="_blank" href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#number_operations">Addition</a></td></tr>
+              <tr><td>-</td><td><a target="_blank" href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#number_operations">Addition</a>Subtraction</a></td></tr>
+              <tr><td>*</td><td><a target="_blank" href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#number_operations">Addition</a>Multiplication</a></td></tr>
+              <tr><td>/</td><td><a target="_blank" href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#number_operations">Addition</a>Division</a></td></tr>
+            </table>
+          </div>
+        </section>
+        <!-- Exercise-->
+        <section>
+          <h3>Let's Develop It</h3>
+          <p>Write a math expression in Sass to calculate the width and height of your page layout instead of delcaring a number</p>
+          <p>Use a variable to represent the result of your calcuation</p>
+          <p>Compile to CSS and refresh your index page to see your changes</p>
+          <pre><code class ="sass css">$layoutWidth = 960px;
+$headerWidth = $layoutWidth*1;
+$navWidth = $layoutWidth/3;
+
+header {
+  width: $headerWidth;
+}
+nav {
+  width: $navWidth;
+}
+footer {
+  width: ($layoutWidth - 20px);
+}
+  </code></pre>
+        </section>
+        
+        <section>
+          <h3>Let's Develop It</h3>
+          <p>Create a new javascript file (a file that ends in .js)</p>
+          <p>Link it to your html file</p>
+          <pre><code class ="html">
+&lt;html>
+  &lt;head>
+    &lt;title>My Site!&lt;/title>
+    &lt;script src="myjavascriptfile.js">&lt;/script>
+  &lt;/head>
+  &lt;body>
+    My site!
+  &lt;/body>
+&lt;/html>
+</code></pre>
         </section>
         
         <section>
@@ -914,7 +955,7 @@ var drawings = $(".drawing"); //All images with class drawing
 			</div>
   		<footer>
         <div class="copyright">
-          Javascript ~ Girl Develop It ~
+          Sass ~ Girl Develop It ~
           <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
         </div>
       </footer>
