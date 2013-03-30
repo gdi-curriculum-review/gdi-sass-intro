@@ -17,7 +17,7 @@
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
 		<link rel="stylesheet" href="reveal.js/css/reveal.css">
-		<link rel="stylesheet" href="reveal.js/css/theme/gdisunny.css" id="theme">
+		<link rel="stylesheet" href="reveal.js/css/theme/css/gdisunny.css" id="theme">
 
 		<!-- For syntax highlighting -->
 		<!-- light editor--><link rel="stylesheet" href="reveal.js/lib/css/light.css">
@@ -165,8 +165,13 @@ header a { color: $accentColor; }</code></pre>
               <div><span class = "green">Browser:</span> Chrome or Firefox</div>
              </li>
              <li>
-              <div><span class = "green">Development Toolkit:</span> Chrome Inspector or Firebug for Firefox</div>
-              <div><span class="green">Command Line</span> Terminal for Mac (Find in Applications> Utilities), Git for Windows (download at <a target="_blank" href="https://code.google.com/p/msysgit/downloads/list?q=full+installer+official+git">Google Code</a></div>
+              <span class = "green">Development Toolkit:</span> Chrome Inspector or Firebug for Firefox</li>
+              <li><span class="green">Command Line</span> 
+                <ul>
+                  <li>Terminal for Mac (Find in Applications> Utilities)</li>
+                  <li>Git for Windows (<a target="_blank" href="https://openhatch.org/missions/windows-setup/install-git-bash">see how to install</a>)
+                  </li>
+                </ul>
              </li>
              <li>
               <div class = "green">Text Editor:</div>
@@ -219,7 +224,7 @@ header a { color: $accentColor; }</code></pre>
             List files in a directory:
             <pre><code contenteditable class="command-line">$ ls</pre></code>
             </div>
-            <span class="blue"><a target="_blank" href="http://files.fosswire.com/2007/08/fwunixref.pdf">Command Line Cheat Sheet!!! (In class1-exercises folder)</a></span>
+            <span class="blue left-align"><a target="_blank" href="http://files.fosswire.com/2007/08/fwunixref.pdf">Command Line Cheat Sheet!!! (In class1-exercises folder)</a></span>
         </section>
         
         <!-- Install Sass -->
@@ -228,9 +233,9 @@ header a { color: $accentColor; }</code></pre>
           <div class="left-align">First, we need to install <span class="red">Ruby</span>:
           <ul>
             <li>Download for Windows: <a target="_blank" href="http://rubyinstaller.org/">rubyinstaller.org</a></li>
-            <li>via the command line for Mac: <a target="_blank" href="http://cfarm.co/rubymac">cfarm.co/rubymac</a></li>
+            <li>Mac users: you're in luck! Mac OS X comes pre-installed with Ruby. Try the following command in Terminal to make sure: </li>
           </ul>
-          <pre><code contenteditable class ="command-line" style="color:#4d4d4c !important; width: 1150px;margin-left:-180px">\curl -#L https://get.rvm.io | bash -s stable --autolibs=3 --ruby</code></pre>
+          <pre><code contenteditable class ="command-line">ruby -v</code></pre>
           </div>
         </section>
         
@@ -242,6 +247,7 @@ header a { color: $accentColor; }</code></pre>
             <p>In Terminal or Git Bash:</p>
             <pre><code contenteditable class ="command-line">gem install sass</code></pre>
           </div>
+            <p class="fragment"><img src="images/confetti.gif" style="border: 0; width: 600px; height: 300px; box-shadow: none;"></p>
         </section>
         
         <section>
@@ -251,7 +257,7 @@ header a { color: $accentColor; }</code></pre>
             <ul>
               <li>open the <span class="blue">"class1-exercises"</span> folder</li>
               <li>open the <span class="blue">"practice"</span> folder in Sublime Text</li>
-              <li>go ahead and open <span class="blue">index.html</span> in a browser</li>
+              <li>go ahead and open <a href="class1-exercises/practice/index.html" target="_blank">index.html</a> in a browser</li>
             </ul>
           </div>
         </section>
@@ -281,7 +287,7 @@ header a { color: $accentColor; }</code></pre>
                   </li>
                 </ul>
               </li>
-              <li>Update your index.html stylesheet link to point to your /css/ folder.</li>
+              <li>Update your index.html stylesheet url in &lt;head&gt; to point to your /css/ folder.</li>
             </ul>
           </div>
         </section>
@@ -365,6 +371,8 @@ nav a:hover { text-decoration: underline; }</code></pre>
             <li>Look for selectors that share a common parent HTML element, like header, nav, footer, #main</li>
             <li>Look for hover styles, or add some, to practice referencing the parent with &</li>
             <li>There are lots of possible solutions! Be creative!</li>
+            <li>Run the <a href="#/17" target="_blank">sass --watch command</a> to see your changes in the browser</li>
+
           </ul>
         </section>
         
@@ -400,10 +408,10 @@ nav a:hover { text-decoration: underline; }</code></pre>
           <h3>Defining Variables</h3>
           <p>Variables with Sass let us reuse values more than once, while only defining them in one place</p>
           <pre><code contenteditable class = "sass css">//define using dollar sign
-$brandColor = #f90000;
-$mainTextcolor = #fff;
-$accentColor = #ccc;</code></pre>
-        <p class="blue">To create a variable you need a dollar sign before the name of your variable, and an equal sign to give it a <em>value</em></p>
+$brandColor: #f90000;
+$mainTextcolor: #fff;
+$accentColor: #ccc;</code></pre>
+        <p>To create a variable you need a dollar sign before the name of your variable, and a colon: to give it a <em>value</em></p>
         <p class="fragment">Note that in Sass files, you can comment out a line with <span class="green">// two slashes</span></p>
 
         </section>
@@ -411,9 +419,9 @@ $accentColor = #ccc;</code></pre>
 
 
  <section>
-<pre><code contenteditable class = "sass css">$brandColor = #f90000; 
-$mainTextcolor = #fff;
-$accentColor = #ccc;</code></pre>
+<pre><code contenteditable class = "sass css">$brandColor: #f90000; // red
+$mainTextcolor: #fff; // white
+$accentColor: #ccc; // grey</code></pre>
           <pre><code contenteditable class = "sass css">header {
   color: $mainTextColor;
   background-color: $brandColor;
@@ -432,18 +440,18 @@ footer {
           <p>Variables are easy to change if you keep them all in one stylesheet, and update or add to the styles as needed</p>
 <pre><code contenteditable class = "php">// Let's define some variables 
 // Colors
-$favoriteColor = #2a79af;
-$anotherColor = #f05b62;
+$favoriteColor: #2a79af;
+$anotherColor: #f05b62;
 // Fonts
-$favoriteFont = Papyrus, fantasy;
-$aPracticalFont = "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+$favoriteFont: Papyrus, fantasy;
+$aPracticalFont: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
 // Font sizes
-$aNiceBigFontSize = 16px;
-$finePrint = 10px;
-$giantLogo = 36px;
+$aNiceBigFontSize: 16px;
+$finePrint: 10px;
+$giantLogo: 36px;
 // Margins and Padding
-$defaultMargin = 15px;
-$defaultPadding = $defaultMargin;
+$defaultMargin: 15px;
+$defaultPadding: $defaultMargin;
 </code></pre>          
         </section>
           
@@ -456,6 +464,7 @@ $defaultPadding = $defaultMargin;
             <li>Don't forget to put it in the right folder</li>
             <li>In your new stylesheet, create some variables</li>
             <li>Make some new variables, and base some variables on your existing styles - look for colors, fonts, and size values</li>
+            <li>Run the <a href="#/17" target="_blank">sass --watch command</a> to see your changes in the browser</li>
           </ul>
         </section>
         
@@ -478,473 +487,140 @@ $defaultPadding = $defaultMargin;
           <h3>Math Expressions</h3>
           <div>
             <p>With CSS you have to be explicit about everything, including numbers. With Sass, you can write math expressions to calculate numbers for you:</p>
-            <p>Sass input:</p>
-            <pre><code contenteditable class ="javascript">example</code></pre>
-            <p>CSS output:</p>
-            <pre><code contenteditable class ="javascript">example</code></pre>
-          </div>
-          <div>
             <table style="display: block;margin: 0 auto; width: 300px;">
               <!--tr><th>Symbol</th><th>Meaning</th></tr-->
               <tr><td>+</td><td><a target="_blank" href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#number_operations">Addition</a></td></tr>
-              <tr><td>-</td><td><a target="_blank" href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#number_operations">Addition</a>Subtraction</a></td></tr>
-              <tr><td>*</td><td><a target="_blank" href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#number_operations">Addition</a>Multiplication</a></td></tr>
-              <tr><td>/</td><td><a target="_blank" href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#number_operations">Addition</a>Division</a></td></tr>
+              <tr><td>-</td><td><a target="_blank" href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#number_operations">Subtraction</a></td></tr>
+              <tr><td>*</td><td><a target="_blank" href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#number_operations">Multiplication</a></td></tr>
+              <tr><td>/</td><td><a target="_blank" href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#division-and-slash">Division</a>*</td></tr>
             </table>
+            <p style="margin-top: 25px;font-size: .6em">*division is special, check the documentation link for why and how</p>
           </div>
         </section>
+
+        <section class="present">
+          <h3>Math Expressions</h3>
+          <div>
+            <p>Sass input:</p>
+            <pre><code contenteditable class ="sass css"><span class="variable">$layoutWidth</span>: 960px;
+#sidebar {
+  width: <span class="variable">$layoutWidth</span>/3;
+}
+</code></pre>
+            <p>CSS output:</p>
+            <pre><code contenteditable class ="sass css">#sidebar {
+  width: 320px;
+}</code></pre>
+          </div>
+        </section>
+
         <!-- Exercise-->
         <section>
           <h3>Let's Develop It</h3>
-          <p>Write a math expression in Sass to calculate the width and height of your page layout instead of delcaring a number</p>
-          <p>Use a variable to represent the result of your calcuation</p>
-          <p>Compile to CSS and refresh your index page to see your changes</p>
+          <ul>
+          <li>Write a math expression in Sass to calculate the width of elements in your page layout instead of declaring a number</li>
+          <li>Use a variable to represent the result of your calcuation</li>
+          <li>Compile to CSS and refresh your index page to see your changes</li>
+        </ul>
           <pre><code class ="sass css">$layoutWidth = 960px;
-$headerWidth = $layoutWidth*1;
 $navWidth = $layoutWidth/3;
-
-header {
-  width: $headerWidth;
-}
-nav {
-  width: $navWidth;
-}
 footer {
   width: ($layoutWidth - 20px);
+}</code></pre>
+        </section>
+        
+
+        <section class="present">
+          <h3>Color Functions</h3>
+          <p class="left-align">Color functions are built-in to Sass. They let you alter existing color values. This is the <span class="blue">lighten</span> function:</p>
+          <table class="code-compare">
+            <tr><td>
+            <p>Sass input:</p>
+            <pre><code contenteditable class ="sass css"><span class="variable">$linkColor</span>: #000;
+<span class="variable">$linkShadow</span>: lighten(#000, 40%);
+a {
+  color: <span class="variable">$linkColor</span>;
+  text-shadow: <span class="variable">$linkShadow</span>;
 }
-  </code></pre>
-        </section>
-        
-        <section>
-          <h3>Let's Develop It</h3>
-          <p>Create a new javascript file (a file that ends in .js)</p>
-          <p>Link it to your html file</p>
-          <pre><code class ="html">
-&lt;html>
-  &lt;head>
-    &lt;title>My Site!&lt;/title>
-    &lt;script src="myjavascriptfile.js">&lt;/script>
-  &lt;/head>
-  &lt;body>
-    My site!
-  &lt;/body>
-&lt;/html>
 </code></pre>
-        </section>
-        
-        <section>
-          <h3>Objects -- returning values</h3>
-          <p>Access values of "properties" using "dot notation":</p>
-          <div class = "fragment">
-            <pre><code contenteditable class = "javascript">
-      var charlie = {
-        age: 8,
-        name: "Charlie Brown",
-        likes: ["baseball", "The little red-haired girl"],
-        pet: "Snoopy"
-      };
-      </code></pre>
-          </div> 
-          <div class = "fragment">
-            <pre><code contenteditable class = "javascript">
-          var pet = charlie.pet;
-            </code></pre>
-          </div>
-        </section>
-        
-        <section>
-          <h3>Objects -- returning values</h3>
-          <div class = "fragment">
-            Or using "bracket notation" (like arrays):
-            <pre><code contenteditable class = "javascript">
-          var name = charlie['name'];
-            </code></pre>
-          </div>
-          <div class = "fragment">
-            Non-existent properties will return undefined:
-            <pre><code contenteditable class = "javascript">
-          var gender = charlie.gender
-            </code></pre>
-          </div>
-        </section>
-        
-        <section>
-          <h3>Objects -- changing values</h3>
-          <p>Use dot or bracket notation with the assignment operator to change objects.</p>
-          <div class = "fragment">
-          Change existing properties:
-          <pre><code contenteditable class = "javascript">
-          charlie.name = "Chuck";
-          </code></pre>
-          </div>
-          <div class = "fragment">
-            Or add new properties:
-            <pre><code contenteditable class = "javascript">
-          charlie.gender = "male";
-            </code></pre>
-          </div>
-          <div class ="fragment">
-          You can also delete properties:
-          <pre><code contenteditable class = "javascript">
-          delete charlie.gender;
-          </code></pre>
-          </div>
-        </section>
-        
-        <section>
-          <h3>Arrays of Objects</h3>
-          <p>Arrays can hold objects too!</p>
-          <div class = "fragment">
-            <pre><code contenteditable class = "javascript">
-          var peanuts = [
-            {name: "Charlie Brown", 
-             pet: "Snoopy"},
-            {name: "Linus van Pelt",
-             pet: "Blue Blanket"}
-          ];
-            </code></pre>
-          </div>
-          <div class = "fragment">
-            That means we can use a for loop!
-            <pre><code contenteditable class = "javascript">
-  for (var i = 0; i < peanuts.length; i++) {
-    var peanut = peanuts[i];
-    console.log(peanut.name + ' has a pet named ' + peanut.pet + '.');
-  }
-          </code></pre>
-          </div>
-        </section>
-        
-        <section>
-          <h3>Objects in functions</h3>
-          <p>You can pass an object into a function as a parameter</p>
-          <pre><code contenteditable class = "javascript">
-        var peanut ={
-          name: "Charlie Brown", 
-          pet: "Snoopy"
-          };
-          </code></pre>
-          <div class = "fragment">
-            <pre><code contenteditable class = "javascript">
-  function describeCharacter(character){
-    console.log(character.name + ' has a pet named ' + character.pet + '.');
-  }
-            </code></pre>
-          </div>
-         <div class = "fragment">
-            <pre><code contenteditable class = "javascript">
-              describeCharacter(peanut);
-            </code></pre>
-          </div>
-        </section>
-        
-        <!-- Exercise -->
-        <section>
-          <h3>Let's Develop It</h3>
-          <ul>
-            <li>Add another link that calls the function myFriends() onclick</li>
-            <li>Add a new function to the javascript myFriends</li>
-            <li>In the function, create an array of friends objects, with their names and hair colors</li>
-            <li>Use a for loop to go through each friend and describe them</li>
-            <li>Alert the results</li>
-            <li>Bonus -- make a separate functions that describe the friends</li>
-          </ul>
-        </section>
-        
-        <!-- DOM -->
-        <section>
-          <h3>DOM</h3>
-          <ul>
-            <li class = "fragment">"Document Object Model"</li>
-            <li class = "fragment">A way to interact with the HTML elements on a webpage</li>
-            <li class = "fragment">Chrome and Firefox -- Right click --> Inspect Element</li>
-          </ul>
-          <img src = "images/dom.png" class = "fragment">
-        </section>
-        
-        <section>
-          <h3>DOM Interaction</h3>
-          <p class = "fragment">On every webpage, the document object gives us ways of accessing and changing the DOM.</p>
-          <p class = "fragment left-align">Every DOM "node" has properties. They are connected like a family tree.</p>   
-          <p class = "fragment left-align"> Parent (parentNode), children (childNodes, firstChild), siblings (prevSibling, nextSibling)</p> 
-          <div class = "fragment">
-            <pre><code contenteditable class = "javascript">
-  var bodyNode = document.body; // &lt;body>
-  var htmlNode = document.body.parentNode; // &lt;html>
-  for (var i = 0; i < document.body.childNodes.length; i++) {
-    var childNode = document.body.childNodes[i];
-    //could be &lt;p>, &lt;h1>, etc.
-    //any html element
-  }
-          </code></pre>
-          </div>
-        </section>
-        
-        <section>
-          <h3>DOM Interaction: Easier</h3>
-          <p class = "fragment blue">Finding every element on the page by siblings and children is time consuming!</p>
-          <p class = "fragment">The document object also provides methods for finding DOM nodes without going one by one</p>
-          <div class = "fragment">
-            Find element by id
-            <pre><code contenteditable class = "html">
-&lt;img id="mainpicture" src="http://girldevelopit.com/assets/pink-logo.png">
-            </code></pre>
-            <pre><code contenteditable class = "javascript">
-var img = document.getElementById('mainpicture');            
-            </code></pre>
-          </div>
-        </section>
-        
-        <section>
-          <h3>DOM Interaction: Easier</h3>
-          <div>
-            Find element by tag name (p, li, div, etc.)
-            <pre><code contenteditable class = "html">
-          &lt;li class="peanut">Charlie Brown&lt;/li>
-          &lt;li class="peanut">Linus van Pelt&lt;/li>
-            </code></pre>
-          <pre><code contenteditable class = "javascript">
-      var listItems = document.getElementsByTagName('li');
-      for (var i =0; i < listItems.length; i++) {
-        var listItem = listItems[i];
-      }
-          </code></pre>
-          </div>
-        </section>
-        
-        <section>
-          <h3>DOM Interaction: Easiest - use jQuery</h3>
-          <div>
-            Find element by tag name (p, li, div, etc.) using jQuery!
-            <pre><code contenteditable class = "html">
-          &lt;li class="peanut">Charlie Brown&lt;/li>
-          &lt;li class="peanut">Linus van Pelt&lt;/li>
-            </code></pre>
-          <pre><code contenteditable class = "javascript">
-      var listItems = $('li');
-      for (var i =0; i < listItems.length; i++) {
-        var listItem = listItems[i];
-      }
-          </code></pre>
-          </div>
+</td>
+<td>
+            <p>CSS output:</p>
+            <pre><code contenteditable class ="sass css">a {
+  color: #000;
+  text-shadow: #666;
+}</code></pre>
+<p class="output-example" style="color: #000; text-shadow: 3px 2px #666;">Example of output style</p>
+          </tr></td></table>
         </section>
 
-        <!-- Methods-->
-        <section>
-          <h3>Methods</h3>
-          <ul>
-            <li>Methods are special functions</li>
-            <li>They affect or return a value for a specific object</li>
-            <li>Used with dot notation</li>
-          </ul>
-          <div class = "fragment">
-            Previously seen example:
-            <pre><code contenteditable class = "javascript">
-  var candy = ['Gummy Bears', 'Sour Patch Kids', 'Swedish Fish'];
-  var length = candy.length;
-            </code></pre>
-          </div>
-        </section>
-        
-        <!-- Attributes-->
-        <!--section>
-          <h3>DOM Nodes -- Attributes</h3>
-          <p>We can use node methods to set and retrieve attributes</p>
-          <div class = "fragment">
-            getAttribute/setAttribute
-            <pre><code contenteditable class = "javascript">
- var img = document.getElementById('mainpicture');
- img.getAttribute('src');
- img.setAttribute('src', 'http://girldevelopit.com/assets/pink-logo.png');
-            </code></pre>
-            
-            <pre><code contenteditable class = "javascript">
- var img = document.getElementById('mainpicture');
- img.getAttribute('class');
- img.setAttribute('class', 'picture-class');
-            </code></pre>
-          </div>
-        </section-->
-        
-        <!-- Inner HTML-->
-        <!--section>
-          <h3>DOM innerHTML</h3>
-          <p>Each DOM node has an innerHTML property:</p>
-        <div class = "fragment">
-          <pre><code contenteditable class = "javascript">
-        document.body.innerHTML;
-          </code></pre>
-        </div>
-        <div class = "fragment">
-        You can set innerHTML yourself to change the contents of the node:
-          <pre><code contenteditable class = "javascript">
-document.body.innerHTML = '&lt;p>I changed the whole page!&lt;/p>';
-          </code></pre>
-        </div>
-        <div class = "fragment">
-        You can also just add to the innerHTML instead of replace everything:
-          <pre><code contenteditable class = "javascript">
-document.body.innerHTML += "...just adding this bit at the end of the page.";
-          </code></pre>
-        </div>
-        </section-->
-        
-        <!-- Create element and append child-->
-        <!--section>
-          <h3>DOM Modifying</h3>
-          <p>The document object can create new nodes:</p>
-          <div class = "fragment">
-            <pre><code contenteditable class = "javascript">
-              document.createElement(tagName);
-              document.createTextNode(text);
-              document.appendChild();
-            </code></pre>
-          </div>
-          <div class = "fragment">
-            <pre><code contenteditable class = "javascript">
-var newImg = document.createElement('img');
-newImg.src = 'http://girldevelopit.com/assets/pink-logo.png';
-document.body.appendChild(newImg);
-            </code></pre>
-          </div>
-          <div class = "fragment">
-            <pre><code contenteditable class = "javascript">
-var newParagraph = document.createElement('p');
-var paragraphText = document.createTextNode('New Paragraph!');
-newParagraph.appendChild(paragraphText);
-document.body.appendChild(newParagraph);
-      </code></pre>
-          </div>
-          
-        </section-->
-        <!-- Including jquery-->
-        <section>
-          <h3>Including jQuery</h3>
-          Two ways to include jQuery on your page:
-          <div class = "fragment">
-            Download the library, store it locally:
-          <pre><code contenteditable class = "html">
-  &lt;head>
-    &lt;script type="text/javascript" src="jquery.js">&lt;/script>
-  &lt;/head>
-          </code></pre>
-          </div>
-          <div class = "fragment">
-          Include the the live library:
-          <pre><code contenteditable class = "html">
-  &lt;head>
-    &lt;script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js">
-    &lt;/script>
-  &lt;/head>
-          </code></pre>
-          </div>
-          <div class = "fragment">
-            Note: live code can change! It's always best to download
-          </div>
-        </section>
-        
-        <!-- Selectors-->
-        <section>
-          <h3>jQuery Selectors</h3>
-          <p>Instead of document.getElementById() and document.getElementsByTagName()... </p>
-          <p> jQuery selectors let you get elements by: </p>
-          <ul>
-            <li>Element name (div, img)
-            <pre><code contenteditable class = "javascript">
-      var divs = $("div"); // All divs on page
-      var pics = $("img"); // All images on page
-            </code></pre>
-            </li>
-            <li class = "fragment">ID name (#logo)
-            <pre><code contenteditable class = "javascript">
-var logo = $("#logo"); //img with id logo
-            </code></pre>
-            </li>
-            <li class = "fragment">Class name (.drawing)
-            <pre><code contenteditable class = "javascript">
-var drawings = $(".drawing"); //All images with class drawing 
-            </code></pre> 
-            </li>
-          </ul>
-        </section>
-        <!-- Actions-->
-        <section>
-          <h3>jQuery Actions</h3>
-          <div class = "left-align">
-            <p class = "fragment">jQuery has hundreds of actions that can be performed on any element</p>
-            <p class = "fragment">All the actions are methods</p>
-            <p class = "fragment">As methods they are called with dot notation</p>
-          </div>
-          <div class = "fragment">
-            Action format
-            <pre><code contenteditable class = "javascript">
-        $(selector).action();     
-            </code></pre>
-          </div>
-        </section>
-        
-        <!-- Attributes and css-->
-        <section>
-          <h3>Updating HTML attributes</h3>
-          <div>
-            <pre><code contenteditable class = "html">
-  &lt;img id="logo" src="http://girldevelopit.com/assets/pink-logo.png">         
-            </code></pre>
-          </div>
-          <div>
-            Attribute get and set
-            <pre><code contenteditable class = "javascript">
-  var img = $('#logo');
-  img.attr('src');
-  img.attr('src', 'http://girldevelopit.com/assets/pink-logo.png');
-            </code></pre>
-          </div>
-          <!--div class = "fragment">
-            CSS property get and set
-            <pre><code contenteditable class = "javascript">
-  var img = $('#logo');
-  img.css('width');
-  img.css('width', '200px');
-            </code></pre>
-          </div-->
+                <section class="present">
+          <h3>Color Functions</h3>
+          <p class="left-align">This is the <span class="blue">darken</span> function:</p>
+          <table class="code-compare">
+            <tr><td>
+            <p>Sass input:</p>
+            <pre><code contenteditable class ="sass css"><span class="variable">$background</span>: #ff0000; // red
+<span class="variable">$text</span>: darken($background,50%);
+body {
+  color: <span class="variable">$text</span>;
+  background: <span class="variable">$background</span>;
+}
+</code></pre>
+</td>
+<td>
+            <p>CSS output:</p>
+            <pre><code contenteditable class ="sass css">body {
+  color: #990000;
+  background: #ff0000;
+}</code></pre>
+          <p class="output-example" style="background-color: #f00; color: #900">Example of output style</p>
+
+          </tr></td></table>
         </section>
 
-   <!-- Append and prepend-->
-        <section>
-          <h3>Append and Prepend</h3>
-          <div>
-            <pre><code contenteditable class = "html">
-  &lt;div class = "results">Boo!&lt;/div>         
-            </code></pre>
-          </div>
-          <div class = "fragment">
-            Append html
-            <pre><code contenteditable class = "javascript">
-    var div = $('#results');
-    div.append('Additional html');
-            </code></pre>
-          </div>
-          <div class = "fragment">
-            Prepend html
-            <pre><code contenteditable class = "javascript">
-    var div = $('#results');
-    div.prepend('Additional html (on top)');
-            </code></pre>
-          </div>
+
+        <section class="present">
+          <h3>Color Functions</h3>
+          <p class="left-align">This is the <span class="blue">grayscale</span> function:</p>
+          <table class="code-compare">
+            <tr><td>
+            <p>Sass input:</p>
+            <pre><code contenteditable class ="sass css"><span class="variable">$background</span>: #ff0000; // red
+<span class="variable">$text</span>: darken($background,50%);
+body {
+  background: <span class="variable">grayscale(#f00)</span>;
+  color: <span class="variable">grayscale(darken(#f00, 50%))</span>;
+}
+</code></pre>
+</td>
+<td>
+            <p>CSS output:</p>
+            <pre><code contenteditable class ="sass css">body {
+  background: #000;
+  color: #808080;
+}</code></pre>
+          <p class="output-example grayscale">Example of output style</p>
+
+          </tr></td></table>
         </section>
 
         <!-- Exercise-->
         <section>
           <h3>Let's Develop It</h3>
           <ul>
-            <li>Put it all together</li>
-            <li>Add jQuery file to your page</li>
-            <li>Modify your existing three functions to add new elements to the screen instead of firing an alert</li>
-            <li>Keep in mind how to find an element, how to append an element, and how to change an html attribute of an element</li>
-            <li>There are lots of possible solutions! Be creative!</li>
-          </ul>
+          <li>Add some variables to your _utilities.scss file that use color functions</li>
+          <li>Use these variables in your styles.scss file</li>
+          <li>Refer to the <a href="http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html">sass-lang.com docs</a> for list of functions and how to use them</li>
+          <li>Compile to CSS and refresh your index page to see your changes</li>
+        </ul>
+          <pre><code class ="sass css">lighten(#000, 20%)
+darken(#eee, 30%)
+grayscale(#2a79af)
+saturate(#2a79af, 40%)
+desaturate(#2a79af, 20%)</code></pre>
         </section>
-
+        
 
         <!-- -->
         <section>

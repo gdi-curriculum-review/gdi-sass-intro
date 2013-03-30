@@ -10,7 +10,7 @@ The course is meant to be taught in 2 two-hour sections. Each of the slides and 
 
 
 #### Part 1: Introduction to Sass. What is it? Why does it matter?
-We look at how Sass makes writing CSS easier, and set up our environment. You will install Ruby and Sass, learn basics of the command line and get your files set up to compile Sass into CSS. Then we will structure our Sass files into a base file, header file, main file, and footer file.
+We look at how Sass makes writing CSS easier, and set up our environment. You will install Ruby and Sass, learn basics of the command line and get your files set up to compile Sass into CSS.
 
 #### Part 2: Building Blocks of Sass.
 You'll learn basic Sass concepts including variables, nesting, color functions and mix-ins. Students will create a basic Sass stylesheet with color and font variables, nested styles, and simple mix-ins for reusing CSS.
