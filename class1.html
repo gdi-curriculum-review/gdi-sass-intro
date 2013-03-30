@@ -462,8 +462,11 @@ $defaultPadding: $defaultMargin;
           <ul>
             <li>Create a new Sass stylesheet called _utilities.scss</li>
             <li>Don't forget to put it in the right folder</li>
-            <li>In your new stylesheet, create some variables</li>
-            <li>Make some new variables, and base some variables on your existing styles - look for colors, fonts, and size values</li>
+            <li>Import your new stylesheet into styles.scss by putting the following code at the top of styles.scss:
+<pre><code contenteditable class = "sass css">@import "_utilities";
+</code></pre>                     
+            </li>
+            <li>In your new stylesheet, make some new variables, and base some variables on your existing styles - look for colors, fonts, and size values</li>
             <li>Run the <a href="#/17" target="_blank">sass --watch command</a> to see your changes in the browser</li>
           </ul>
         </section>
@@ -621,6 +624,102 @@ saturate(#2a79af, 40%)
 desaturate(#2a79af, 20%)</code></pre>
         </section>
         
+         <section class="present">
+          <h3>Comments</h3>
+          <p class="left-align">Traditional CSS comments are downloaded by the user. With Sass, we can specify whether comments are left in the final CSS code or are only visible to the developer:</p>
+          <table class="code-compare">
+            <tr><td>
+            <p>Sass input:</p>
+            <pre><code contenteditable class ="sass css"><span class="variable">$background</span>: #ff0000; // red
+<span class="variable">$text</span>: darken($background,50%);
+body {
+  background: <span class="variable">grayscale(#f00)</span>;
+  color: <span class="variable">grayscale(darken(#f00, 50%))</span>;
+}
+</code></pre>
+</td>
+<td>
+            <p>CSS output:</p>
+            <pre><code contenteditable class ="sass css">body {
+  background: #000;
+  color: #808080;
+}</code></pre>
+          <p class="output-example grayscale">Example of output style</p>
+
+          </tr></td></table>
+        </section>
+
+         <section class="present">
+          <h3>Comments</h3>
+          <p class="left-align">This is the <span class="blue">grayscale</span> function:</p>
+          <table class="code-compare">
+            <tr><td>
+            <p>Sass input:</p>
+            <pre><code contenteditable class ="sass css"><span class="variable">$background</span>: #ff0000; // red
+<span class="variable">$text</span>: darken($background,50%);
+body {
+  background: <span class="variable">grayscale(#f00)</span>;
+  color: <span class="variable">grayscale(darken(#f00, 50%))</span>;
+}
+</code></pre>
+</td>
+<td>
+            <p>CSS output:</p>
+            <pre><code contenteditable class ="sass css">body {
+  background: #000;
+  color: #808080;
+}</code></pre>
+          <p class="output-example grayscale">Example of output style</p>
+
+          </tr></td></table>
+        </section>
+
+         <section class="present">
+          <h3>Mixins</h3>
+          <p class="left-align">Mixins are the Sass name for functions. If you've done any Javascript or other programming, they work like functions or methods.</p>
+          <table class="code-compare">
+            <tr><td>
+            <p>Sass input:</p>
+            <pre><code contenteditable class ="sass css"><span class="value">@mixin dropshadow(<span class="variable">$text</span>)</span> {
+  color: <span class="variable">$text</span>;
+  text-shadow: 2px 4px lighten(<span class="variable">$text</span>, 50%);
+}
+p {
+  <span class="value">@include dropshadow(black);</span>
+}
+</code></pre>
+</td>
+<td>
+            <p>CSS output:</p>
+            <pre><code contenteditable class ="sass css">p {
+  color: black;
+  text-shadow: 2px 4px #808080;
+}</code></pre>
+          <p class="output-example" style="color: black; text-shadow: 2px 4px #808080; background: transparent;">Example of output style</p>
+
+          </tr></td></table>
+        </section>
+
+        <!-- Exercise-->
+        <section>
+          <h3>Let's Develop It</h3>
+          <ul>
+          <li>Add some mix-ins to your _utilities.scss file</li>
+          <li>Use these mix-ins in your styles.scss file</li>
+          <li>Compile to CSS and refresh your index page to see your changes</li>
+        </ul>
+          <pre><code class ="sass css">@mixin name {
+  property: value;
+}
+@mixin example($argument) {
+  property: value;
+  property: $argument;
+}
+</code></pre>
+        </section>
+        
+
+
 
         <!-- -->
         <section>
