@@ -630,50 +630,22 @@ desaturate(#2a79af, 20%)</code></pre>
           <table class="code-compare">
             <tr><td>
             <p>Sass input:</p>
-            <pre><code contenteditable class ="sass css"><span class="variable">$background</span>: #ff0000; // red
-<span class="variable">$text</span>: darken($background,50%);
-body {
-  background: <span class="variable">grayscale(#f00)</span>;
-  color: <span class="variable">grayscale(darken(#f00, 50%))</span>;
-}
+            <pre><code contenteditable class ="sass css"><span class="comment">/* Multiline comments will appear
+ in the final CSS file */</span>
+<span class="value">//This single-line comment won't</span>
+a { color: blue; }
 </code></pre>
 </td>
 <td>
             <p>CSS output:</p>
-            <pre><code contenteditable class ="sass css">body {
-  background: #000;
-  color: #808080;
-}</code></pre>
-          <p class="output-example grayscale">Example of output style</p>
+            <pre><code contenteditable class ="sass css"><span class="comment">/* Multiline comments will appear
+ in the final CSS file */</span>
+  a { color: blue; }</code></pre>
 
           </tr></td></table>
         </section>
 
-         <section class="present">
-          <h3>Comments</h3>
-          <p class="left-align">This is the <span class="blue">grayscale</span> function:</p>
-          <table class="code-compare">
-            <tr><td>
-            <p>Sass input:</p>
-            <pre><code contenteditable class ="sass css"><span class="variable">$background</span>: #ff0000; // red
-<span class="variable">$text</span>: darken($background,50%);
-body {
-  background: <span class="variable">grayscale(#f00)</span>;
-  color: <span class="variable">grayscale(darken(#f00, 50%))</span>;
-}
-</code></pre>
-</td>
-<td>
-            <p>CSS output:</p>
-            <pre><code contenteditable class ="sass css">body {
-  background: #000;
-  color: #808080;
-}</code></pre>
-          <p class="output-example grayscale">Example of output style</p>
-
-          </tr></td></table>
-        </section>
-
+        
          <section class="present">
           <h3>Mixins</h3>
           <p class="left-align">Mixins are the Sass name for functions. If you've done any Javascript or other programming, they work like functions or methods.</p>
@@ -706,7 +678,7 @@ p {
           <ul>
           <li>Add some mix-ins to your _utilities.scss file</li>
           <li>Use these mix-ins in your styles.scss file</li>
-          <li>Compile to CSS and refresh your index page to see your changes</li>
+          <li>Add different types of comments that describe what your mix-ins do, and check the final CSS in the browser inspector to see if they appear</li> 
         </ul>
           <pre><code class ="sass css">@mixin name {
   property: value;

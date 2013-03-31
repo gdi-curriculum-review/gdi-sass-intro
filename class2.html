@@ -1,1126 +1,740 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
 
-		<title>Class 2 (Sass, Girl Develop IT)</title>
+    <title>Class 2 (Sass, Girl Develop It)</title>
 
-		<meta name="description" content="This is the official Girl Develop It Intro to Sass course. Materials by Catherine Farman.
+    <meta name="description" content="This is the official Girl Develop It Intro to Sass course. Materials by Catherine Farman.
 
     The course is meant to be taught in 2 two-hour sections. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
-		<meta name="author" content="Girl Develop It">
+    <meta name="author" content="Girl Develop It">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
-		<link rel="stylesheet" href="reveal.js/css/reveal.css">
-		<link rel="stylesheet" href="reveal.js/css/theme/gdisunny.css" id="theme">
+    <link rel="stylesheet" href="reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="reveal.js/css/theme/css/gdisunny.css" id="theme">
 
-		<!-- For syntax highlighting -->
+    <!-- For syntax highlighting -->
     <!-- light editor--><link rel="stylesheet" href="reveal.js/lib/css/light.css">
     <!-- dark editor<link rel="stylesheet" href="reveal.js/lib/css/dark.css"> -->
 
-		<!-- If use the PDF print sheet so students can print slides-->
-		
-		<link rel="stylesheet" href="reveal.js/css/print/pdf.css" type="text/css" media="print">
+    <!-- If use the PDF print sheet so students can print slides-->
+    
+    <link rel="stylesheet" href="reveal.js/css/print/pdf.css" type="text/css" media="print">
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
 
-	<body>
+  <body>
 
-		<div class="reveal">
+    <div class="reveal">
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-			  <!-- Opening slide -->
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <!-- Opening slide -->
         <section>
           <img src = "images/gdi_logo_badge.png" class="badge">
-          <h3>Beginning Javascript</h3>
+          <h3>Intro to Sass</h3>
           <h4>Class 2</h4>
         </section>
-        
-        <!-- Welcome-->
+
+        <!-- Opening slide -->
         <section>
-          <h3>Welcome!</h3>
+          <h3>Download Class 2 Files:</h3>
+          <p class="blue" style="font-size: 3em; text-decoration: underline;">cfarm.co/sass2</p>
+        </section>
+        
+        <section>
+          <h3>Review</h3>
           <div class = "left-align">
-          <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
-          <p class ="green">Some "rules"</p>
+          <p class = "blue">Reviewing from yesterday.</p>
           <ul>
-            <li>We are here for you!</li>
-            <li>Every question is important</li>
-            <li>Help each other</li>
-            <li>Have fun</li>
+            <li>Who are you?</li>
+            <li>What do you hope to get out of the class?</li>
+            <li>What's something no one in this room knows about you?</li>
           </ul>
           </div>
-        </section>
-        <!-- Link to Slides-->
-        <section>
-          <h3>Updated Slides for Class 2:</h3>
-          <p style="font-size: 4em; text-decoration: underline;" class="blue">cfarm.co/2</p>
-        </section>
-        <!-- Libraries & APIs-->
-        <section>
-          <h3>Class 2</h3>
-          <ul>
-            <li>Review Class 1</li>
-              <ul>
-                <li>Objects</li>
-              </ul>
-            <li>Intro to jQuery</li>
-            <li>APIs, REST & AJAX
-              <ul>
-                <li>Meetup.com API</li>
-                <li>Bonus: jQuery UI & Plugins</li>
-              </li>
-          </ul>
-        </section>
-        
-    <!-- Objects-->
-        <section>
-          <h3>Objects</h3>
-          <p>Objects are a data type that let us store a collection of properties and methods.</p>
-          <pre><code contenteditable class = "javascript">
-          var objectName = { 
-            propertyName: propertyValue,
-            propertyName: propertyValue,
-            ...
-          };
-          </code></pre>
-          <div class = "fragment">
-            <pre><code contenteditable class = "javascript">
-      var charlie = {
-        age: 8,
-        name: "Charlie Brown",
-        likes: ["baseball", "The little red-haired girl"],
-        pet: "Snoopy"
-      };
-          </code></pre>
-          </div>
-        </section>
-        
-<!-- Objects-->
-        <section>
-          <h3>Objects</h3>
-          <p>Objects are a data type that let us store a collection of properties and methods.</p>
-          <div>
-            <pre><code contenteditable class = "javascript">
-      var address = {
-        name: "Indy Hall",
-        street: "22 N. 3rd St",
-        city: "Philadelphia",
-        phone: ["555-2222", "555-1122"]
-      };
-          </code></pre>
-          </div>
-          <p>Things you might use objects for:
-          <ul>
-            <li class="fragment">Storing entries of an address book</li>
-            <li class="fragment">Information about an image in a slideshow</li>
-            <li class="fragment">Questions and answers in a quiz app!</li>
-          </ul>
         </section>
 
+        <!--What does Sass do? -->
         <section>
-          <h3>Objects -- returning values</h3>
-          <p>Access values of "properties" using "dot notation":</p>
-          <div class = "fragment">
-            <pre><code contenteditable class = "javascript">
-      var charlie = {
-        age: 8,
-        name: "Charlie Brown",
-        likes: ["baseball", "The little red-haired girl"],
-        pet: "Snoopy"
-      };
-      </code></pre>
-          </div> 
-          <div class = "fragment">
-            <pre><code contenteditable class = "javascript">
-          var pet = charlie.pet;
-            </code></pre>
-          </div>
+          <h3>What does Sass do?</h3>
+          <div class="left-align">
+            Variables:
+            <pre><code contenteditable class="sass css">$brandColor: #f90000;
+$accentColor: #fff;
+header {
+  background-color: $brandColor;
+  color: $accentColor;
+}
+header a { color: $accentColor; }</code></pre>  
+</div>
         </section>
-        
+
+        <!--What does Sass do 2? -->
         <section>
-          <h3>Objects -- returning values</h3>
-          <div class = "fragment">
-            Or using "bracket notation" (like arrays):
-            <pre><code contenteditable class = "javascript">
-          var name = charlie['name'];
-            </code></pre>
-          </div>
-          <div class = "fragment">
-            Non-existent properties will return undefined:
-            <pre><code contenteditable class = "javascript">
-          var gender = charlie.gender
-            </code></pre>
-          </div>
-        </section>
-        
-        <section>
-          <h3>Objects -- changing values</h3>
-          <p>Use dot or bracket notation with the assignment operator to change objects.</p>
-          <div class = "fragment">
-          Change existing properties:
-          <pre><code contenteditable class = "javascript">
-          charlie.name = "Chuck";
-          </code></pre>
-          </div>
-          <div class = "fragment">
-            Or add new properties:
-            <pre><code contenteditable class = "javascript">
-          charlie.gender = "male";
-            </code></pre>
-          </div>
-          <div class ="fragment">
-          You can also delete properties:
-          <pre><code contenteditable class = "javascript">
-          delete charlie.gender;
-          </code></pre>
-          </div>
-        </section>
-        
-        <section>
-          <h3>Arrays of Objects</h3>
-          <p>Arrays can hold objects too!</p>
-          <div class = "fragment">
-            <pre><code contenteditable class = "javascript">
-          var peanuts = [
-            {name: "Charlie Brown", 
-             pet: "Snoopy"},
-            {name: "Linus van Pelt",
-             pet: "Blue Blanket"}
-          ];
-            </code></pre>
-          </div>
-          <div class = "fragment">
-            That means we can use a for loop!
-            <pre><code contenteditable class = "javascript">
-  for (var i = 0; i < peanuts.length; i++) {
-    var peanut = peanuts[i];
-    console.log(peanut.name + ' has a pet named ' + peanut.pet + '.');
+          <h3>What does Sass do?</h3>
+          <div class="left-align">
+            Nesting:          
+            <pre><code contenteditable class="sass css">header {
+  background-color: $brandColor;
+  color: $accentColor;
+  a {
+    color: $accentColor;
   }
-          </code></pre>
-          </div>
+}</code></pre>
+</div>
         </section>
-        
+
+        <!--What does Sass do 3? -->
         <section>
-          <h3>Objects in functions</h3>
-          <p>You can pass an object into a function as a parameter</p>
-          <pre><code contenteditable class = "javascript">
-        var peanut ={
-          name: "Charlie Brown", 
-          pet: "Snoopy"
-          };
-          </code></pre>
-          <div class = "fragment">
-            <pre><code contenteditable class = "javascript">
-  function describeCharacter(character){
-    console.log(character.name + ' has a pet named ' + character.pet + '.');
-  }
-            </code></pre>
-          </div>
-         <div class = "fragment">
-            <pre><code contenteditable class = "javascript">
-              describeCharacter(peanut);
-            </code></pre>
-          </div>
+          <h3>What does Sass do?</h3>
+          <div class="left-align">
+            Mix-ins:          
+            <pre><code contenteditable class="sass css">@mixin visually-hidden {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.image-replace {
+  @include visually-hidden;
+  background: url(logo.png) no-repeat;
+}
+</code></pre>
+</div>
         </section>
-        
-        <!-- Exercise 1 -->
+
+        <!--What does Sass do 4? -->
         <section>
-          <h3>Let's Develop It</h3>
-          <ul>
-            <li>Add another link that calls the function myFriends() onclick</li>
-            <li>Add a new function to the javascript myFriends</li>
-            <li>In the function, create an array of friends objects, with their names and ages</li>
-            <li>Use a for loop to go through each friend and describe them</li>
-            <li>Alert the results</li>
-            <li>Bonus -- make a separate function that describe the friends</li>
-          </ul>
-        </section>
-        
-        <!-- DOM -->
-        <section>
-          <h3>DOM</h3>
-          <ul>
-            <li class = "fragment">"Document Object Model"</li>
-            <li class = "fragment">A way to interact with the HTML elements on a webpage</li>
-            <li class = "fragment">Chrome and Firefox -- Right click --> Inspect Element</li>
-          </ul>
-          <img src = "images/dom.png" class = "fragment">
-        </section>
-        
-        <section>
-          <h3>DOM Tree</h3>
-          <p class = "left-align">Every DOM "node" has properties. They are connected like a family tree.</p>   
-          <ul>
-            <li> Parent</li>
-            <ul>
-              <li>children, siblings</li>
+          <h3>What does Sass do?</h3>
+          <div class="left-align">
+            More examples:
+            <ul>       
+              <li><a target="_blank" href="http://codepen.io/cfarm/pen/jteAG">Cross-Browser CSS3 Gradients</a></li>
+              <li><a target="_blank" href="http://codepen.io/cfarm/pen/rkEIo">Cross-Browser Box-shadow (drop shadow) effects</a></li>
+              <li><a target="_blank" href="http://codepen.io/andrewboyd/pen/LmIxi">Inner Text Shadow effect</a></li>
+              <li><a target="_blank" href="http://codepen.io/krisbulman/pen/ACnHl">Animated CSS Progress Bars</a></li>
+              <li><a target="_blank" href="http://codepen.io/canarymason/details/BFlHD">Multiple CSS Animations in a sequence</a></li>
+              <li><a target="_blank" href="http://oddbird.net/demos/susy-off-canvas/">Off-Canvas Responsive Layout</a></li>
+
             </ul>
-          </ul>
-          <img src="images/domtree.gif" title="The DOM tree">
-          <!--div class = "fragment">
-            <pre><code contenteditable class = "javascript">
-  var bodyNode = document.body; // &lt;body>
-  var htmlNode = document.body.parentNode; // &lt;html>
-  for (var i = 0; i < document.body.childNodes.length; i++) {
-    var childNode = document.body.childNodes[i];
-    //could be &lt;p>, &lt;h1>, etc.
-    //any html element
-  }
-          </code></pre>
-          </div-->
-        </section>
-        
-        <section>
-          <h3>DOM Interaction</h3>
-          <p>On every webpage, the document object gives us ways of accessing and changing the DOM.</p>
-          <div>
-            <pre><code contenteditable class = "javascript">
-  var bodyNode = document.body; // &lt;body>
-  var htmlNode = document.body.parentNode; // &lt;html>
-  for (var i = 0; i < document.body.childNodes.length; i++) {
-    var childNode = document.body.childNodes[i];
-    //could be &lt;p>, &lt;h1>, etc.
-    //any html element
-  }
-          </code></pre>
-          </div>
-          </section>
-
-          <section>
-          <h3>DOM Interaction</h3>
-          <div>
-            Find element by id
-            <pre><code contenteditable class = "html">
-&lt;img id="mainpicture" src="http://girldevelopit.com/assets/pink-logo.png">
-            </code></pre>
-            <pre><code contenteditable class = "javascript">
-var img = document.getElementById('mainpicture');            
-            </code></pre>
-          </div>
-        </section>
-        
-        <section>
-          <h3>DOM Interaction</h3>
-          <div>
-            Find element by tag name (p, li, div, etc.)
-            <pre><code contenteditable class = "html">
-          &lt;li class="peanut">Charlie Brown&lt;/li>
-          &lt;li class="peanut">Linus van Pelt&lt;/li>
-            </code></pre>
-          <pre><code contenteditable class = "javascript">
-      var listItems = document.getElementsByTagName('li');
-      for (var i =0; i < listItems.length; i++) {
-        var listItem = listItems[i];
-      }
-          </code></pre>
-          </div>
-        </section>
-        
-        <section>
-          <h3>DOM Interaction: Easier - use jQuery</h3>
-          <div>
-            Find element by tag name (p, li, div, etc.) using jQuery!
-            <pre><code contenteditable class = "html">
-          &lt;li class="peanut">Charlie Brown&lt;/li>
-          &lt;li class="peanut">Linus van Pelt&lt;/li>
-            </code></pre>
-          <pre><code contenteditable class = "javascript">
-      var listItems = $('li');
-      for (var i =0; i < listItems.length; i++) {
-        var listItem = listItems[i];
-      }
-          </code></pre>
           </div>
         </section>
 
-        <!-- Including jquery-->
+        <!-- Tools -->
         <section>
-          <h3>Including jQuery</h3>
-          Two ways to include jQuery on your page:
-          <div class = "fragment">
-            Download the library, store it locally:
-          <pre><code contenteditable class = "html">
-  &lt;head>
-    &lt;script type="text/javascript" src="jquery.js">&lt;/script>
-  &lt;/head>
-          </code></pre>
-          </div>
-          <div class = "fragment">
-          Include the the live library:
-          <pre><code contenteditable class = "html">
-  &lt;head>
-    &lt;script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js">
-    &lt;/script>
-  &lt;/head>
-          </code></pre>
-          </div>
-          <div>
+          <h3>Tools</h3>
           <ul>
-          <li class = "fragment">
-            Download is best for testing and development</li>
-            <li class="fragment">Link to a hosted library like Google for production websites</li>
+            <li>
+              <div><span class = "green">Browser:</span> Chrome or Firefox</div>
+             </li>
+             <li>
+              <span class = "green">Development Toolkit:</span> Chrome Inspector or Firebug for Firefox</li>
+              <li><span class="green">Command Line</span> 
+                <ul>
+                  <li>Terminal for Mac (Find in Applications> Utilities)</li>
+                  <li>Git for Windows (<a target="_blank" href="https://openhatch.org/missions/windows-setup/install-git-bash">see how to install</a>)
+                  </li>
+                </ul>
+             </li>
+             <li>
+              <div class = "green">Text Editor:</div>
+              <div><a target="_blank" href="http://www.sublimetext.com/2">Sublime Text - Mac or Windows</a><br>
+                <a target="_blank" href="http://www.sublimetext.com/2">sublimetext.com/2</a></div>
+             </li>
           </ul>
-          </div>
-        </section>
+        </section>        
         
-        <!-- What is jQuery-->
+        <!-- Terms-->
         <section>
-          <h3>What is jQuery?</h3>
-          <p class = "fragment">jQuery is a <span class = "green">library</span> of JavaScript functions.</p>
-          <p class = "fragment">It contains many functions to help simplify your programming, including:</p>
-          <ul>
-            <li class = "fragment">HTML element selection &amp; manipulation</li>
-            <li class = "fragment">CSS manipulation</li>
-            <li class = "fragment">HTML events</li>
-            <li class = "fragment">JavaScript effects and animations</li>
-          </ul>
-        </section>
-  
-        <!-- What is a library-->
-        <section>
-          <h3>What is a library?</h3>
-          <ul>
-            <li class = "fragment">Software libraries hold functions (not books!)</li>
-            <li class = "fragment">When you include a library, you can use all the functions in that library</li>
-            <li class = "fragment">That means: <span class = "pink">you get to take advantage of other people's experience!</li>
-            <li class = "fragment">And... <span class ="blue">Save time!</span></li>
-          </ul>
-        </section>
-
-        <section>
-          <h3>Why use jQuery?</h3>
-          <ul>
-            <li class = "fragment">The most popular JavaScript library</li>
-            <li class = "fragment">jQuery empowers you to "write less, do more."</li>
-            <li class = "fragment">Great <a href = "http://docs.jquery.com/" target = "_blank">documentation and tutorials</a></li>
-            <li class = "fragment">Used by nearly 20 million(!) websites</li>
-          </ul>
-        </section>
-        
-        <section>
-          <h3>jQuery: A Brief History</h3>
-          <ul>
-            <li class = "fragment">jQuery was created by John Resig, a JavaScript tool developer at Mozilla.</li>
-            <li class = "fragment">January 2006: John announced jQuery at BarCampNYC: BarCampNYC Wrap-up</li>
-            <li class = "fragment">September 2007: A new user interface library is added to jQuery: jQuery UI: Interactions and Widgets</li>
-            <li class = "fragment">September 2008: Microsoft and Nokia announce their support for jQuery</li>
-            <li class = "fragment">December 2009: jQuery wins .Net Magazine's Award for Best Open Source Application</li>
-          </ul>
-        </section>
-        
-        <!-- Selectors-->
-        <section>
-          <h3>jQuery Selectors</h3>
-          <p>Remember <a href="#/14">document.getElementById()</a> and <a href="#/15">document.getElementsByTagName()</a>? </p>
-          <p class = "fragment"> jQuery selectors let you get elements by: </p>
-          <ul>
-            <li class = "fragment">Element name (div, p)
-            <pre><code contenteditable class = "javascript">
-      var divs = $("div"); // All divs on page
-            </code></pre>
-            </li>
-            <li class = "fragment">ID name (#logo) & class name(.drawing)
-            <pre><code contenteditable class = "javascript">
-var logo = $("#logo"); //img with id logo
-var drawings = $(".drawing"); //All images with class drawing 
-            </code></pre>
-            </li>
-          </ul>
-        </section>
-
-        <!-- Methods-->
-        <section>
-          <h3>Methods</h3>
-          <ul>
-            <li>Methods are special functions</li>
-            <li>They affect or return a value for a specific object</li>
-            <li>Used with dot notation</li>
-          </ul>
-          <div class = "fragment">
-            Previously seen example:
-            <pre><code contenteditable class = "javascript">
-  var candy = ['Gummy Bears', 'Sour Patch Kids', 'Swedish Fish'];
-  var length = candy.length;
-            </code></pre>
-          </div>
-        </section>      
-        
-        <!-- Actions-->
-        <section>
-          <h3>jQuery Methods</h3>
-          <div class = "left-align">
-            <p class = "fragment"><a href="http://api.jquery.com/" title="jQuery API">jQuery has hundreds of methods</a> that can be performed on any element</p>
-            <p class = "fragment">As methods they are called with dot notation</p>
-          </div>
-          <div class = "fragment">
-            jQuery method format
-            <pre><code contenteditable class = "javascript">
-        $(selector).action();     
-            </code></pre>
-          </div>
-          <div class = "fragment">
-          <pre><code contenteditable class = "javascript">
-        $("div").hide();     
-            </code></pre>            
-          </div>
-        </section>
-        
-        <!-- Attributes and css-->
-        <section>
-          <h3>Updating attributes and css</h3>
-          <div class = "fragment">
-            <pre><code contenteditable class = "html">
-  &lt;img id="mainpicture" src="http://girldevelopit.com/assets/pink-logo.png">         
-            </code></pre>
-          </div>
-          <div class = "fragment">
-            Attribute get and set
-            <pre><code contenteditable class = "javascript">
-  var img = $('#mainpicture');
-  img.attr('src');
-  img.attr('src', 'http://girldevelopit.com/assets/pink-logo.png');
-            </code></pre>
-          </div>
-          <div class = "fragment">
-            CSS property get and set
-            <pre><code contenteditable class = "javascript">
-  var img = $('#mainpicture');
-  img.css('width');
-  img.css('width', '200px');
-            </code></pre>
-          </div>
-        </section>
-        
-        <!-- html values-->
-        <section>
-          <h3>Updating values and html</h3>
-          <div class = "fragment">
-            <pre><code contenteditable class = "html">
-  &lt;div class = "results">Boo!&lt;/div>         
-            </code></pre>
-          </div>
-          <div class = "fragment">
-            Get and set html value
-            <pre><code contenteditable class = "javascript">
-  var div = $('#results');
-  div.html();
-  div.html('New html!');
-            </code></pre>
-          </div>
-        </section>
-        
-        <!-- Append and prepend-->
-        <section>
-          <h3>Append and Prepend</h3>
-          <div>
-            <pre><code contenteditable class = "html">
-  &lt;div class = "results">Boo!&lt;/div>         
-            </code></pre>
-          </div>
-          <div>
-            Append html
-            <pre><code contenteditable class = "javascript">
-    var div = $('#results');
-    div.append('Additional html');
-            </code></pre>
-          </div>
-          <div>
-            Prepend html
-            <pre><code contenteditable class = "javascript">
-    var div = $('#results');
-    div.prepend('Additional html (on top)');
-            </code></pre>
-          </div>
-        </section>
-        
-        <section>
-          <h3>Creating new element</h3>
-          <div>
-            <pre><code contenteditable class = "javascript">
-    var newDiv = $("&lt;div>&lt;/div>");
-    $("body").prepend($newDiv);
-            </code></pre>
-          </div>
-          <div>
-            Seriously. That's it!
-          </div>
-        </section>
-        
-        <!-- Exercise 2-->
-        <section>
-          <h3>Let's Develop It!</h3>
-          <ul>
-          <li>Modify the DOM! Update your functions to output their results on the page using jQuery.</li>
-          <li>Don't forget to <a href="#/7">include jQuery in your html head</a>!</li>
-          <li>Instead of your output going in an alert, use the <a href="http://api.jquery.com/prepend/">jQuery prepend(); method</a>.</li>
-        </ul>
-        </section>
-
-        <!-- BREAK before APIS -->
-        <section>
-          <h3>Break Time!</h3>
-          <div>
-            <p>Stand up and stretch</p>
-          </div>
-        </section>
-        
-        <!-- Document Ready-->
-        <section>
-          <h3>Document Ready</h3>
-          <div class = "left-align">
-          <p>Webpages take time to load</p>
-          <p class = "fragment">Almost always, you don't want the JavaScript to be called until the page is loaded</p>
-          </div>
-          <div class = "fragment">
-            Document ready is a method called when the page is loaded
-            <pre><code contenteditable class = "javascript">
-        $(document).ready(function(){
-            // all of our code goes here
-        });
-            </code></pre>
-          </div>
-          <div class = "fragment left-align">
-            <span class = "yellow">Note:</span> The function() inside is an "anonymous function". It has no name, but still performs like a function. <a href="http://jqfundamentals.com/chapter/jquery-basics">More info</a>
-          </div>
-        </section>
-        
-        <!-- HTML Events-->
-        <section>
-          <h3>HTML events</h3>
-          <p>Events occur on a webpage via user interaction</p>
-          <p class = "fragment">Common Events:</p>
-          <ul>
-            <li class = "fragment">hover -- when mouse hovers on an element</li>
-            <li class = "fragment">scroll -- when page is scrolled</li>
-            <li class = "fragment">click -- mouse clicks an element</li>
-            <li class = "fragment"><a href = "http://api.jquery.com/category/events/" target = "_blank">Other events</a></li>
-          </ul>
-        </section>
-        
-        <section>
-          <h3>Handling events</h3>
-      <pre><code contenteditable class = "javascript">
-  $(selector).click(function(){
-    //code to execute when selector is clicked
-  })
-      </code></pre>
-          <div class = "fragment">
-      <pre><code contenteditable class = "javascript">
-  $('a').click(function(){
-    $(this).css('background-color', 'purple');
-  })
-      </code></pre>
-          </div>
-          <div class = "fragment left-align">
-            <div>The <span class = "green">$(this)</span> selector in jQuery refers to the element on whom the action was called.</div>
-            <div>Here <span class = "green">$(this)</span> is the <span class = "blue">$('a')</span> element that the user clicked.
-          </div>
-        </section>
-        
-        <section>
-          <h3>Handling event examples</h3>
-          <div>
-            <pre><code contenteditable class = "javascript">
-      $('div').hover(function(){
-        $(this).css('background-color', 'purple')
-      })
-            </code></pre>
-          </div>
-          <div class = "fragment">
-          <pre><code contenteditable class = "javascript">
-      $(window).scroll(function(){
-        $("body").css('background-color', 'orange')
-      })
-          </code></pre>
-          </div>
-          <div class = "fragment">
-          <pre><code contenteditable class = "javascript">
-      $('a').click(function(){
-        $(this).prepend('some text to add to page')
-      })
-          </code></pre>
-          </div>
-        </section>
-        
-        <section>
-          <h3>Combining events</h3>
-          <p>If you want multiple events to happen on the same element, you should use the bind method</p>
-          <div class = "fragment">
-          <pre><code contenteditable class = "javascript">
-      $('a').bind({
-        click: function() {
-          $(this).css('background-color', 'green')
-        },
-        hover: function() {
-          $(this).css('background-color', 'purple')
-        }
-      });
-          </code></pre>
-          </div>
-        </section>
-        
-        <!-- Exercise-->
-        <section>
-          <h3>Let's Develop It</h3>
-          <ul>
-            <li>Add a div to your html that is 100px by 200px</li>
-            <li>Bind events to the div in your javascript file</li>
-            <li>Don't forget to surround your events with document ready</li>
-            <li>Try to change size, color, or text  inside the div</li>
-            <li>Bonus: change all the onclick events in your functions to jQuery click events</li>
-          </ul>
-        </section>
-        
-        <!-- HTML forms-->
-        <section>
-          <h3>HTML forms</h3>
-          <p>HTML Forms allow users to enter information</p>
-          <div class = "fragment">
-            <pre><code contenteditable class = "html">
-&lt;form id ="about-me">
-  &lt;input type = "text" id = "name" placeholder = "Enter a name"/>
-  &lt;label>Do you like popcorn&lt;/label>
-  Yes &lt;input type = "radio" name = "popcorn" val = "yes"/>
-  No &lt;input type = "radio" name = "popcorn" val = "no"/>
-  &lt;label>Favorite Dinosaur&lt;/label>
-  &lt;select id = "dinosaur">
-    &lt;option value = "t-rex">Tyrannosaurus Rex&lt;/option>
-    &lt;option value = "tri">Triceratops&lt;/option>
-    &lt;option value = "stego">Stegosaurus&lt;/option>
-    &lt;option value = "other">Other&lt;/option>
-  &lt;/select>
-  &lt;input type = "submit" value = "Go!" style = "padding: 7px; font-size:1em"/>
-&lt;/form>
-            </code></pre>
-          </div>
-        </section>
-        
-        <section>
-          <h3>HTML forms</h3>
-          <p>HTML Forms allow users to enter information</p>
-          <div class = "fragment left-align">
-<form>
-  <input type = "text" id = "name" placeholder = "Enter a name" style = "width:300px; padding: 7px; font-size:1em"/><br/>
-  <label>Do you like popcorn</label><br/>
-  Yes <input type = "radio" name = "popcorn" val = "yes" style ="font-size:1em"/>
-  No <input type = "radio" name = "popcorn" val = "no" style ="font-size:1em"/><br/>
-  <label>Favorite Dinosaur</label><br/>
-  <select id = "dinosaur" style = "padding: 7px; font-size:1em">
-    <option>Tyrannosaurus Rex</option>
-    <option>Triceratops</option>
-    <option>Stegosaurus</option>
-    <option>Other</option>
-  </select><br/>
-  <input type = "submit" value = "Go!" style = "padding: 7px; font-size:1em"/>
-</form>
-          </div>
-        </section>
-        
-        <!-- JavaScript and HTML Forms-->
-        <section>
-          <h3>Values from Forms</h3>
-          <p>You can use JavaScript to get values from a form</p>
-          <div class = "fragment">
-            <pre><code contenteditable class = "javascript">
-    $('#name').val();
-    $('select#dinosaur').val();
-    $('input:radio[name=popcorn]:checked').val();
-            </code></pre>
-          </div>
-          <div class = "fragment">
-            Or set values of a form
-            <pre><code contenteditable class = "javascript">
-    $('#name').val('Mitch');
-    $('select#dinosaur').val('stego');
-    $('input:radio[name=popcorn]:checked').val('no');
-            </code></pre>
-          </div>
-        </section>
-        
-        <section>
-          <h3>Values from Forms</h3>
-          <p>jQuery has an event for form submission</p>
-          <div class = "fragment">
-            <pre><code contenteditable class = "javascript">
-      $('#about-me').submit(function(event){
-            //code to execute after submission
-            return false;
-        });
-            </code></pre>
-            <span class = "yellow">"return false"</span> to prevent the form trying to submit to a server.
-          </div>
-        </section>
-        
-        <!-- Exercise-->
-        <section>
-          <h3>Let's Develop It</h3>
-          <ul>
-            <li>Choose one (or all!) of your functions made so far</li>
-            <li>i.e. lifetime supply, favorite things, or my friends</li>
-            <li>Create a form to send dynamic data to the function when you click the button</li>
-            <li>Don't forget to add parameters (aka <a href="class1.html#/29">arguments</a>) to your existing functions!</p>
-            <li>This is a little harder than all the other exercises.</li>
-            <li>Be creative!</li>
-          </ul>
-        </section>
-
-        
-        <!-- BREAK before APIS -->
-        <section>
-          <h3>Break Time!</h3>
-          <div>
-            <p>Stand up and stretch</p>
-          </div>
-        </section>
-
-        <!-- Part 2: APIs, REST and AJAX --> 
-        <section>
-          <h3>Warning</h3>
-          <div style ="font-size=1.2em" class = "yellow">
-            The following few slides have lots of acronyms and jargon.
-          </div>
-          <div>On behalf of developers everywhere, we apologize</div>
-        </section>
-        <!-- What is an API-->
-        <section>
-          <h3>What is an API?</h3>
-          <ul>
-            <li class = "fragment"><span class = "yellow">A</span>pplication <span class = "yellow">P</span>rogramming <span class = "yellow">I</span>nterface</li>
-            <li class = "fragment">Data structure and rules for accessing a web-based application</li>
-            <li class = "fragment">How we can access information from sites that are not our own (Meetup, Facebook, Foursquare, Google Maps)</li>
-          </ul>
-        </section>
-        
-        <section>
-          <h3>What is an API?</h3>
-          <ul>
-            <li class = "fragment">Primary role: a channel for applications to work together
-              <ul>
-                <li class = "fragment">Your website and the Google Maps API</li>
-                <li class = "fragment">Twitter's mobile app and the Twitter API</li>
-                <li class = "fragment">Hootsuite's mobile app and the Twitter API</li>
-            </li>
-          </ul>
-        </section>
-        
-        <!-- What is AJAX-->
-        <section>
-          <h3>What is AJAX?</h3>
-          <ul>
-            <li class = "fragment"><span class = "yellow">A</span>synchronous <span class = "yellow">J</span>avaScript <span class = "yellow">a</span>nd <span class = "yellow">X</span>ML</li>
-            <li class = "fragment">Method to communicate to a server or API</li>
-            <li class = "fragment">Asynchronous means:
-              <ul>
-                <li class = "fragment">I ask Twitter for all the tweets ever!</li>
-                <li class = "fragment">That will take a while</li>
-                <li class = "fragment">My <span class = "green">whole website</span> could be <span class = "green">locked up</span> while I wait!</li>
-                <li class = "fragment">Or, my call can be <span class = "blue">'asynchronous'</span> and my website will just <span class = "blue">listen for Twitter's response</span> with one ear, but go about <span class = "blue">normal business until the response arrives</span>.
-              </ul>
-            </li>
-            <li class = "fragment">Requests and results can be in JavaScript or XML</li>
-          </ul>
-        </section>
-        
-        <!-- What is REST-->
-        <section>
-          <h3>What is REST?</h3>
-          <ul>
-            <li class = "fragment"><span class = "yellow">Re</span>presentational <span class = "yellow">S</span>tate <span class = "yellow">T</span>ransfer</li>
-            <li class = "fragment">REST is a way to ask an API for information by using a URL.</li>
-            <li class = "fragment">REST Urls are created with the following syntax:
-              <ul>
-                <li class = "fragment">http://ApiSite.com/method?parameter=value&amp;parameter=value</li>
-                <li class = "fragment"><span class = "blue">Method</span> -- what you want from the API. Defined by API documentations</li>
-                <li class = "fragment"><span class = "blue">Parameter</span> -- a type of filter or restraint. Defined by API documentations</li>
-                <li class = "fragment"><span class = "blue">Value</span> -- value for parameter. Defined by you!</li>
-              </ul>
-            </li>
-            
-          </ul>
-        </section>
-        
-        <section>
-          <h3>Where do I learn about an API?</h3>
-          <p>All (good) APIs have documentation</p>
-          <ul>
-            <li>Facebook (<a href = "https://developers.facebook.com/" target = "_blank">https://developers.facebook.com/</a>)</li>
-            <li>Google Maps (<a href = "https://developers.google.com/maps/documentation/javascript/tutorial" target = "_blank">https://developers.google.com/maps</a>)</li>
-            <li>Meetup (<a href = "http://www.meetup.com/meetup_api/" target = "_blank">http://www.meetup.com/meetup_api/</a>)</li>
-            <li>FourSquare (<a href = "https://developer.foursquare.com/">https://developer.foursquare.com/</a>)</li>
-        </section>
-        
-        <!-- What is JSON-->
-        <section>
-          <h3>What is JSON?</h3>
-          <ul>
-            <li class = "fragment"><span class = "yellow">J</span>ava<span class = "yellow">S</span>cript <span class = "yellow">O</span>bject <span class = "yellow">N</span>otation</li>
-            <li class = "fragment">Format for data returned from APIs</li>
-            <li class = "fragment">You've seen it before!</li>
-            <li class = "fragment">JavaScript objects</li>
-          </ul>
-        </section>
-        
-        <!-- Getting started!-->
-        <section>
-         <h3>Getting started!</h3>
-         <p>Get an API Key</p>
-         <p class = "fragment green">A what?</p>
+         <h3>Terms</h3>
          <ul>
-           <li class = "fragment">Api Key or Developer Key is a way for an API to identify you</li>
-           <li class = "fragment">More secure for an API (Know who is using their API)</li>
-           <li class = "fragment">More secure for you -- people can't pretend to be your website</li>
+           <li>
+            <div><span class="green">Ruby:</span> A programming language</div><br>
+           </li>
+           <li>
+            <div><span class="green">Preprocessor:</span> A computer program that modifies data to conform with the input requirements of another program.
+            <span class ="blue">(Sass is a preprocessor)</span></div><br>
+           </li>
+            <li>
+            <div><span class="green">Compile:</span> The act of converting one computer program into another programming language.</div><br>
+           </li>
+           <li>
+            <div><span class="green">CSS3:</span> The output of Sass. Sass compiles into CSS!</div>
+           </li>
+         </ul>
+        </section>
+        
+        <!-- Process: Sass to CSS -->
+        <section>
+          <h3>Sass and CSS</h3>
+          <p>How Sass compiles into CSS</p>
+          <img src = "images/sass-compile.png"/>
+          <div class="left-align">1. You write Sass (.scss files)<br>
+          2 .You run a command (sass --watch) on the command line <br>
+          3. .scss files compile into .css files</div>
+        </section>
+        
+        <!-- Practice: Command Line -->
+        <section>
+          <h3>Command Line Tips</h3>
+          <div class="left-align">
+            Up one level:
+            <pre><code contenteditable class="command-line"><span class="variable">$</span> cd ../</code></pre>
+            Go to your home directory:
+            <pre><code contenteditable class="command-line"><span class="variable">$</span> cd /</code></pre>
+            Go to a specific folder:
+            <pre><code contenteditable class="command-line"><span class="variable">$</span> <span class="identifier">cd Users/cfarman/Sites/gdi-sass</span></pre></code>
+            List files in a directory:
+            <pre><code contenteditable class="command-line">$ ls</pre></code>
+            </div>
+            <span class="blue left-align"><a target="_blank" href="http://files.fosswire.com/2007/08/fwunixref.pdf">Command Line Cheat Sheet!!! (In class1-exercises folder)</a></span>
+        </section>
+        
+        <!-- Install Sass -->
+        <section>
+          <h3>Installing Sass</h3>
+          <div class="left-align">First, we need to install <span class="red">Ruby</span>:
+          <ul>
+            <li>Download for Windows: <a target="_blank" href="http://rubyinstaller.org/">rubyinstaller.org</a></li>
+            <li>Mac users: you're in luck! Mac OS X comes pre-installed with Ruby. Try the following command in Terminal to make sure: </li>
           </ul>
-        </section>
-        
-        <!-- Meetup-->
-        <section>
-          <h3>Meetup API</h3>
-          <p>We will be using the Meetup API</p>
-          <p><a href = "http://www.meetup.com/meetup_api/" target = "_blank">Documentation</a></p>
-          <img src = "images/meetup.png" />
-        </section>
-        
-        <section>
-          <h3>Meetup API</h3>
-          <p>We will be finding interesting Meetups near us</p>
-          <p><a href = "http://www.meetup.com/meetup_api/docs/2/open_events/" target = "_blank">Open Events</a></p>
-          <img src = "images/meetup_open.png"/>
-        </section>
-        
-        <section>
-          <h3>Meetup API</h3>
-          <p>Try it in the meetup console</p>
-          <p><a href = "http://www.meetup.com/meetup_api/console/?path=/2/open_events" target = "_blank">Open Events Console</a></p>
-          <img src = "images/meetup_console.png"/>
-        </section>
-        
-        <section>
-          <h3>Meetup API</h3>
-          <p>Try it in the meetup console</p>
-          <img src = "images/meetup_results.png"/>
-        </section>
-        
-        <!-- jQuery Ajax-->
-        <section>
-          <h3>jQuery Ajax</h3>
-          <p>jQuery method to perform an AJAX call</p>
-          <div class = "fragment">
-            <pre><code contenteditable class = "javascript">
-    $.ajax({
-      url: 'http://site.com',
-      data: {
-        parameter: 'value',
-        parameter: 'value'
-      },
-      crossDomain: true,
-      dataType: 'jsonp',
-      type: "GET",
-      success: function (data) {
-          // code with data returned
-      },
-      error: function(data) {
-         // code with error returned
-      }       
-    });
-            </code></pre>
+          <pre><code contenteditable class ="command-line">ruby -v</code></pre>
           </div>
         </section>
         
+        <!-- Variables-->
         <section>
-          <h3>jQuery Ajax</h3>
-          <div class = "fragment">
-            <pre><code contenteditable class = "javascript">
-    $.ajax({
-      url: 'http://site.com',
-      ...     
-    });
-            </code></pre>
+          <h3>Installing Sass</h3>
+          <div class = " left-align">
+            <p>Now that Ruby is installed, we can install the Sass gem.</p>
+            <p>In Terminal or Git Bash:</p>
+            <pre><code contenteditable class ="command-line">gem install sass</code></pre>
           </div>
-          <ul>
-            <li class = "fragment"> $.ajax() -- jQuery method for sending AJAX requests</li>
-            <li class = "fragment">Takes one argument -- a JavaScript object</li>
-            <li class = "fragment">Note the {}</li>
-            <li class = "fragment"><span class = "blue">url</span> -- first property, the url where you will send the AJAX request</li>
-          </ul>
+            <p class="fragment"><img src="images/confetti.gif" style="border: 0; width: 600px; height: 300px; box-shadow: none;"></p>
         </section>
         
         <section>
-          <h3>jQuery Ajax</h3>
-          <div class = "fragment">
-            <pre><code contenteditable class = "javascript">
-  ...
-  data: {
-    parameter: 'value',
-    parameter: 'value'
-  },
-  ... 
-            </code></pre>
-          </div>
-          <ul>
-            <li class = "fragment"><span class = "blue">data</span> --  a JavaScript object with all the parameters for the AJAX request</li>
-            <li class = "fragment">Some parameters in the <a href = "http://www.meetup.com/meetup_api/docs/2/open_events/" target = "_blank">Meetup open events</a>
-              <ul>
-                <li>key (refers to api key)</li>
-                <li>city</li>
-                <li>country</li>
-                <li>topic</li>
-              </ul>
-            </li>
-          </ul>
-        </section>
-        
-        <section>
-          <h3>jQuery Ajax</h3>
-          <div class = "fragment">
-            <pre><code contenteditable class = "javascript">
-  ...
-  crossDomain: true,
-  dataType: 'jsonp',
-  type: "GET",
-  ... 
-            </code></pre>
-          </div>
-          <ul>
-            <li class = "fragment"><span class = "blue">crossDomain</span> -- are you sending the request to a domain that is not your own?</li>
-            <li class = "fragment"><span class = "blue">dataType</span> -- how will you evaluate the data returned</li>
-            <li class = "fragment"><span class = "blue">type</span> -- what type of request is it?
-              <ul>
-                <li>GET -- retrieve data</li>
-                <li>POST -- post new data</li>
-              </ul>
-            </li>
-          </ul>
-        </section>
-        
-        
-        <section>
-          <h3>jQuery Ajax</h3>
-          <div class = "fragment">
-            <pre><code contenteditable class = "javascript">
-  ...
-  success: function (data) {
-      // code with data returned
-  },
-  error: function(data) {
-     // code with error returned
-  }
-  ... 
-            </code></pre>
-          </div>
-          <ul>
-            <li class = "fragment"><span class = "blue">success</span> -- code that will execute if results are sent back successfully</li>
-            <li class = "fragment"><span class = "blue">error</span> -- code that will execute if results return an error</li>
-          </ul>
-        </section>
-        
-        <!-- Exercise-->
-        <section>
-          <h3>Let's Develop It!</h3>
-          <ul>
-            <li>Create a new div with the id "events"</li>
-            <li>Create a new function in your javascript that calls <a href = "http://www.meetup.com/meetup_api/docs/2/open_events/" target = "_blank">Meetup open events</a> method</li>
-            <li>Add parameters such as city, state or lat, lon to find meetups near you</li>
-            <li>Add a parameter such as category or topic to find meetups that you would be interested in</li>
-            <li>For now, just look at the results in the console.log()</li>
-            <li>Call this new function in document ready</li>
-          </ul>
-        </section>
-        
-        <section>
-          <h3>Let's Develop It!</h3>
-          <img src = "images/console.png"/>
-        </section>
-        
-        <section>
-          <h3>Let's Develop It!</h3>
-          <ul>
-            <li>Create a new function that can parse results.</li>
-            <li>Remember that the results will be an array of objects</li>
-            <li>Loop through your results</li>
-            <li>For each result, create a new div</li>
-            <li>Get the name, description, group name, and url of each event</li>
-            <li>Append them to your new div</li>
-            <li>Append the new div to the div "events"</li>
-          </ul>
-        </section>
-        
-        <section>
-          <h3>Let's Develop It!</h3>
-          <ul>
-            <li>Create a form for users to enter in their location and a topic of their choosing</li>
-            <li>On submit, call the same Meetup open events method, but with the user's values</li>
-          </ul>
-        </section>
-        
-        <section>
-          <h3>Bonus</h3>
-          <p class = "blue">Still have time? Can't stop learning?</p>
-          <div class = "left-align">
-            <p>One of the best things about jQuery is the developer community</p>
-            <p>They love to build!</p>
-            <p>Check out some great plugins:</p>
+          <h3>Setting up our stylesheets</h3>
+          <div>
+            <p>We need to structure our stylesheets before we can compile them.</p>
             <ul>
-              <li><a href = "http://jqueryui.com/" target = "_blank">jQuery UI</a> -- accordions, drag and drop, resize, sort</li>
-              <li><a href = "http://leandrovieira.com/projects/jquery/lightbox/" target = "_blank">jQuery Lightbox</a> -- Pop up gallery of images!</li>
-              <li><a href = "http://www.jqueryplugins.com/" target = "_blank">And so many more!</a></li>
+              <li>open the <span class="blue">"class1-exercises"</span> folder</li>
+              <li>open the <span class="blue">"practice"</span> folder in Sublime Text</li>
+              <li>go ahead and open <a href="class1-exercises/practice/index.html" target="_blank">index.html</a> in a browser</li>
             </ul>
           </div>
         </section>
+
+        <section>
+          <h3>Setting up our stylesheets</h3>
+          <div class="left-align">
+            <ul>
+              <li>rename CSS files to have a <span class="blue"><strong>.scss</strong></span> file extension</li>
+              <li>structure them inside the stylesheets folder like so:
+                <ul class="red">
+                  <li>/stylesheets/
+                    <ul>
+                      <li>/css/
+                        <ul>
+                          <li>empty for now</li>
+                        </ul>
+                      </li>
+                      <li>/scss/
+                        <ul>
+                          <li>/font/</li>
+                          <li>reset.scss</li>
+                          <li>styles.scss</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>Update your index.html stylesheet url in &lt;head&gt; to point to your /css/ folder.</li>
+            </ul>
+          </div>
+        </section>
+        
+        <!-- Sass Watch - Compiling -->
+        <section>
+          <h3>Compile with the Sass Watch Command</h3>
+          <div class = "left-align">
+            <p>Check out your index.html file in a browser. Looks funky, yes?</p>
+            <p class="fragment">We need to compile our .scss (Sass) files to make the CSS work in the browser.</p>
+            <p class="fragment">First, navigate via the command line to your /stylesheets directory in the "practice" folder.</p>
+            <p class="fragment">Then type:</p>
+
+            <pre class="fragment"><code contenteditable class ="sass css">$ sass --watch scss:css</code></pre>
+
+          </div>
+        </section>
+
+        <!-- Sass Watch - Compiling -->
+        <section>
+          <h3>Compile with the Sass Watch Command</h3>
+          <div class = "left-align">
+            <p>Let's break this command down - you're going to use it *a lot*!</p>
+            <pre><code contenteditable class ="sass css">$ sass --watch scss:css</code></pre>
+            <p class="fragment"><strong>--watch</strong> tells Sass to look for changes to our .scss files, and to compile them to css if they have updates.</p>
+            <p class="fragment">The <strong>scss</strong> bit is the folder where our .scss files live. We edit these files only.</p>
+            <p class="fragment">The <strong>css</strong> part is the folder where our .css files will be. These files are the compiled output of our Sass, and are only created when we run the above command.</p>
+
+          </div>
+        </section>        
+        
+        
+        <!-- Nesting -->
+        <section class="present">
+          <h3>Nesting</h3>
+          <div>
+            <p>Sass input:</p>
+            <pre><code contenteditable class ="sass css">header { 
+  color: black;
+  nav { 
+    background: red; 
+    a { color: white; }
+}
+</code></pre>
+            <p>CSS output:</p>
+            <pre><code contenteditable class ="css sass">header { color: black; }
+header nav { background: red; }
+header nav a { color: white; }</code></pre>
+          </div>
+        </section>
+        
+ 
+        
+       
+        <!-- Comparison-->
+        <section>
+          <h3>Referencing Parent Selectors: &</h3>
+          <div>
+            <p>Sass input:</p>
+            <pre><code contenteditable class ="sass css">nav { 
+    background: red; 
+    a { 
+      color: white;
+      &:hover { text-decoration: underline; }
+    }
+}
+</code></pre>
+            <p>CSS output:</p>
+            <pre><code contenteditable class ="css sass">nav { background: red; }
+nav a { color: white; }
+nav a:hover { text-decoration: underline; }</code></pre>
+          </div>
+        </section>
+        
+        <!-- Exercise - #2? 3? -->
+        <section>
+          <h3>Let's Develop It!</h3>
+          <ul>
+            <li>Open your <span class="blue">styles.scss</span> file</li>
+            <li>Rewrite some styles to use nesting and referencing the parent</li>
+            <li>Look for selectors that share a common parent HTML element, like header, nav, footer, #main</li>
+            <li>Look for hover styles, or add some, to practice referencing the parent with &</li>
+            <li>There are lots of possible solutions! Be creative!</li>
+            <li>Run the <a href="#/17" target="_blank">sass --watch command</a> to see your changes in the browser</li>
+
+          </ul>
+        </section>
+        
+ 
+        
+        <!-- BREAK before Part 2 -->
+        <section>
+          <h3>Break Time!</h3>
+          <div>
+            <p>Stand up and stretch - we'll resume in 10 minutes</p>
+            <img src="images/stretchbreak.jpg">
+          </div>
+        </section>
+
+<!-- Scripting! -->
+        <section>
+          <h3>Variables</h3>
+          <p>Sometimes you want to reuse a value for a style - you use them frequently, they're hard to type or remember, such as</p>
+          <ul>
+            <li class = "fragment">Colors
+<pre><code contenteditable class = "sass css">#2a79af</code></pre>
+            </li>
+            <li class = "fragment"><a target="_blank" href="http://cssfontstack.com/">Font stack styles</a>
+<pre><code contenteditable class = "sass css">Georgia, Times, "Times New Roman", serif;</code></pre>
+            </li>
+            <li class = "fragment">Font sizes
+<pre><code contenteditable class = "sass css">1.667em</code></pre>
+            </li>
+          </ul>
+        </section>
+        
+         <section>
+          <h3>Defining Variables</h3>
+          <p>Variables with Sass let us reuse values more than once, while only defining them in one place</p>
+          <pre><code contenteditable class = "sass css">//define using dollar sign
+$brandColor: #f90000;
+$mainTextcolor: #fff;
+$accentColor: #ccc;</code></pre>
+        <p>To create a variable you need a dollar sign before the name of your variable, and a colon: to give it a <em>value</em></p>
+        <p class="fragment">Note that in Sass files, you can comment out a line with <span class="green">// two slashes</span></p>
+
+        </section>
+
+
+
+ <section>
+<pre><code contenteditable class = "sass css">$brandColor: #f90000; // red
+$mainTextcolor: #fff; // white
+$accentColor: #ccc; // grey</code></pre>
+          <pre><code contenteditable class = "sass css">header {
+  color: $mainTextColor;
+  background-color: $brandColor;
+}
+.content {
+  color: $mainTextColor;
+  background-color: $accentColor;
+}
+footer {
+  color: $accentColor;
+  background-color: $brandColor;
+}</code></pre>
+        </section>        
+        <section>
+          <h3>Keep em together</h3>
+          <p>Variables are easy to change if you keep them all in one stylesheet, and update or add to the styles as needed</p>
+<pre><code contenteditable class = "php">// Let's define some variables 
+// Colors
+$favoriteColor: #2a79af;
+$anotherColor: #f05b62;
+// Fonts
+$favoriteFont: Papyrus, fantasy;
+$aPracticalFont: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+// Font sizes
+$aNiceBigFontSize: 16px;
+$finePrint: 10px;
+$giantLogo: 36px;
+// Margins and Padding
+$defaultMargin: 15px;
+$defaultPadding: $defaultMargin;
+</code></pre>          
+        </section>
+          
+        
+        <!-- Exercise -->
+        <section>
+          <h3>Let's Develop It</h3>
+          <ul>
+            <li>Create a new Sass stylesheet called _utilities.scss</li>
+            <li>Don't forget to put it in the right folder</li>
+            <li>Import your new stylesheet into styles.scss by putting the following code at the top of styles.scss:
+<pre><code contenteditable class = "sass css">@import "_utilities";
+</code></pre>                     
+            </li>
+            <li>In your new stylesheet, make some new variables, and base some variables on your existing styles - look for colors, fonts, and size values</li>
+            <li>Run the <a href="#/17" target="_blank">sass --watch command</a> to see your changes in the browser</li>
+          </ul>
+        </section>
+        
+        <!-- Syntax highlighting -->
+        <section>
+          <h3>Syntax highlighting</h3>
+          <div class="left-align">
+          <p>You can download tools to highlight your Sass properly in Sublime Text:</p>
+          <ul>
+            <li><a target="_blank" href="http://wbond.net/sublime_packages/package_control/installation">Install Package Manager for Sublime Text 2</a></li>
+            <li>Go to Tools > Command Palette. Type "Package Control".</li>
+            <li>Click "Install Package"</li>
+            <li>Type "Sass" and click the first result</li>
+            <li>Click: View > Syntax > Sass</li> 
+          </div>
+        </section>
+
+<!-- Math -->
+        <section class="present">
+          <h3>Math Expressions</h3>
+          <div>
+            <p>With CSS you have to be explicit about everything, including numbers. With Sass, you can write math expressions to calculate numbers for you:</p>
+            <table style="display: block;margin: 0 auto; width: 300px;">
+              <!--tr><th>Symbol</th><th>Meaning</th></tr-->
+              <tr><td>+</td><td><a target="_blank" href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#number_operations">Addition</a></td></tr>
+              <tr><td>-</td><td><a target="_blank" href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#number_operations">Subtraction</a></td></tr>
+              <tr><td>*</td><td><a target="_blank" href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#number_operations">Multiplication</a></td></tr>
+              <tr><td>/</td><td><a target="_blank" href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#division-and-slash">Division</a>*</td></tr>
+            </table>
+            <p style="margin-top: 25px;font-size: .6em">*division is special, check the documentation link for why and how</p>
+          </div>
+        </section>
+
+        <section class="present">
+          <h3>Math Expressions</h3>
+          <div>
+            <p>Sass input:</p>
+            <pre><code contenteditable class ="sass css"><span class="variable">$layoutWidth</span>: 960px;
+#sidebar {
+  width: <span class="variable">$layoutWidth</span>/3;
+}
+</code></pre>
+            <p>CSS output:</p>
+            <pre><code contenteditable class ="sass css">#sidebar {
+  width: 320px;
+}</code></pre>
+          </div>
+        </section>
+
+        <!-- Exercise-->
+        <section>
+          <h3>Let's Develop It</h3>
+          <ul>
+          <li>Write a math expression in Sass to calculate the width of elements in your page layout instead of declaring a number</li>
+          <li>Use a variable to represent the result of your calcuation</li>
+          <li>Compile to CSS and refresh your index page to see your changes</li>
+        </ul>
+          <pre><code class ="sass css">$layoutWidth = 960px;
+$navWidth = $layoutWidth/3;
+footer {
+  width: ($layoutWidth - 20px);
+}</code></pre>
+        </section>
+        
+
+        <section class="present">
+          <h3>Color Functions</h3>
+          <p class="left-align">Color functions are built-in to Sass. They let you alter existing color values. This is the <span class="blue">lighten</span> function:</p>
+          <table class="code-compare">
+            <tr><td>
+            <p>Sass input:</p>
+            <pre><code contenteditable class ="sass css"><span class="variable">$linkColor</span>: #000;
+<span class="variable">$linkShadow</span>: lighten(#000, 40%);
+a {
+  color: <span class="variable">$linkColor</span>;
+  text-shadow: <span class="variable">$linkShadow</span>;
+}
+</code></pre>
+</td>
+<td>
+            <p>CSS output:</p>
+            <pre><code contenteditable class ="sass css">a {
+  color: #000;
+  text-shadow: #666;
+}</code></pre>
+<p class="output-example" style="color: #000; text-shadow: 3px 2px #666;">Example of output style</p>
+          </tr></td></table>
+        </section>
+
+                <section class="present">
+          <h3>Color Functions</h3>
+          <p class="left-align">This is the <span class="blue">darken</span> function:</p>
+          <table class="code-compare">
+            <tr><td>
+            <p>Sass input:</p>
+            <pre><code contenteditable class ="sass css"><span class="variable">$background</span>: #ff0000; // red
+<span class="variable">$text</span>: darken($background,50%);
+body {
+  color: <span class="variable">$text</span>;
+  background: <span class="variable">$background</span>;
+}
+</code></pre>
+</td>
+<td>
+            <p>CSS output:</p>
+            <pre><code contenteditable class ="sass css">body {
+  color: #990000;
+  background: #ff0000;
+}</code></pre>
+          <p class="output-example" style="background-color: #f00; color: #900">Example of output style</p>
+
+          </tr></td></table>
+        </section>
+
+
+        <section class="present">
+          <h3>Color Functions</h3>
+          <p class="left-align">This is the <span class="blue">grayscale</span> function:</p>
+          <table class="code-compare">
+            <tr><td>
+            <p>Sass input:</p>
+            <pre><code contenteditable class ="sass css"><span class="variable">$background</span>: #ff0000; // red
+<span class="variable">$text</span>: darken($background,50%);
+body {
+  background: <span class="variable">grayscale(#f00)</span>;
+  color: <span class="variable">grayscale(darken(#f00, 50%))</span>;
+}
+</code></pre>
+</td>
+<td>
+            <p>CSS output:</p>
+            <pre><code contenteditable class ="sass css">body {
+  background: #000;
+  color: #808080;
+}</code></pre>
+          <p class="output-example grayscale">Example of output style</p>
+
+          </tr></td></table>
+        </section>
+
+        <!-- Exercise-->
+        <section>
+          <h3>Let's Develop It</h3>
+          <ul>
+          <li>Add some variables to your _utilities.scss file that use color functions</li>
+          <li>Use these variables in your styles.scss file</li>
+          <li>Refer to the <a href="http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html">sass-lang.com docs</a> for list of functions and how to use them</li>
+          <li>Compile to CSS and refresh your index page to see your changes</li>
+        </ul>
+          <pre><code class ="sass css">lighten(#000, 20%)
+darken(#eee, 30%)
+grayscale(#2a79af)
+saturate(#2a79af, 40%)
+desaturate(#2a79af, 20%)</code></pre>
+        </section>
+        
+         <section class="present">
+          <h3>Comments</h3>
+          <p class="left-align">Traditional CSS comments are downloaded by the user. With Sass, we can specify whether comments are left in the final CSS code or are only visible to the developer:</p>
+          <table class="code-compare">
+            <tr><td>
+            <p>Sass input:</p>
+            <pre><code contenteditable class ="sass css"><span class="variable">$background</span>: #ff0000; // red
+<span class="variable">$text</span>: darken($background,50%);
+body {
+  background: <span class="variable">grayscale(#f00)</span>;
+  color: <span class="variable">grayscale(darken(#f00, 50%))</span>;
+}
+</code></pre>
+</td>
+<td>
+            <p>CSS output:</p>
+            <pre><code contenteditable class ="sass css">body {
+  background: #000;
+  color: #808080;
+}</code></pre>
+          <p class="output-example grayscale">Example of output style</p>
+
+          </tr></td></table>
+        </section>
+
+         <section class="present">
+          <h3>Comments</h3>
+          <p class="left-align">This is the <span class="blue">grayscale</span> function:</p>
+          <table class="code-compare">
+            <tr><td>
+            <p>Sass input:</p>
+            <pre><code contenteditable class ="sass css"><span class="variable">$background</span>: #ff0000; // red
+<span class="variable">$text</span>: darken($background,50%);
+body {
+  background: <span class="variable">grayscale(#f00)</span>;
+  color: <span class="variable">grayscale(darken(#f00, 50%))</span>;
+}
+</code></pre>
+</td>
+<td>
+            <p>CSS output:</p>
+            <pre><code contenteditable class ="sass css">body {
+  background: #000;
+  color: #808080;
+}</code></pre>
+          <p class="output-example grayscale">Example of output style</p>
+
+          </tr></td></table>
+        </section>
+
+         <section class="present">
+          <h3>Mixins</h3>
+          <p class="left-align">Mixins are the Sass name for functions. If you've done any Javascript or other programming, they work like functions or methods.</p>
+          <table class="code-compare">
+            <tr><td>
+            <p>Sass input:</p>
+            <pre><code contenteditable class ="sass css"><span class="value">@mixin dropshadow(<span class="variable">$text</span>)</span> {
+  color: <span class="variable">$text</span>;
+  text-shadow: 2px 4px lighten(<span class="variable">$text</span>, 50%);
+}
+p {
+  <span class="value">@include dropshadow(black);</span>
+}
+</code></pre>
+</td>
+<td>
+            <p>CSS output:</p>
+            <pre><code contenteditable class ="sass css">p {
+  color: black;
+  text-shadow: 2px 4px #808080;
+}</code></pre>
+          <p class="output-example" style="color: black; text-shadow: 2px 4px #808080; background: transparent;">Example of output style</p>
+
+          </tr></td></table>
+        </section>
+
+        <!-- Exercise-->
+        <section>
+          <h3>Let's Develop It</h3>
+          <ul>
+          <li>Add some mix-ins to your _utilities.scss file</li>
+          <li>Use these mix-ins in your styles.scss file</li>
+          <li>Compile to CSS and refresh your index page to see your changes</li>
+        </ul>
+          <pre><code class ="sass css">@mixin name {
+  property: value;
+}
+@mixin example($argument) {
+  property: value;
+  property: $argument;
+}
+</code></pre>
+        </section>
+        
+
 
 
         <!-- -->
         <section>
           <h2>Questions?</h2>
-          <p>ph.ly/gdi-js</p>
           <div style = "font-size:1200%; height:100%; margin-top:40%" class ="blue">?
             <div class ="clear"></div></div>
         </section>
-			</div>
-  		<footer>
+      </div>
+      <footer>
         <div class="copyright">
           Sass ~ Girl Develop It ~
           <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
         </div>
       </footer>
-		</div>
+    </div>
 
 
-		<script src="reveal.js/lib/js/head.min.js"></script>
-		<script src="reveal.js/js/reveal.min.js"></script>
+    <script src="reveal.js/lib/js/head.min.js"></script>
+    <script src="reveal.js/js/reveal.min.js"></script>
 
-		<script>
+    <script>
 
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/none
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/none
 
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'reveal.js/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
 
-		</script>
+    </script>
 
-	</body>
+  </body>
 </html>
