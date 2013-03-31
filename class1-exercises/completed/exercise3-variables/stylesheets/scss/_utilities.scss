@@ -19,5 +19,5 @@ $defaultFontSize: 16px;
  // Layout 
 $centered: 0 auto;
 $layoutWidth: 960px;
-$headerWidth: $layoutWidth*1;
-$navWidth: $layoutWidth/3;
+$headerWidth: $layoutWidth - 20px;
+$navWidth: $layoutWidth/4;
