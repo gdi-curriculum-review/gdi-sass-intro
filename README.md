@@ -1,6 +1,6 @@
 # Intro to Sass
 
-This is the Girl Develop It Core Intro to Sass course. Materials by Catherine Farman.
+This is the Girl Develop It Intro to Sass course. Materials by Catherine Farman, based on <a href="https://github.com/girldevelopit/gdi-core-intermediate-html-css">Intermediate HTML/CSS materials</a> by Girl Develop It.
 
 The course is meant to be taught in 2 two-hour sections. Each of the slides and practice files are customizable according to the needs of a given class or audience.
 
