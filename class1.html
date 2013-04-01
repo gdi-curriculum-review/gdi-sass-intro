@@ -487,9 +487,9 @@ $defaultPadding: $defaultMargin;
 
 <!-- Math -->
         <section class="present">
-          <h3>Math Expressions</h3>
+          <h3>Math Operations</h3>
           <div>
-            <p>With CSS you have to be explicit about everything, including numbers. With Sass, you can write math expressions to calculate numbers for you:</p>
+            <p>With CSS you have to be explicit about everything, including numbers. With Sass, you can write math to calculate numbers for you:</p>
             <table style="display: block;margin: 0 auto; width: 300px;">
               <!--tr><th>Symbol</th><th>Meaning</th></tr-->
               <tr><td>+</td><td><a target="_blank" href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#number_operations">Addition</a></td></tr>
@@ -502,7 +502,7 @@ $defaultPadding: $defaultMargin;
         </section>
 
         <section class="present">
-          <h3>Math Expressions</h3>
+          <h3>Math Operations</h3>
           <div>
             <p>Sass input:</p>
             <pre><code contenteditable class ="sass css"><span class="variable">$layoutWidth</span>: 960px;
@@ -516,6 +516,27 @@ $defaultPadding: $defaultMargin;
 }</code></pre>
           </div>
         </section>
+
+
+       <section class="present">
+          <h3>Math Operations</h3>
+          <div>
+            <p>Sass input:</p>
+            <pre><code contenteditable class ="sass css"><span class="variable">$layoutWidth</span>: 960px;
+$defaultPadding: 16px;
+#main {
+  padding: $defaultPadding;
+  width: <span class="variable">$layoutWidth</span> - $defaultPadding*2;
+}
+</code></pre>
+            <p>CSS output:</p>
+            <pre><code contenteditable class ="sass css">#main {
+  padding: 16px;
+  width: 928px;
+}</code></pre>
+          </div>
+        </section>
+
 
         <!-- Exercise-->
         <section>
@@ -612,16 +633,16 @@ body {
         <section>
           <h3>Let's Develop It</h3>
           <ul>
-          <li>Add some variables to your _utilities.scss file that use color functions</li>
-          <li>Use these variables in your styles.scss file</li>
-          <li>Refer to the <a href="http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html">sass-lang.com docs</a> for list of functions and how to use them</li>
-          <li>Compile to CSS and refresh your index page to see your changes</li>
+          <li>Edit your variables in _utilities.scss file to use color functions</li>
+          <li>Refer to the <a target="_blank" href="http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html">sass-lang.com docs</a></li>
+          <li>Compile to CSS to see your changes</li>
+          <li class="blue">Bonus - change the color scheme of your website without editing styles.scss!</li>
         </ul>
           <pre><code class ="sass css">lighten(#000, 20%)
 darken(#eee, 30%)
 grayscale(#2a79af)
 saturate(#2a79af, 40%)
-desaturate(#2a79af, 20%)</code></pre>
+invert(#2a79af)</code></pre>
         </section>
         
          <section class="present">
@@ -648,7 +669,7 @@ a { color: blue; }
         
          <section class="present">
           <h3>Mixins</h3>
-          <p class="left-align">Mixins are the Sass name for functions. If you've done any Javascript or other programming, they work like functions or methods.</p>
+           <p class="left-align">Mixins are really just a collection of one or more styles that are reusable, like variables are reusable values</p>
           <table class="code-compare">
             <tr><td>
             <p>Sass input:</p>
@@ -672,13 +693,22 @@ p {
           </tr></td></table>
         </section>
 
+
+         <section class="present">
+          <h3>Mixins</h3>
+          <p class="left-align">These are especially useful for CSS3 rules that need browser prefixes, like gradients.</p>
+          <p><a target="_blank" href="http://cfarm.co/gradient">cfarm.co/gradient</a></p>
+         
+        </section>
+
         <!-- Exercise-->
         <section>
           <h3>Let's Develop It</h3>
           <ul>
-          <li>Add some mix-ins to your _utilities.scss file - a good candidate is any style that needs a browser prefix</li>
-          <li>Use these mix-ins in your styles.scss file</li>
-          <li>Add different types of comments that describe what your mix-ins do, and check the final CSS in the browser inspector to see if they appear</li> 
+          <li>Add some mixins to your _utilities.scss file - a good candidate is any style that needs a browser prefix</li>
+          <li>Try replacing the footer gradient with a mixin</li>
+          <li>Use these mixins in your styles.scss file</li>
+          <li>Add different types of comments that describe what your mixins do, and check the final CSS in the browser inspector to see if they appear</li> 
         </ul>
           <pre><code class ="sass css">@mixin name {
   property: value;

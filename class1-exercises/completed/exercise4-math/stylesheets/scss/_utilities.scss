@@ -1,0 +1,38 @@
+// Utilities file! We're going to do some MATH in this exercise.
+
+// Colors! 
+$bodyBackground: rgb(241, 241, 241); // light grey
+$accentBackground: #009D92; // teal
+$contrastColor: #FFEECC; // yellow
+$linkText: #1D766F; // teal
+$linkHover: #BC2F36; // red
+$textShadow: rgba(255, 255, 255, 0.25);
+$contentBackground: #fff;
+$sectionHeadingBackground: rgb(60, 60, 60); // darkest grey
+$sectionHeading: #fff;
+$headingYears: rgb(120, 120, 120); // grey for bio years
+$navLink: #fff;
+$linkAccent: #FB000D; // light red in hovers and shadows
+$jumpIcon: #565656; // dark grey
+$factsAccent: #ffa700; // bright yellow in facts section
+
+
+ // Fonts!
+$title: 'Audiowide', cursive;
+$headings: 'Quicksand', sans-serif;
+$bodyText: 'Lato', Arial, sans-serif;
+
+$defaultFontSize: 16px;
+
+
+ // Layout 
+$centered: 0 auto;
+$layoutWidth: 960px;
+$defaultPadding: 10px;
+$headerWidth: $layoutWidth - $defaultPadding*2;
+$navWidth: $layoutWidth/4;
+$navLinkHeight: $defaultFontSize + $defaultPadding*2; // let's adjust the line height for header nav, basing it on font size and top and bottom padding
+$articleWidth: $layoutWidth/3 - $defaultPadding*4;
+$listItemHeight: $defaultFontSize + $defaultPadding;
+$footerWidth: $headerWidth;
+

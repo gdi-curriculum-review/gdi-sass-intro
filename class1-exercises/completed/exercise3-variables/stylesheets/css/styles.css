@@ -27,7 +27,7 @@ h1 {
 
 h2 {
   background-color: #3c3c3c;
-  color: #FFF;
+  color: white;
   font-family: "Quicksand", sans-serif;
   font-size: 2.4em;
   font-weight: 400;
@@ -49,17 +49,17 @@ h4 {
 
 /* Navigation */
 nav {
-  width: 240px; }
+  width: 960px; }
   nav li {
     float: left; }
     nav li a {
-      color: #fff;
+      color: white;
       margin: 0 10px;
       padding: 5px 10px;
       text-decoration: none; }
       nav li a:hover {
         box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
-        color: #FB000D; }
+        color: #fb000d; }
 
 .jump {
   color: #565656;
@@ -74,16 +74,16 @@ nav {
   .jump.down {
     right: 15px; }
   .jump:hover {
-    color: #BC2F36; }
+    color: #bc2f36; }
 
 /* Header */
 header {
   margin: 0 auto;
-  width: 940px;
-  background-color: #009D92;
+  width: 960px;
+  background-color: #009d92;
   padding: 10px; }
   header h1 {
-    color: #FFEECC;
+    color: #ffeecc;
     background: url("../images/icons/it.png") no-repeat 0 50%;
     padding-left: 40px; }
   header nav {
@@ -95,7 +95,7 @@ header {
     header nav a {
       border-radius: 6px; }
       header nav a:hover {
-        background-color: #fff; }
+        background-color: white; }
   header:after {
     /* clearfix hack */
     content: "";
@@ -122,7 +122,7 @@ header {
 
 /* Famous Women */
 #famous h2 {
-  text-shadow: 1px 1px 2px #009D92; }
+  text-shadow: 1px 1px 2px #009d92; }
 #famous article.woman {
   background-color: white;
   float: left;
@@ -154,7 +154,7 @@ header {
   clear: both;
   height: 500px; }
   #organizations h2 {
-    text-shadow: 1px 1px 2px #FB000D; }
+    text-shadow: 1px 1px 2px #fb000d; }
   #organizations ul {
     margin: 50px;
     position: relative; }
@@ -165,7 +165,7 @@ header {
       padding-left: 5px;
       max-width: 50%; }
       #organizations ul li:before {
-        color: #FB000D;
+        color: #fb000d;
         content: '6';
         font-family: 'EntypoRegular';
         font-size: 40px;
@@ -189,7 +189,7 @@ header {
 
 /* Fun Facts */
 #facts h2 {
-  text-shadow: 1px 1px 2px #FFA700; }
+  text-shadow: 1px 1px 2px #ffa700; }
 
 #facts ul {
   margin: 50px; }
@@ -208,7 +208,7 @@ header {
   border-radius: 10px; }
 
 #facts ul li:before {
-  color: #FFA700;
+  color: #ffa700;
   content: '7';
   font-family: 'EntypoRegular';
   font-size: 30px;
@@ -231,7 +231,7 @@ footer {
     margin: 10px; }
     footer nav a:hover {
       box-shadow: none;
-      color: #FFEECC; }
+      color: #ffeecc; }
   footer:after {
     /* clearfix hack */
     content: "";

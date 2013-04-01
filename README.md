@@ -13,16 +13,16 @@ The course is meant to be taught in 2 two-hour sections. Each of the slides and 
 We look at how Sass makes writing CSS easier, and set up our environment. You will install Ruby and Sass, learn basics of the command line and get your files set up to compile Sass into CSS.
 
 #### Part 2: Building Blocks of Sass.
-You'll learn basic Sass concepts including variables, nesting, color functions and mix-ins. Students will create a basic Sass stylesheet with color and font variables, nested styles, and simple mix-ins for reusing CSS.
+You'll learn basic Sass concepts including variables, nesting, color functions and mix-ins. Students will create a basic Sass stylesheet with color and font variables, nested styles, and simple mix-ins for reusing CSS. 
 You'll learn the difference between hidden comments and visible comments, and see the output of your Sass experiments.
 
 ### Class 2
 
 #### Part 1: Advanced Mix-Ins
-You'll learn how to create advanced mix-ins for CSS3 features like gradients, sprite images, and drop shadows. With a Photoshop mockup as our guide, we'll build the front end of our site using Sass to style it with the latest CSS3 features.
+You'll learn how to create advanced mix-ins for CSS3 features like gradients, sprite images, and drop shadows. We'll redesign the front end of our site using Sass to style it with the latest CSS3 features.
 
 #### Part 2: Custom Sass Functions
-You will write your own functions to extend your Sass, using programming concepts like if/else statements, for loops, and arrays to power your CSS. You'll put your functions into action by using it to finish your website based on our mockup.
+You will write your own functions to extend your Sass, using programming concepts like if/else statements, for loops, and lists to power your CSS.
 
 #### Part 3: Sass Tips & Tricks
 Sass extends CSS3, and there are also tools that extend Sass! We'll look at the following Sass helpers:

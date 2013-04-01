@@ -1,0 +1,310 @@
+/* General Styles */
+body {
+  background-color: #f1f1f1;
+  background-image: -webkit-linear-gradient(#f1f1f1, #585858, #f1f1f1);
+  background-image: -moz-linear-gradient(#f1f1f1, #585858, #f1f1f1);
+  background-image: linear-gradient(#f1f1f1, #585858, #f1f1f1);
+  font-family: "Lato", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.2em;
+  margin: 0px auto;
+  width: 100%; }
+  body p {
+    margin: 1em; }
+  body a {
+    color: #00847a;
+    text-decoration: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s; }
+    body a:hover {
+      color: #c8000e; }
+
+h1 {
+  font-family: "Audiowide", cursive;
+  font-size: 2.2em;
+  float: left;
+  line-height: 75px;
+  text-shadow: 2px 2px #00d0c1; }
+
+h2 {
+  background-color: #3e3e3e;
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  font-size: 2.4em;
+  font-weight: 400;
+  line-height: 80px;
+  margin: 0 0 0.5em 0;
+  text-align: center; }
+
+h3 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.4em;
+  font-weight: 700;
+  margin: 0 0 0.3em 0;
+  text-align: center; }
+
+h4 {
+  color: #585858;
+  font-size: 1em;
+  text-align: center; }
+
+/* Navigation */
+nav {
+  width: 240px; }
+  nav li {
+    float: left; }
+    nav li a {
+      color: white;
+      text-shadow: 2px 2px gray;
+      margin: 0 10px;
+      padding: 5px 10px;
+      text-decoration: none; }
+      nav li a:hover {
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+        color: #e20010; }
+
+.jump {
+  color: #585858;
+  font-family: 'EntypoRegular';
+  font-size: 70px;
+  line-height: 80px;
+  position: absolute;
+  text-decoration: none;
+  top: 0; }
+  .jump.up {
+    left: 15px; }
+  .jump.down {
+    right: 15px; }
+  .jump:hover {
+    color: #c8000e; }
+
+/* Header */
+header {
+  margin: 0 auto;
+  width: 940px;
+  background-color: #009d92;
+  padding: 10px; }
+  header h1 {
+    color: #ffeecc;
+    background: url("../images/icons/it.png") no-repeat 0 50%;
+    padding-left: 40px; }
+  header nav {
+    float: right;
+    font-size: 1.2em;
+    margin-left: 20px; }
+    header nav li {
+      line-height: 36px; }
+    header nav a {
+      border-radius: 6px; }
+      header nav a:hover {
+        background-color: white; }
+  header:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+/* Main */
+#main {
+  background: white;
+  margin: 0 auto;
+  width: 960px; }
+  #main section {
+    margin-bottom: 1em;
+    position: relative; }
+    #main section:after {
+      content: "";
+      display: table;
+      clear: both; }
+  #main div.wrapper {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto; }
+
+/* Famous Women */
+#famous h2 {
+  text-shadow: 1px 1px 2px #009d92; }
+#famous article.woman {
+  background-color: white;
+  float: left;
+  min-height: 250px;
+  margin: 1%;
+  opacity: 0.8;
+  padding: 10px;
+  width: 280px; }
+#famous article:hover {
+  opacity: 1; }
+#famous article:nth-child(4n) {
+  clear: both; }
+#famous article img {
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px #000;
+  display: block;
+  margin: 1em auto;
+  width: 100%; }
+  #famous article img:hover {
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+    -webkit-transform-origin: 50% 0;
+    -moz-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+      /*  -webkit-transform: rotate(-5deg);
+        -moz-transform: rotate(-5deg);
+        transform: rotate(-5deg);
+
+        -webkit-transform-origin: 50% 0;
+        -moz-transform-origin: 50% 0;
+        transform-origin: 50% 0;*/ }
+
+/* Organizations */
+#organizations {
+  clear: both;
+  height: 500px; }
+  #organizations h2 {
+    text-shadow: 1px 1px 2px #e20010; }
+  #organizations ul {
+    margin: 50px;
+    position: relative; }
+    #organizations ul li {
+      font-size: 1.2em;
+      line-height: 26px;
+      margin-bottom: 1em;
+      padding-left: 5px;
+      max-width: 50%; }
+      #organizations ul li:before {
+        color: #e20010;
+        content: '6';
+        font-family: 'EntypoRegular';
+        font-size: 40px;
+        opacity: 0.5;
+        padding-right: 10px;
+        text-shadow: 0px 0px 2px #888; }
+      #organizations ul li:hover:before {
+        opacity: 1; }
+      #organizations ul li:hover img {
+        opacity: 1; }
+  #organizations img {
+    border-radius: 20px;
+    position: absolute;
+    right: 20px;
+    top: 0;
+    max-width: 40%;
+    opacity: 0;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    transition: opacity 1s; }
+
+/* Fun Facts */
+#facts h2 {
+  text-shadow: 1px 1px 2px #ffaa00; }
+
+#facts ul {
+  margin: 50px; }
+
+#facts ul li {
+  font-size: 1.2em;
+  line-height: 26px;
+  margin-bottom: 1em;
+  padding-left: 5px;
+  -webkit-transition: background-color 1s;
+  -moz-transition: background-color 1s;
+  transition: background-color 1s; }
+
+#facts ul li:hover {
+  background-color: #fff;
+  border-radius: 10px; }
+
+#facts ul li:before {
+  color: #ffaa00;
+  content: '7';
+  font-family: 'EntypoRegular';
+  font-size: 30px;
+  padding-right: 10px;
+  text-shadow: 1px 1px 1px #CCC; }
+
+#facts ul li:hover:before {
+  color: #FF6F00; }
+
+/* Footer */
+footer {
+  margin: 0 auto;
+  width: 960px;
+  background-image: -webkit-linear-gradient(#00665f, #1d766f, #00665f);
+  background-image: -moz-linear-gradient(#00665f, #1d766f, #00665f);
+  background-image: linear-gradient(#00665f, #1d766f, #00665f); }
+  footer nav {
+    float: left;
+    font-size: 1.1em;
+    padding: 10px;
+    width: 940px; }
+    footer nav a:hover {
+      box-shadow: none;
+      color: #ffeecc; }
+  footer:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+/* Fonts */
+@font-face {
+  font-family: 'EntypoRegular';
+  src: url("font/Entypo-webfont.eot");
+  src: url("font/Entypo-webfont.eot?#iefix") format("embedded-opentype"), url("font/Entypo-webfont.woff") format("woff"), url("font/Entypo-webfont.ttf") format("truetype"), url("font/Entypo-webfont.svg#EntypoRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/** Tablet view **/
+@media screen and (max-width: 960px) {
+  h1 {
+    font-size: 1.1em;
+    line-height: 40px; }
+
+  header nav li {
+    line-height: 40px; } }
+/** Mobile view **/
+@media screen and (max-width: 480px) {
+  h1 {
+    padding: 20px;
+    line-height: 40px; }
+
+  h1 span {
+    display: none; }
+
+  header nav {
+    margin-left: 5px; }
+
+  header nav li {
+    line-height: 40px; }
+
+  header nav li a {
+    font-size: 0.9em;
+    margin: 3px;
+    padding: 1px; }
+
+  #famous article.woman {
+    float: none;
+    margin: 5px auto;
+    padding: 2%;
+    width: 80%; }
+
+  h2 {
+    font-size: 2.0em; }
+
+  #organizations {
+    height: auto; }
+
+  #organizations ul li {
+    max-width: 100%; }
+
+  #organizations ul li img {
+    display: none; }
+
+  footer nav li {
+    line-height: 40px; }
+
+  footer nav li a {
+    font-size: 0.9em;
+    margin: 3px;
+    padding: 1px; } }

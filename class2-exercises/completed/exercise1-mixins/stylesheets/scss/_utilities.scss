@@ -1,0 +1,64 @@
+// Utilities file! 
+
+// Colors! 
+$bodyBackground: rgb(241, 241, 241); // light grey
+$accentBackground: #009D92; // teal
+$contrastColor: #FFEECC; // yellow
+$linkText: darken($accentBackground, 5%); // teal
+$linkHover: darken(invert($accentBackground), 30%); // red
+$titleShadow: lighten($accentBackground, 10%);
+$contentBackground: #fff;
+$sectionHeadingBackground: darken($bodyBackground, 70%); // darkest grey
+$sectionHeading: #fff;
+$headingYears: darken($bodyBackground, 60%); // grey for bio years
+$navLink: #fff;
+$linkAccent: lighten($linkHover, 5%); // light red in hovers and shadows
+$jumpIcon: darken($bodyBackground, 60%); // dark grey
+$factsAccent: darken($contrastColor, 40%); // bright yellow in facts section
+
+
+ // Fonts!
+$title: 'Audiowide', cursive;
+$headings: 'Quicksand', sans-serif;
+$bodyText: 'Lato', Arial, sans-serif;
+
+$defaultFontSize: 16px;
+
+
+ // Layout 
+$centered: 0 auto;
+$layoutWidth: 960px;
+$defaultPadding: 10px;
+$headerWidth: $layoutWidth - $defaultPadding*2;
+$navWidth: $layoutWidth/4;
+$navLinkHeight: $defaultFontSize + $defaultPadding*2; // let's adjust the line height for header nav, basing it on font size and top and bottom padding
+$articleWidth: $layoutWidth/3 - $defaultPadding*4;
+$listItemHeight: $defaultFontSize + $defaultPadding;
+$footerWidth: $headerWidth;
+
+// Mixins
+
+// Drop shadow (text-shadow) effect
+@mixin dropshadow($text) {
+  color: $text;
+  text-shadow: 2px 2px darken($text, 50%);
+}
+@mixin clearfix {
+    content: "";
+    display: table;
+    clear: both;
+}
+@mixin gradient($color1, $color2) {
+	background-image: -webkit-linear-gradient($color1, $color2, $color1);
+  	background-image: -moz-linear-gradient($color1, $color2, $color1);
+  	background-image: linear-gradient($color1, $color2, $color1);
+}
+// The rotate mixin uses interpolation of variables to have them sit alongside regular CSS text. see the docs: http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#interpolation_
+@mixin rotate($degree, $position) {
+	-webkit-transform: rotate(#{$degree}deg); 
+    -moz-transform: rotate(#{$degree}deg);
+    transform: rotate(#{$degree}deg);
+    -webkit-transform-origin: $position;
+    -moz-transform-origin: $position;
+    transform-origin: $position;
+}

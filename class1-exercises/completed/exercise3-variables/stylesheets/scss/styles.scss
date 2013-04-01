@@ -5,7 +5,7 @@
 
 // We're adding variables from our _utilities stylesheet to our styles now!
 body {
-  background-color: $backgroundColor;
+  background-color: $bodyBackground;
   font-family: $bodyText;
   font-size: $defaultFontSize;
   font-weight: 300;
@@ -39,8 +39,8 @@ h1 {
 }
 
 h2 {
-  background-color: rgb(60, 60, 60);
-  color: #FFF;
+  background-color: $sectionHeadingBackground;
+  color: $sectionHeading;
   font-family: $headings;
   font-size: 2.4em;
   font-weight: 400;
@@ -58,7 +58,7 @@ h3 {
 }
 
 h4 {
-  color: rgb(120, 120, 120);
+  color: $headingYears;
   font-size: 1em;
   text-align: center;
 }
@@ -66,24 +66,24 @@ h4 {
 
 /* Navigation */
 nav {
-  width: $navWidth;
+  width: $layoutWidth;
     li {
     float: left;
     a {
-      color: #fff;
+      color: $navLink;
       margin: 0 10px;
       padding: 5px 10px;
       text-decoration: none;
       &:hover {
         box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
-        color: #FB000D;
+        color: $linkAccent;
       }
     }
   } 
 }
 
 .jump {
-  color: #565656;
+  color: $jumpIcon;
   font-family: 'EntypoRegular';
   font-size: 70px;
   line-height: 80px;
@@ -97,7 +97,7 @@ nav {
     right: 15px;
   }
   &:hover {
-    color: #BC2F36;
+    color: $linkHover;
   }
 }
 
@@ -105,11 +105,11 @@ nav {
 /* Header */
 header {
   margin: $centered;
-  width: $headerWidth;
-  background-color: #009D92;
+  width: $layoutWidth;
+  background-color: $accentBackground;
   padding: 10px;
   h1 {
-    color: #FFEECC;
+    color: $contrastColor;
     background: url('../images/icons/it.png') no-repeat 0 50%;
     padding-left: 40px;
   }
@@ -123,7 +123,7 @@ header {
     a {
       border-radius: 6px;
       &:hover {
-        background-color: #fff;
+        background-color: $navLink;
       }
     }
   }
@@ -160,11 +160,11 @@ header {
 /* Famous Women */
 #famous {
   h2 {
-    text-shadow: 1px 1px 2px #009D92;
+    text-shadow: 1px 1px 2px $accentBackground;
   }  
   article {
     &.woman {
-      background-color: white;
+      background-color: $contentBackground;
       float: left;
       min-height: 250px;
       margin: 1%;
@@ -202,7 +202,7 @@ header {
   clear: both;
   height: 500px;
   h2 {
-    text-shadow: 1px 1px 2px #FB000D;
+    text-shadow: 1px 1px 2px $linkAccent;
   }
   ul {
     margin: 50px;
@@ -214,7 +214,7 @@ header {
       padding-left: 5px;
       max-width: 50%;
       &:before {
-        color: #FB000D;
+        color: $linkAccent;
         content: '6';
         font-family: 'EntypoRegular';
         font-size: 40px;
@@ -246,7 +246,7 @@ header {
 
 /* Fun Facts */
 #facts h2 {
-  text-shadow: 1px 1px 2px #FFA700;
+  text-shadow: 1px 1px 2px $factsAccent;
 }
 #facts ul {
   margin: 50px;
@@ -266,7 +266,7 @@ header {
   border-radius: 10px;
 }
 #facts ul li:before {
-  color: #FFA700;
+  color: $factsAccent;
   content: '7';
   font-family: 'EntypoRegular';
   font-size: 30px;
@@ -291,7 +291,7 @@ footer {
     margin: 10px;
     a:hover {
       box-shadow: none;
-      color: #FFEECC;
+      color: $contrastColor;
     }
   }
   &:after {

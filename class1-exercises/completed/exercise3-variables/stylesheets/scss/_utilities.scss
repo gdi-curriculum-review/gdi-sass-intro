@@ -1,11 +1,20 @@
 // Utilities file! I'm adding lotsa variables for this exercise.
 
 // Colors! 
-$backgroundColor: rgb(241, 241, 241);
-$linkText: #1D766F;
-$linkHover: #BC2F36;
+$bodyBackground: rgb(241, 241, 241); // light grey
+$accentBackground: #009D92; // teal
+$contrastColor: #FFEECC; // yellow
+$linkText: #1D766F; // teal
+$linkHover: #BC2F36; // red
 $textShadow: rgba(255, 255, 255, 0.25);
 $contentBackground: #fff;
+$sectionHeadingBackground: rgb(60, 60, 60); // darkest grey
+$sectionHeading: #fff;
+$headingYears: rgb(120, 120, 120); // grey for bio years
+$navLink: #fff;
+$linkAccent: #FB000D; // light red in hovers and shadows
+$jumpIcon: #565656; // dark grey
+$factsAccent: #ffa700; // bright yellow in facts section
 
 
  // Fonts!
@@ -19,5 +28,4 @@ $defaultFontSize: 16px;
  // Layout 
 $centered: 0 auto;
 $layoutWidth: 960px;
-$headerWidth: $layoutWidth - 20px;
-$navWidth: $layoutWidth/4;
+
