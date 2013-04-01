@@ -5,7 +5,7 @@
 
 body {
   background-color: $bodyBackground;
-  @include gradient($bodyBackground, darken($bodyBackground, 60%));
+  @include gradient;
   font-family: $bodyText;
   font-size: $defaultFontSize;
   font-weight: 300;
@@ -70,7 +70,7 @@ nav {
     li {
     float: left;
     a {
-      @include dropshadow($navLink);
+      @include dropshadow($navLink, 20%);
       margin: 0 10px;
       padding: 5px 10px;
       text-decoration: none;
@@ -107,6 +107,7 @@ header {
   margin: $centered;
   width: $headerWidth;
   background-color: $accentBackground;
+  @include gradient($accentBackground, lighten($accentBackground, 8%));
   padding: 10px;
   h1 {
     color: $contrastColor;
@@ -179,13 +180,14 @@ header {
       margin: 1em auto;
       width: 100%;
       &:hover {
-        -webkit-transform: rotate(-5deg);
+        @include rotate(-5, 50% 0);
+      /*  -webkit-transform: rotate(-5deg);
         -moz-transform: rotate(-5deg);
         transform: rotate(-5deg);
 
         -webkit-transform-origin: 50% 0;
         -moz-transform-origin: 50% 0;
-        transform-origin: 50% 0;
+        transform-origin: 50% 0;*/
       }
     }
   }
@@ -194,7 +196,7 @@ header {
 /* Organizations */
 #organizations {
   clear: both;
-  height: 500px;
+  height: auto;
   h2 {
     text-shadow: 1px 1px 2px $linkAccent;
   }
@@ -239,6 +241,10 @@ header {
 }
 
 /* Fun Facts */
+#facts {
+  @extend #organizations;
+  width: 100%;
+}
 #facts h2 {
   text-shadow: 1px 1px 2px $factsAccent;
 }
@@ -246,11 +252,7 @@ header {
   margin: 50px;
 }
 #facts ul li {
-  font-size: 1.2em;
-  line-height: $listItemHeight;
-  margin-bottom: 1em;
-  padding-left: 5px;
-
+  max-width: 100%;
   -webkit-transition: background-color 1s;
   -moz-transition: background-color 1s;
   transition: background-color 1s;

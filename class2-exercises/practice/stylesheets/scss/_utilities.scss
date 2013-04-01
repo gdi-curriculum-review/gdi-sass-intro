@@ -1,4 +1,4 @@
-// Utilities file! Color Functions
+// Utilities file!
 
 // Colors! 
 $bodyBackground: rgb(241, 241, 241); // light grey
@@ -44,21 +44,11 @@ $footerWidth: $headerWidth;
   text-shadow: 2px 2px darken($text, 50%);
 }
 @mixin clearfix {
-    content: "";
-    display: table;
-    clear: both;
+
 }
-@mixin gradient($color1, $color2) {
-	background-image: -webkit-linear-gradient($color1, $color2, $color1);
-  	background-image: -moz-linear-gradient($color1, $color2, $color1);
-  	background-image: linear-gradient($color1, $color2, $color1);
+@mixin gradient() {
+
 }
-// The rotate mixin uses interpolation of variables to have them sit alongside regular CSS text. see the docs: http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#interpolation_
 @mixin rotate($degree, $position) {
-	-webkit-transform: rotate(#{$degree}deg); 
-    -moz-transform: rotate(#{$degree}deg);
-    transform: rotate(#{$degree}deg);
-    -webkit-transform-origin: $position;
-    -moz-transform-origin: $position;
-    transform-origin: $position;
+
 }

@@ -1,4 +1,4 @@
-// Utilities file! 
+// Utilities file!
 
 // Colors! 
 $bodyBackground: rgb(241, 241, 241); // light grey
@@ -39,17 +39,26 @@ $footerWidth: $headerWidth;
 // Mixins
 
 // Drop shadow (text-shadow) effect
-@mixin dropshadow($text) {
-  color: $text;
-  text-shadow: 2px 2px darken($text, 50%);
+@mixin dropshadow($textColor: #666, $percent: 50%) {
+  color: $textColor;
+  text-shadow: 2px 2px darken($textColor, $percent);
 }
 @mixin clearfix {
     content: "";
     display: table;
     clear: both;
 }
-@mixin gradient($color1, $color2) {
+@mixin gradient($color1: $bodyBackground, $color2: $accentBackground) {
 	background-image: -webkit-linear-gradient($color1, $color2, $color1);
-  	background-image: -moz-linear-gradient($color1, $color2, $color1);
-  	background-image: linear-gradient($color1, $color2, $color1);
+	background-image: -moz-linear-gradient($color1, $color2, $color1);
+  background-image: linear-gradient($color1, $color2, $color1);
+}
+// The rotate mixin uses interpolation of variables to have them sit alongside regular CSS text. see the docs: http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#interpolation_
+@mixin rotate($degree, $position) {
+	-webkit-transform: rotate(#{$degree}deg); 
+  -moz-transform: rotate(#{$degree}deg);
+  transform: rotate(#{$degree}deg);
+  -webkit-transform-origin: $position;
+  -moz-transform-origin: $position;
+  transform-origin: $position;
 }

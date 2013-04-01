@@ -15,6 +15,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/png" href="reveal.js/favicon.ico">
 
     <link rel="stylesheet" href="reveal.js/css/reveal.css">
     <link rel="stylesheet" href="reveal.js/css/theme/css/gdisunny.css" id="theme">
@@ -60,7 +61,6 @@
             <li>dropshadow/text-shadow style</li>
             <li>clearfix</li>
             <li>gradient</li>
-            <li>transform/rotate</li>
           </ul>
           <pre><code class ="php">@mixin example($optionalArgument) {
   property: value;
@@ -77,7 +77,7 @@ p {
         <section>
           <h3>Multiple Arguments</h3>
           <div class="left-align">
-            Mixins can take multiple arguments, as we saw with the gradient and rotate mixins:
+            Mixins can take multiple arguments, as we saw with the gradient mixin:
             <pre><code contenteditable class="sass css">@mixin gradient($color1, $color2) {
   background-image: -webkit-linear-gradient($color1, $color2, $color1);
   background-image: -moz-linear-gradient($color1, $color2, $color1);
@@ -93,8 +93,8 @@ p {
             You can also specify *default* values for arguments, for next-level laziness (a good thing):
             <pre><code contenteditable class="sass css">@mixin gradient($color1: #fff, $color2: #666) {
   background-image: -webkit-linear-gradient($color1, $color2, $color1);
-    background-image: -moz-linear-gradient($color1, $color2, $color1);
-    background-image: linear-gradient($color1, $color2, $color1);
+  background-image: -moz-linear-gradient($color1, $color2, $color1);
+  background-image: linear-gradient($color1, $color2, $color1);
 }</code></pre>  
 </div>
         </section>
@@ -103,14 +103,14 @@ p {
         <section>
           <h3>Interpolation</h3>
           <div class="left-align">
-            With some styles, we may want to use variables right next to text, like in our rotate mixin:
+            With some styles, we may want to use variables right next to text, like with our image rotate style - try it in _utilities: 
             <pre><code contenteditable class="sass css">@mixin rotate($degree, $position) {
   -webkit-transform: rotate(-5deg); 
-    -moz-transform: rotate(-5deg);
-    transform: rotate(-5deg);
-    -webkit-transform-origin: $position;
-    -moz-transform-origin: $position;
-    transform-origin: $position;
+  -moz-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+  -webkit-transform-origin: $position;
+  -moz-transform-origin: $position;
+  transform-origin: $position;
 }</code></pre>  
 </div>
         </section>
@@ -122,11 +122,11 @@ p {
             We do this by using <a target="_blank" href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#interpolation_">interpolations</a>, which is a special syntax for variables that appear inside regular CSS text:
             <pre><code contenteditable class="sass css">@mixin rotate(<span class="variable">$degree</span>, $position) {
   -webkit-transform: rotate(<span class="variable">#{$degree}</span>deg); 
-    -moz-transform: rotate(<span class="variable">#{$degree}</span>deg);
-    transform: rotate(<span class="variable">#{$degree}</span>deg);
-    -webkit-transform-origin: $position;
-    -moz-transform-origin: $position;
-    transform-origin: $position;
+  -moz-transform: rotate(<span class="variable">#{$degree}</span>deg);
+  transform: rotate(<span class="variable">#{$degree}</span>deg);
+  -webkit-transform-origin: $position;
+  -moz-transform-origin: $position;
+  transform-origin: $position;
 }</code></pre>  
 </div>
         </section>        
@@ -149,7 +149,7 @@ p {
 </div>
         </section>          
 
-        <!-- Exercise 2: More Mixins -->
+        <!-- Exercise 2: Advanced Mixins -->
         <section>
           <h3>Let's Develop It</h3>
           <ul>
@@ -165,17 +165,74 @@ p {
           <li>Compile to CSS and refresh your index page to see your changes</li>
         </ul>
         </section>
+
+        <!-- Advanced mixins: CSS3 and UI mixins -->
+        <section>
+          <h3>CSS3 Mixins</h3>
+          <div class="left-align">
+            Lots of CSS3 features require browser prefixes or have complex syntaxes. These are perfectly suited to mixins, so we can include them in our styles without having to copy and paste from sites like <a target="_blank" href="http://css3please.com/">CSS3 Please</a>.
+            <pre><code contenteditable class="sass css">@mixin rotate(<span class="variable">$degree</span>, $position) {
+  -webkit-transform: rotate(<span class="variable">#{$degree}</span>deg); 
+  -moz-transform: rotate(<span class="variable">#{$degree}</span>deg);
+  transform: rotate(<span class="variable">#{$degree}</span>deg);
+  -webkit-transform-origin: $position;
+  -moz-transform-origin: $position;
+  transform-origin: $position;
+}</code></pre>  
+</div>
+        </section>     
+
+        <!-- Advanced mixins: CSS3 and UI mixins -->
+        <section>
+          <h3>CSS3 Mixins</h3>
+          <div class="left-align">
+            Gradients are CSS3 and require lots of browser prefixes to work in Firefox, Chrome, Safari, &amp; Internet Explorer.
+            <pre><code contenteditable class="sass css">@mixin gradient($color1: $bodyBackground, $color2: $accentBackground) {
+  background-image: -webkit-linear-gradient($color1, $color2, $color1);
+  background-image: -moz-linear-gradient($color1, $color2, $color1);
+  background-image: linear-gradient($color1, $color2, $color1);
+}
+@include gradient(#fff, #000);</code></pre>  
+</div>
+        </section>  
+
+        <!-- Advanced mixins: CSS3 and UI mixins -->
+        <section>
+          <h3>CSS3 Mixins</h3>
+          <div class="left-align">
+            <p>Other CSS3 features that require browser prefixes to work in most popular browsers include:</p>
+            <ul>
+              <li><a target="_blank" href="http://codepen.io/cfarm/pen/arBLb">@font-face</a></li>
+              <li><a target="_blank" href="http://codepen.io/cfarm/pen/BrckG"> transitions</a></li>
+              <li><a target="_blank" href="http://codepen.io/cfarm/pen/rkEIo">box-shadow</a></li>
+              <li><a target="_blank" href="http://codepen.io/cfarm/pen/kcfwH">opacity</a></li>
+            </ul>
+        </div>
+        </section>  
+
+        <!-- Advanced mixins: UI development mixins -->
+        <section>
+          <h3>Mixins for UI Elements</h3>
+          <div class="left-align">
+            <p>Mixins are very useful for common design patterns, or reused user interface elements that appear on websites. A great example is the CSS sprite design pattern.</p>
+            <ul>
+              <li></li>
+            </ul>
+        </div>
+        </section>  
+
         
-        <!-- Exercise 3: Advanced mixins -->
+        <!-- Exercise 3: CSS3 and UI mixins -->
         <section>
           <h3>Let's Develop It</h3>
           <ul>
-          <li>Create new mixins for the following use cases:
+          <li>Create new mixins for the following use cases, combining as many as possible:
             <ul>
               <li>Sprite images</li>
               <li>Opacity for all browsers, including IE</li>
               <li>CSS3 box-shadow</li>
               <li>@font-face</li>
+              <li>transitions</li>
               <li>CSS shapes</li>
             </ul>
           </li>
@@ -230,7 +287,6 @@ p {
         <section>
           <h3>For Loops</h3>
           <div class = "left-align">
-
           <ul>
             <li>Rewrite your grid layout to use loops to write the classes and styles for you</li>
             <li>Create @media queries using a @for loop</li>
