@@ -168,7 +168,7 @@ p {
 
         <!-- Advanced mixins: CSS3 and UI mixins -->
         <section>
-          <h3>CSS3 Mixins</h3>
+          <h3>CSS3: Browser Prefixes</h3>
           <div class="left-align">
             Lots of CSS3 features require browser prefixes or have complex syntaxes. These are perfectly suited to mixins, so we can include them in our styles without having to copy and paste from sites like <a target="_blank" href="http://css3please.com/">CSS3 Please</a>.
             <pre><code contenteditable class="sass css">@mixin rotate(<span class="variable">$degree</span>, $position) {
@@ -184,9 +184,9 @@ p {
 
         <!-- Advanced mixins: CSS3 and UI mixins -->
         <section>
-          <h3>CSS3 Mixins</h3>
+          <h3>CSS3: Browser Prefixes</h3>
           <div class="left-align">
-            Gradients are CSS3 and require lots of browser prefixes to work in Firefox, Chrome, Safari, &amp; Internet Explorer.
+            Gradients are CSS3 and require browser prefixes to work in Firefox, Chrome, Safari, &amp; Internet Explorer.
             <pre><code contenteditable class="sass css">@mixin gradient($color1: $bodyBackground, $color2: $accentBackground) {
   background-image: -webkit-linear-gradient($color1, $color2, $color1);
   background-image: -moz-linear-gradient($color1, $color2, $color1);
@@ -214,13 +214,23 @@ p {
         <section>
           <h3>Mixins for UI Elements</h3>
           <div class="left-align">
-            <p>Mixins are very useful for common design patterns, or reused user interface elements that appear on websites. A great example is the CSS sprite design pattern.</p>
-            <ul>
-              <li></li>
-            </ul>
+            <p>Mixins are very useful for common design patterns. A great example is the <a target="_blank" href="http://coding.smashingmagazine.com/2012/04/11/css-sprites-revisited/">CSS sprite</a> design pattern.</p>
+           <pre><code contenteditable class="sass css"></code></pre>  
         </div>
         </section>  
 
+       <!-- Advanced mixins: CSS3 and UI mixins -->
+        <section>
+          <h3>CSS3 Mixins</h3>
+          <div class="left-align">
+            <p>Other common UI elements that mixins are great for styling:</p>
+            <ul>
+              <li><a target="_blank" href="http://codepen.io/seansean11/pen/CKIyf">buttons</a></li>
+              <li><a target="_blank" href="http://codepen.io/cfarm/pen/opCjq">error messages</a></li>
+              <li><a target="_blank" href="http://codepen.io/minimalmonkey/pen/KIaGD">CSS shapes (triangles, arrows)</a></li>
+            </ul>
+        </div>
+        </section>  
         
         <!-- Exercise 3: CSS3 and UI mixins -->
         <section>
