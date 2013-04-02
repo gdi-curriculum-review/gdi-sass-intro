@@ -215,7 +215,23 @@ p {
           <h3>Mixins for UI Elements</h3>
           <div class="left-align">
             <p>Mixins are very useful for common design patterns. A great example is the <a target="_blank" href="http://coding.smashingmagazine.com/2012/04/11/css-sprites-revisited/">CSS sprite</a> design pattern.</p>
-           <pre><code contenteditable class="sass css"></code></pre>  
+            <p>Here's an example from YouTube:</p>
+
+           <table class="code-compare">
+            <tr><td>
+            <p>Sprite image:</p>
+            <a target="_blank" href="images/youtube_sprite.png"><img src="images/youtube_sprite.png"></a>
+</td>
+<td>
+            <p>CSS for icon:</p>
+            <pre style="width: 650px"><code contenteditable class ="sass css">.icon {
+display: block;
+background: no-repeat url(images/youtube_sprite.png) -395px -114px;
+background-size: auto;
+width: 18px;
+height: 18px; }</code></pre>
+
+          </tr></td></table>
         </div>
         </section>  
 
@@ -223,15 +239,17 @@ p {
         <section>
           <h3>CSS3 Mixins</h3>
           <div class="left-align">
-            <p>Other common UI elements that mixins are great for styling:</p>
+            <p>Other common UI elements that Sass mixins make easy:</p>
             <ul>
               <li><a target="_blank" href="http://codepen.io/seansean11/pen/CKIyf">buttons</a></li>
+              <li><a target="_blank" href="http://codepen.io/cfarm/pen/FAgsp">image replacement</a></li>
               <li><a target="_blank" href="http://codepen.io/cfarm/pen/opCjq">error messages</a></li>
               <li><a target="_blank" href="http://codepen.io/minimalmonkey/pen/KIaGD">CSS shapes (triangles, arrows)</a></li>
             </ul>
         </div>
         </section>  
-        
+
+
         <!-- Exercise 3: CSS3 and UI mixins -->
         <section>
           <h3>Let's Develop It</h3>
@@ -251,6 +269,14 @@ p {
         </ul>
         </section>
 
+        <!-- BREAK before Part 2 -->
+        <section>
+          <h3>Break Time!</h3>
+          <div>
+            <p>Stand up and stretch - we'll resume in 5 minutes</p>
+            <img src="images/stretchbreak.jpg">
+          </div>
+        </section>
 
         <!-- Exercise 4: Grid layout -->
         <section>

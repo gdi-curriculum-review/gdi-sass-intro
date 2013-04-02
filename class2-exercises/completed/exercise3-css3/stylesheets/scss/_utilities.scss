@@ -43,17 +43,22 @@ $footerWidth: $headerWidth;
   color: $textColor;
   text-shadow: 2px 2px darken($textColor, $percent);
 }
+
+// Clearfix
 @mixin clearfix {
     content: "";
     display: table;
     clear: both;
 }
+
+// Gradient for 2 colors, with 2nd color sandwiched in the middle
 @mixin gradient($color1: $bodyBackground, $color2: $accentBackground) {
 	background-image: -webkit-linear-gradient($color1, $color2, $color1);
 	background-image: -moz-linear-gradient($color1, $color2, $color1);
   background-image: linear-gradient($color1, $color2, $color1);
 }
-// The rotate mixin uses interpolation of variables to have them sit alongside regular CSS text. see the docs: http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#interpolation_
+
+// Transform: Rotate mixin
 @mixin rotate($degree, $position) {
 	-webkit-transform: rotate(#{$degree}deg); 
   -moz-transform: rotate(#{$degree}deg);
@@ -61,4 +66,25 @@ $footerWidth: $headerWidth;
   -webkit-transform-origin: $position;
   -moz-transform-origin: $position;
   transform-origin: $position;
+}
+
+// Image replacement - accessibly hides text when you want to use a background image instead
+@mixin image-replace {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+// Sprite
+@mixin sprite-position($x:0, $y:0) {
+  $gridSize:  -32px;
+  $offsetX:   $x * $gridSize;
+  $offsetY:   $y * $gridSize;
+  background-position: $offsetX $offsetY;
+}
+@mixin sprite-image($file, $x:0, $y:0) {
+  display: block;
+  background-image: url("../../images/icons/#{$file}");
+  @include sprite-position($x, $y);
+  @include image-replace;
 }

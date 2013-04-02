@@ -288,6 +288,31 @@ footer {
       box-shadow: none;
       color: $contrastColor;
     }
+    .icon {
+      @include sprite-image("sprite.png");
+      margin: 0 10px;
+      width: 32px;
+      height: 32px;
+      float: left;
+    }
+    .youtube {
+      @include sprite-position(0,0);
+    }
+    .twitter {
+      @include sprite-position(1,0);
+    }
+    .rss {
+      @include sprite-position(2,0);
+    } 
+    .flickr {
+      @include sprite-position(3,0);
+    }
+    .facebook {
+      @include sprite-position(4,0);
+    }
+    .print {
+      @include sprite-position(5,0);
+    }   
   }
   &:after {
     @include clearfix;
