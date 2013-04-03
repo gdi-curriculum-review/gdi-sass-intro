@@ -239,22 +239,18 @@ height: 18px; }</code></pre>
         <section>
           <h3>Sprite Mixins</h3>
           <div class="left-align">
-            <p>If you <a target="_blank" href="http://coding.smashingmagazine.com/2012/04/11/css-sprites-revisited/">set up your Photoshop files to use grid lines</a>, you can take advantage of a Sass mixin to easily position your sprite image without lots of trial and error.</p>
-            <p>Here's an example from YouTube:</p>
-
-           <table class="code-compare">
-            <tr><td>
-            <p>Sprite example using grid lines:</p>
-            <a target="_blank" href="class2-exercises/practice/images/icons/sprite.png"><img src="class2-exercises/practice/images/icons/sprite.png"></a>
-</td>
-<td>
-            <p>CSS for icon:</p>
-            <pre style="width: 650px"><code contenteditable class ="sass css">.icon {
-display: block;
-background: no-repeat url(images/youtube_sprite.png) -395px -114px;
-background-size: auto;
-width: 18px;
-height: 18px; }</code></pre>
+            <p>If you <a target="_blank" href="http://coding.smashingmagazine.com/2012/04/11/css-sprites-revisited/">set up your Photoshop sprite to use grid lines</a>, you can take advantage of a Sass mixin to easily position your sprite image without lots of trial and error.</p>
+            <pre style="width: 850px"><code contenteditable class ="sass css">@mixin sprite-position($x:0, $y:0) {
+  $gridSize:  -32px;
+  $offsetX:   $x * $gridSize;
+  $offsetY:   $y * $gridSize;
+  background-position: $offsetX $offsetY;
+}
+@mixin sprite-image($file, $x:0, $y:0) {
+  background-image: url("../../images/icons/#{$file}");
+  @include sprite-position($x, $y);
+}</code></pre>
+            
 
           </tr></td></table>
         </div>
