@@ -1,0 +1,541 @@
+/* Fonts */
+@font-face {
+  font-family: "EntypoRegular";
+  src: url("font/Entypo-webfont.eot");
+  src: url("font/Entypo-webfont.eot?#iefix") format("embedded-opentype"), url("font/Entypo-webfont.woff") format("woff"), url("font/Entypo-webfont.ttf") format("truetype"), url("font/Entypo-webfont.svg#Entypo-webfont") format("svg"); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/_utilities\.scss}line{font-family:\00003210}}
+.column-1 {
+  display: inline-block;
+  padding: 10px;
+  width: 3em;
+  color: #ffeecc;
+  font-size: 1em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/_utilities\.scss}line{font-family:\00003210}}
+.column-2 {
+  display: inline-block;
+  padding: 10px;
+  width: 6em;
+  color: #ffeecc;
+  font-size: 2em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/_utilities\.scss}line{font-family:\00003210}}
+.column-3 {
+  display: inline-block;
+  padding: 10px;
+  width: 9em;
+  color: #ffeecc;
+  font-size: 3em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/_utilities\.scss}line{font-family:\00003222}}
+.ada-bg {
+  background-image: url("../../images/ada_bg.png"); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/_utilities\.scss}line{font-family:\00003222}}
+.grace-bg {
+  background-image: url("../../images/grace_bg.png"); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/_utilities\.scss}line{font-family:\00003222}}
+.frances-bg {
+  background-image: url("../../images/frances_bg.png"); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/_utilities\.scss}line{font-family:\00003222}}
+.barbara-bg {
+  background-image: url("../../images/barbara_bg.png"); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/_utilities\.scss}line{font-family:\00003222}}
+.anita-bg {
+  background-image: url("../../images/anita_bg.png"); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/_utilities\.scss}line{font-family:\00003222}}
+.maria-bg {
+  background-image: url("../../images/maria_bg.png"); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/_utilities\.scss}line{font-family:\00003230}}
+footer nav .icon.youtube {
+  background-position: 0px 0px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/_utilities\.scss}line{font-family:\00003230}}
+footer nav .icon.twitter {
+  background-position: -32px 0px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/_utilities\.scss}line{font-family:\00003230}}
+footer nav .icon.rss {
+  background-position: -64px 0px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/_utilities\.scss}line{font-family:\00003230}}
+footer nav .icon.flickr {
+  background-position: -96px 0px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/_utilities\.scss}line{font-family:\00003230}}
+footer nav .icon.facebook {
+  background-position: -128px 0px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/_utilities\.scss}line{font-family:\00003230}}
+footer nav .icon.print {
+  background-position: -160px 0px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/_utilities\.scss}line{font-family:\00003263}}
+footer nav .icon.youtube {
+  background-position: 0px 0px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/_utilities\.scss}line{font-family:\00003263}}
+footer nav .icon.twitter {
+  background-position: -32px 0px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/_utilities\.scss}line{font-family:\00003263}}
+footer nav .icon.rss {
+  background-position: -64px 0px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/_utilities\.scss}line{font-family:\00003263}}
+footer nav .icon.flickr {
+  background-position: -96px 0px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/_utilities\.scss}line{font-family:\00003263}}
+footer nav .icon.facebook {
+  background-position: -128px 0px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/_utilities\.scss}line{font-family:\00003263}}
+footer nav .icon.print {
+  background-position: -160px 0px; }
+
+/* General Styles */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\000036}}
+body {
+  background-color: #f1f1f1;
+  background-color: white;
+  background-image: -moz-linear-gradient(top, white, #009d92);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, white), color-stop(1, #009d92));
+  background: -webkit-linear-gradient(white, #009d92);
+  background: -o-linear-gradient(white, #009d92);
+  background: -ms-linear-gradient(white, #009d92);
+  background-image: linear-gradient(top, white, #009d92);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='white', EndColorStr='#009d92');
+  font-family: "Lato", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.2em;
+  margin: 0px auto;
+  width: 100%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\0000316}}
+  body p {
+    margin: 1em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\0000319}}
+  body a {
+    color: #00847a;
+    text-decoration: none;
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    transition: color 0.3s; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/_utilities\.scss}line{font-family:\00003176}}
+    body a:hover {
+      color: #e20010; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\0000328}}
+h1 {
+  font-family: "Audiowide", cursive;
+  font-size: 2.2em;
+  float: left;
+  line-height: 75px;
+  text-shadow: 2px 2px #00d0c1; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\0000336}}
+h2 {
+  background-color: #3e3e3e;
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  font-size: 2.4em;
+  font-weight: 400;
+  line-height: 80px;
+  margin: 0 0 0.5em 0;
+  text-align: center;
+  box-shadow: inset 0px 0px 20px 2px black;
+  -webkit-box-shadow: inset 0px 0px 20px 2px black;
+  -moz-box-shadow: inset 0px 0px 20px 2px black; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\0000348}}
+h3 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.4em;
+  font-weight: 700;
+  margin: 0 0 0.3em 0;
+  text-align: center; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\0000356}}
+h4 {
+  color: #585858;
+  font-size: 1em;
+  text-align: center; }
+
+/* Navigation */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\0000364}}
+nav {
+  width: 240px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\0000366}}
+  nav li {
+    float: left;
+    height: 50px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\0000369}}
+    nav li .right-arrow {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-left: 12px solid #ffeecc; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\0000372}}
+    nav li .left-arrow {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-right: 12px solid #ffeecc; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\0000375}}
+    nav li .up-arrow {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-bottom: 16px solid #ffeecc;
+      border-right: 6px solid transparent;
+      border-left: 6px solid transparent; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\0000378}}
+    nav li .down-arrow {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-top: 16px solid #ffeecc;
+      border-right: 6px solid transparent;
+      border-left: 6px solid transparent; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\0000381}}
+    nav li a {
+      color: white;
+      text-shadow: 2px 2px #cccccc;
+      margin: 0 10px;
+      padding: 5px 10px;
+      text-decoration: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\0000386}}
+      nav li a:hover {
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.5); }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\0000393}}
+.jump {
+  color: #585858;
+  font-family: "EntypoRegular";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 70px;
+  line-height: 80px;
+  position: absolute;
+  text-decoration: none;
+  top: 0; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003101}}
+  .jump.up {
+    left: 15px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003104}}
+  .jump.down {
+    right: 15px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003107}}
+  .jump:hover {
+    color: #c8000e; }
+
+/* Header */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003114}}
+header {
+  margin: 0 auto;
+  padding: 10px;
+  width: 940px;
+  background-color: #009d92;
+  background-image: -webkit-linear-gradient(#009d92, #00c6b8, #009d92);
+  background-image: -moz-linear-gradient(#009d92, #00c6b8, #009d92);
+  background-image: linear-gradient(#009d92, #00c6b8, #009d92);
+  filter: alpha(opacity=80);
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=80);
+  opacity: 0.8; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003121}}
+  header h1 {
+    color: #ffeecc;
+    background: url("../images/icons/it.png") no-repeat 0 50%;
+    padding-left: 40px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003126}}
+  header nav {
+    float: right;
+    font-size: 1.2em;
+    margin-left: 20px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003130}}
+    header nav li {
+      line-height: 36px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003133}}
+    header nav a {
+      border-radius: 6px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003135}}
+      header nav a:hover {
+        background-color: white;
+        filter: alpha(opacity=50);
+        filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+        opacity: 0.5; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003141}}
+  header:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+/* Main */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003147}}
+#main {
+  background: white;
+  margin: 0 auto;
+  width: 960px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003151}}
+  #main section {
+    margin-bottom: 1em;
+    position: relative; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003154}}
+    #main section:after {
+      content: "";
+      display: table;
+      clear: both; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003158}}
+  #main div.wrapper {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto; }
+
+/* Famous Women */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003167}}
+#famous h2 {
+  text-shadow: 1px 1px 2px #009d92; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003171}}
+#famous article.woman {
+  background-color: white;
+  float: left;
+  min-height: 250px;
+  margin: 1%;
+  opacity: 0.8;
+  padding: 10px;
+  width: 280px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003180}}
+#famous article:hover {
+  opacity: 1; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003183}}
+#famous article:nth-child(4n) {
+  clear: both; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003186}}
+#famous article img {
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px #000;
+  display: block;
+  margin: 1em auto;
+  width: 100%;
+  box-shadow: 6px 6px 10px 0 #999999;
+  -webkit-box-shadow: 6px 6px 10px 0 #999999;
+  -moz-box-shadow: 6px 6px 10px 0 #999999; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003193}}
+  #famous article img:hover {
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+    -webkit-transform-origin: 50% 0;
+    -moz-transform-origin: 50% 0;
+    transform-origin: 50% 0; }
+
+/* Organizations */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003201}}
+#organizations, #facts {
+  clear: both;
+  height: auto; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003204}}
+  #organizations h2, #facts h2 {
+    text-shadow: 1px 1px 2px #e20010; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003207}}
+  #organizations ul, #facts ul {
+    margin: 50px;
+    position: relative; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003210}}
+    #organizations ul li, #facts ul li {
+      font-size: 1.2em;
+      line-height: 26px;
+      margin-bottom: 1em;
+      padding-left: 5px;
+      max-width: 50%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003216}}
+      #organizations ul li:before, #facts ul li:before {
+        color: #e20010;
+        content: '6';
+        font-family: 'EntypoRegular';
+        font-size: 40px;
+        opacity: 0.5;
+        padding-right: 10px;
+        text-shadow: 0px 0px 2px #888; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003227}}
+  #organizations img, #facts img {
+    border-radius: 20px;
+    position: absolute;
+    right: 20px;
+    top: 0;
+    max-width: 40%;
+    filter: alpha(opacity=0);
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+    opacity: 0;
+    -webkit-transition: opacity 10s;
+    -moz-transition: opacity 10s;
+    transition: opacity 10s; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/_utilities\.scss}line{font-family:\00003176}}
+    #organizations img:hover, #facts img:hover {
+      opacity: 1; }
+
+/* Fun Facts */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003239}}
+#facts {
+  width: 100%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003243}}
+#facts h2 {
+  text-shadow: 1px 1px 2px #ffaa00; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003246}}
+#facts ul {
+  margin: 50px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003249}}
+#facts ul li {
+  max-width: 100%;
+  -webkit-transition: background-color 2s;
+  -moz-transition: background-color 2s;
+  transition: background-color 2s; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/_utilities\.scss}line{font-family:\00003176}}
+  #facts ul li:hover {
+    background-color: #009d92; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003253}}
+#facts ul li:hover {
+  border-radius: 10px;
+  box-shadow: 0 0 2px 2px #111111;
+  -webkit-box-shadow: 0 0 2px 2px #111111;
+  -moz-box-shadow: 0 0 2px 2px #111111;
+  box-shadow: inset white 0 2px 2px #111111;
+  -webkit-box-shadow: inset white 0 2px 2px #111111;
+  -moz-box-shadow: inset white 0 2px 2px #111111; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003258}}
+#facts ul li:before {
+  color: #ffaa00;
+  content: '7';
+  font-family: 'EntypoRegular';
+  font-size: 30px;
+  padding-right: 10px;
+  text-shadow: 1px 1px 1px #CCC; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003266}}
+#facts ul li:hover:before {
+  color: #FF6F00; }
+
+/* Footer */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003272}}
+footer {
+  margin: 0 auto;
+  width: 960px;
+  background-color: #009d92;
+  background-image: -moz-linear-gradient(45deg, black 0%, #009d92 100%);
+  background-image: -webkit-gradient(linear, left bottom, right top, color-stop(0%, black), color-stop(100%, #009d92));
+  background: -webkit-linear-gradient(45deg, black 0%, #009d92 100%);
+  background: -o-linear-gradient(45deg, black 0%, #009d92 100%);
+  background: -ms-linear-gradient(45deg, black 0%, #009d92 100%);
+  background-image: linear-gradient(45deg, black 0%, #009d92 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='black', EndColorStr='#009d92',GradientType=1); }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003277}}
+  footer nav {
+    float: left;
+    font-size: 1.1em;
+    padding: 10px;
+    width: 940px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003282}}
+    footer nav a:hover {
+      box-shadow: none;
+      color: #ffeecc; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003286}}
+    footer nav .icon {
+      display: block;
+      background-image: url("../../images/icons/sprite.png");
+      background-position: 0px 0px;
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      margin: 0 10px;
+      width: 32px;
+      height: 32px;
+      float: left; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003294}}
+  footer:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+/** Tablet view **/
+@media screen and (max-width: 960px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003301}}
+  h1 {
+    font-size: 1.1em;
+    line-height: 40px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003305}}
+  header nav li {
+    line-height: 40px; } }
+/** Mobile view **/
+@media screen and (max-width: 480px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003311}}
+  h1 {
+    padding: 20px;
+    line-height: 40px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003315}}
+  h1 span {
+    display: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003318}}
+  header nav {
+    margin-left: 5px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003321}}
+  header nav li {
+    line-height: 40px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003324}}
+  header nav li a {
+    font-size: 0.9em;
+    margin: 3px;
+    padding: 1px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003329}}
+  #famous article.woman {
+    float: none;
+    margin: 5px auto;
+    padding: 2%;
+    width: 80%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003335}}
+  h2 {
+    font-size: 2.0em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003338}}
+  #organizations, #facts {
+    height: auto; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003341}}
+  #organizations ul li, #facts ul li {
+    max-width: 100%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003344}}
+  #organizations ul li img, #facts ul li img {
+    display: none; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003347}}
+  footer nav li {
+    line-height: 40px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise6-each\/stylesheets\/scss\/styles\.scss}line{font-family:\00003350}}
+  footer nav li a {
+    font-size: 0.9em;
+    margin: 3px;
+    padding: 1px; } }

@@ -251,8 +251,6 @@ height: 18px; }</code></pre>
   @include sprite-position($x, $y);
 }</code></pre>
             
-
-          </tr></td></table>
         </div>
         </section>  
 
@@ -300,7 +298,7 @@ height: 18px; }</code></pre>
         </section>
 
         <!-- Exercise 4: Grid layout -->
-        <section>
+        <!---<section>
           <h3>Let's Develop It</h3>
           <ul>
           <li>Create mixins for your page layout:
@@ -308,12 +306,51 @@ height: 18px; }</code></pre>
               <li>Make grid mixins that take numbers as arguments: width, padding, margins, etc</li>
               <li>Remember the box model!</li>
               <li>Try using <a target="_blank" href="http://css-tricks.com/box-sizing/">CSS3 box-sizing</a> to change the box model - include it as another mixin</li>
+              <li><a target="_blank" href="http://www.slideshare.net/stevehickeydsgn/forget-frameworks-create-your-own-flexible-grid-system">More info on making a grid system</a></li>
             </ul>
           </li>
           <li>Use these mix-ins in your styles.scss file</li>
           <li>Compile to CSS and refresh your index page to see your changes</li>
           <li><span class="blue">Bonus:</span>Write a mixin for responsive styles to be used in the media queries in styles.scss</li>
         </ul>
+        </section>--->
+
+
+        <!-- Advanced mixins: If/Else logic -->
+        <section>
+          <h3>Sprite Mixins</h3>
+          <div class="left-align">
+            <p>Sass has logic statements that you can use to create conditionals. They are <span class="blue">@if</span>, <span class="blue">@else if</span>, and <span class="blue">@else</span></p>
+            <pre style="width: 850px"><code contenteditable class ="sass css">@mixin opacity($value: 0.5) {
+  @if $value == transparent {
+    opacity: 0;
+  } @else if $value == opaque {
+    opacity: 1;
+  } @else {
+    opacity: $value;
+  }
+}
+@include opacity(transparent);
+</code></pre>
+            
+        </div>
+        </section>  
+
+        <!-- Exercise 4: Logic -->
+        <section>
+          <h3>If/Else If</h3>
+          <div class = "left-align">
+          <p>Rewrite your existing mixins to use if/else if statements, so that they output different CSS depending on different arguments.</p>
+          <pre><code class ="php">@mixin arrow($direction: right) {
+  @if $direction == right {
+    //right arrow styles
+  }
+  @else if $direction == left {
+    // left arrow styles
+  }
+}
+</code></pre>
+          </div>
         </section>
 
 
@@ -339,9 +376,39 @@ height: 18px; }</code></pre>
         <section>
           <h3>For Loops</h3>
           <div class = "left-align">
+            <p>With @for loops, you can make Sass write your classes and styles for you.</p>
+ <table class="code-compare">
+            <tr><td>
+            <p>Sass code:</p>
+            <pre><code class ="php">@for $i from 1 through 3 {
+  .column-#{$i} { width: 2em * $i; }
+}
+</code></pre>
+</td>
+<td>
+            <p>CSS output:</p>
+            <pre style="width: 400px"><code contenteditable class ="sass css">.column-1 {
+  width: 2em;
+}
+.column-2 {
+  width: 4em;
+}
+.column-3 {
+  width: 6em;
+}</code></pre>
+
+          </tr></td></table>            
+         
+          </div>
+        </section>
+
+        <!-- Exercise 6: Loops -->
+        <section>
+          <h3>For Loops</h3>
+          <div class = "left-align">
           <ul>
-            <li>Rewrite your grid layout to use loops to write the classes and styles for you</li>
-            <li>Create @media queries using a @for loop</li>
+            <li>Use loops to write classes and styles for you! Use them to make columns that fit within in our layout, and add links to our footer nav in these columns.</li>
+            <li>Experiment with math in your loop's styles - change the width, padding, even font-size</li>
           </ul>
           <pre><code class ="php">@for $i from 1 through 3 {
   .column-#{$i} { width: 2em * $i; }
@@ -350,21 +417,54 @@ height: 18px; }</code></pre>
           </div>
         </section>
 
+        <!-- Looping with @Each -->
+        <section>
+          <h3>@each</h3>
+          <div class = "left-align">
+            <p>With @each, you can loop through a list of item and create styles for each item in the list.</p>
+ <table class="code-compare">
+            <tr><td>
+            <p>Sass code:</p>
+            <pre style="width: 610px"><code class ="php">@each $icon in youtube, twitter, facebook {
+  .icon-$icon {
+    background-image: url('#{$icon}.png');
+  }
+}
+</code></pre>
+</td>
+<td>
+            <p>CSS output:</p>
+            <pre style="width: 560px"><code contenteditable class ="sass css">.icon-youtube {
+  background: url('youtube.png');
+}
+.icon-twitter {
+  background: url('twitter.png');
+}
+.icon-facebook {
+  background: url('facebook.png');
+}</code></pre>
+
+          </tr></td></table>            
+         
+          </div>
+        </section>
+
+
         <!-- Exercise 7: Loops -->
         <section>
-          <h3>@each Directive</h3>
+          <h3>@each</h3>
           <div class = "left-align">
           <ul>
             <li>Create background image styles for each Famous Woman article</li>
             <li>Try SubtlePatterns.com for images to use</li>
-            <li>Rewrite these background styles with @each and a list</li>
+            <li>Write these background styles with @each and a list</li>
+            <li>Bonus: style your social media icons using @each and @if logic</li>
           </ul>
-          <pre><code class ="php">@each $women in ada, grace, frances, barbara, anita, maria {
+          <pre style="width: 1100px; position: relative; left: -100px;"><code class ="php">@each $woman in ada, grace, frances, barbara, anita, maria {
   .#{$woman}-bg {
     background-image: url('images/#{$woman}.png');
   }
-}
-</code></pre>
+}</code></pre>
           </div>
         </section>
 

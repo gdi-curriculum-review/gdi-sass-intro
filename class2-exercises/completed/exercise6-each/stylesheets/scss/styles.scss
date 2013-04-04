@@ -1,0 +1,355 @@
+@import "_utilities";
+// This imports our styles from the _utilities.scss so we can use them in this stylesheet
+
+/* General Styles */
+
+body {
+  background-color: $bodyBackground;
+  @include flexibleGradient;
+//  @include gradient;
+  font-family: $bodyText;
+  font-size: $defaultFontSize;
+  font-weight: 300;
+  line-height: 1.2em;
+  margin: 0px auto;
+  width: 100%;
+  p {
+    margin: 1em;
+  }
+  a {
+    color: $linkText;
+    text-decoration: none;
+    @include transition(color, $linkAccent, 0.3s);
+  }
+}
+
+
+
+h1 {
+  font-family: $title;
+  font-size: 2.2em;
+  float: left;
+  line-height: 75px;
+  text-shadow: 2px 2px $titleShadow;
+}
+
+h2 {
+  background-color: $sectionHeadingBackground;
+  color: $sectionHeading;
+  font-family: $headings;
+  font-size: 2.4em;
+  font-weight: 400;
+  line-height: 80px;
+  margin: 0 0 0.5em 0;
+  text-align: center;
+  @include inner-box-shadow(0px, 0px, 20px, 2px, #000);
+}
+
+h3 {
+  font-family: $headings;
+  font-size: 1.4em;
+  font-weight: 700;
+  margin: 0 0 0.3em 0;
+  text-align: center;
+}
+
+h4 {
+  color: $headingYears;
+  font-size: 1em;
+  text-align: center;
+}
+
+
+/* Navigation */
+nav {
+  width: $navWidth;
+    li {
+    float: left;
+    height: 50px;
+    .right-arrow {
+      @include arrow(right, 12px, 16px, $contrastColor);
+    }
+    .left-arrow {
+      @include arrow(left, 12px, 16px, $contrastColor);
+    }
+    .up-arrow {
+      @include arrow(up, 12px, 16px, $contrastColor);
+    }
+    .down-arrow {
+      @include arrow(down, 12px, 16px, $contrastColor);
+    }
+    a {
+      @include dropshadow($navLink, 20%);
+      margin: 0 10px;
+      padding: 5px 10px;
+      text-decoration: none;
+      &:hover {
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+      }
+    }
+  } 
+}
+
+.jump {
+  color: $jumpIcon;
+  @include iconFont;
+  font-size: 70px;
+  line-height: 80px;
+  position: absolute;
+  text-decoration: none;
+  top: 0;
+  &.up {
+    left: 15px;    
+  }
+  &.down {
+    right: 15px;
+  }
+  &:hover {
+    color: $linkHover;
+  }
+}
+
+
+/* Header */
+header {
+  margin: $centered;
+  padding: 10px;
+  width: $headerWidth;
+  background-color: $accentBackground;
+  @include gradient($accentBackground, lighten($accentBackground, 8%));
+  @include opacity(0.8);
+  h1 {
+    color: $contrastColor;
+    background: url('../images/icons/it.png') no-repeat 0 50%;
+    padding-left: 40px;
+  }
+  nav {
+    float: right;
+    font-size: 1.2em;
+    margin-left: 20px;
+    li {
+      line-height: $navLinkHeight;
+    }
+    a {
+      border-radius: 6px;
+      &:hover {
+        background-color: $navLink;
+        @include opacity;
+      }
+    }
+  }
+  &:after {
+    @include clearfix;
+  }
+}
+
+/* Main */
+#main {
+  background: $contentBackground;
+  margin: $centered;
+  width: $layoutWidth;
+  section {
+    margin-bottom: 1em;
+    position: relative;
+    &:after {
+    @include clearfix;
+    }
+  }
+  div.wrapper{
+      width: 100%;
+      max-width:1400px;
+      margin: 0 auto;
+  }
+}
+
+/* Famous Women */
+#famous {
+  h2 {
+    text-shadow: 1px 1px 2px $accentBackground;
+  }  
+  article {
+    &.woman {
+      background-color: $contentBackground;
+      float: left;
+      min-height: 250px;
+      margin: 1%;
+      opacity: 0.8;
+      padding: $defaultPadding;
+      width: $articleWidth;
+    }
+    &:hover {
+      opacity: 1;
+    }
+    &:nth-child(4n) {
+      clear: both;
+    }
+    img {
+      border-radius: 50%;
+      box-shadow: 0px 0px 5px #000;
+      display: block;
+      margin: 1em auto;
+      width: 100%;
+      @include outer-box-shadow(6px, 6px, 10px, 0, #999);
+      &:hover {
+        @include rotate(-5, 50% 0);
+      }
+    }
+  }
+}
+
+/* Organizations */
+#organizations {
+  clear: both;
+  height: auto;
+  h2 {
+    text-shadow: 1px 1px 2px $linkAccent;
+  }
+  ul {
+    margin: 50px;
+    position: relative;
+    li {
+      font-size: 1.2em;
+      line-height: $listItemHeight;
+      margin-bottom: 1em;
+      padding-left: 5px;
+      max-width: 50%;
+      &:before {
+        color: $linkAccent;
+        content: '6';
+        font-family: 'EntypoRegular';
+        font-size: 40px;
+        opacity: 0.5;
+        padding-right: 10px;
+        text-shadow: 0px 0px 2px #888;
+      }
+    }
+  }
+  img {
+    border-radius: 20px;
+    position: absolute;
+    right: 20px;
+    top: 0;
+    max-width: 40%;
+    @include opacity(0);
+    @include transition(opacity, 1.0, 10s);
+  }
+}
+
+/* Fun Facts */
+#facts {
+  @extend #organizations;
+  width: 100%;
+}
+#facts h2 {
+  text-shadow: 1px 1px 2px $factsAccent;
+}
+#facts ul {
+  margin: 50px;
+}
+#facts ul li {
+  max-width: 100%;
+  @include transition(background-color, $accentBackground, 2s);  
+}
+#facts ul li:hover {
+  border-radius: 10px;
+  @include super-shadow;
+  @include super-shadow(inside, #fff)
+}
+#facts ul li:before {
+  color: $factsAccent;
+  content: '7';
+  font-family: 'EntypoRegular';
+  font-size: 30px;
+  padding-right: 10px;
+  text-shadow: 1px 1px 1px #CCC;
+}
+#facts ul li:hover:before {
+  color: #FF6F00;
+}
+
+
+/* Footer */
+footer {
+  margin: $centered;
+  width: $layoutWidth;
+  @include flexibleGradient($accentBackground, #000, diagonal);
+  //@include gradient(#00665F, #1D766F);
+  nav {
+    float: left;
+    font-size: 1.1em;
+    padding: $defaultPadding;
+    width: $footerWidth;
+    a:hover {
+      box-shadow: none;
+      color: $contrastColor;
+    }
+    .icon {
+      @include sprite-image("sprite.png");
+      margin: 0 10px;
+      width: 32px;
+      height: 32px;
+      float: left;
+    } 
+  }
+  &:after {
+    @include clearfix;
+  }
+}
+
+/** Tablet view **/
+@media screen and (max-width: 960px){
+  h1 {
+    font-size: 1.1em;
+    line-height: 40px;
+  }
+  header nav li{
+    line-height: 40px;
+  }
+}
+/** Mobile view **/
+@media screen and (max-width: 480px){
+  h1{
+    padding: 20px;
+    line-height: 40px;
+  }
+  h1 span{
+      display: none;
+  }
+  header nav{
+    margin-left: 5px;
+  }
+ header nav li{
+    line-height: 40px;
+  }
+  header nav li a {
+    font-size: 0.9em;
+    margin: 3px;
+    padding: 1px;
+  }
+  #famous article.woman {
+    float: none;
+    margin: 5px auto;
+    padding: 2%;
+    width: 80%
+  }
+  h2{
+    font-size: 2.0em;
+  }
+  #organizations{
+    height:auto;
+  }
+  #organizations ul li{
+    max-width: 100%;
+  }
+  #organizations ul li img{
+    display:none;
+  }
+  footer nav li{
+     line-height: 40px;
+   }
+  footer nav li a {
+     font-size: 0.9em;
+     margin: 3px;
+     padding: 1px;
+   }
+}

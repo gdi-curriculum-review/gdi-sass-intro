@@ -1,0 +1,206 @@
+// Utilities file!
+
+// Colors! 
+$bodyBackground: rgb(241, 241, 241); // light grey
+$accentBackground: #009D92; // teal
+$contrastColor: #FFEECC; // yellow
+$linkText: darken($accentBackground, 5%); // teal
+$linkHover: darken(invert($accentBackground), 30%); // red
+$titleShadow: lighten($accentBackground, 10%);
+$contentBackground: #fff;
+$sectionHeadingBackground: darken($bodyBackground, 70%); // darkest grey
+$sectionHeading: #fff;
+$headingYears: darken($bodyBackground, 60%); // grey for bio years
+$navLink: #fff;
+$linkAccent: lighten($linkHover, 5%); // light red in hovers and shadows
+$jumpIcon: darken($bodyBackground, 60%); // dark grey
+$factsAccent: darken($contrastColor, 40%); // bright yellow in facts section
+
+
+ // Fonts!
+$title: 'Audiowide', cursive;
+$headings: 'Quicksand', sans-serif;
+$bodyText: 'Lato', Arial, sans-serif;
+
+$defaultFontSize: 16px;
+
+
+ // Layout 
+$centered: 0 auto;
+$layoutWidth: 960px;
+$defaultPadding: 10px;
+$headerWidth: $layoutWidth - $defaultPadding*2;
+$navWidth: $layoutWidth/4;
+$navLinkHeight: $defaultFontSize + $defaultPadding*2; // let's adjust the line height for header nav, basing it on font size and top and bottom padding
+$articleWidth: $layoutWidth/3 - $defaultPadding*4;
+$listItemHeight: $defaultFontSize + $defaultPadding;
+$footerWidth: $headerWidth;
+
+// Mixins
+
+// Drop shadow (text-shadow) effect
+@mixin dropshadow($textColor: #666, $percent: 50%) {
+  color: $textColor;
+  text-shadow: 2px 2px darken($textColor, $percent);
+}
+
+// Clearfix
+@mixin clearfix {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+// Gradient for 2 colors, with 2nd color sandwiched in the middle
+@mixin gradient($color1: $bodyBackground, $color2: $accentBackground) {
+	background-image: -webkit-linear-gradient($color1, $color2, $color1);
+	background-image: -moz-linear-gradient($color1, $color2, $color1);
+  background-image: linear-gradient($color1, $color2, $color1);
+}
+
+// ==========================================================================
+// Linear OR Diagonal Gradient, including IE
+// ==========================================================================
+@mixin flexibleGradient($topColor: #fff, $bottomColor: $accentBackground, $angle: default) {
+  background-color: $topColor;
+
+  @if $angle == default { // linear top to bottom
+    background-image: -moz-linear-gradient(top, $topColor, $bottomColor); 
+    background-image: -webkit-gradient(linear,left top,left bottom, color-stop(0, $topColor),color-stop(1, $bottomColor)); 
+    background: -webkit-linear-gradient($topColor, $bottomColor); 
+    background: -o-linear-gradient($topColor, $bottomColor); 
+    background: -ms-linear-gradient($topColor, $bottomColor); 
+    background-image: linear-gradient(top,$topColor, $bottomColor);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$topColor}', EndColorStr='#{$bottomColor}'); 
+  }
+  @if $angle == diagonal { // diagonal top right to bottom left
+  background-image: -moz-linear-gradient(45deg, $bottomColor 0%, $topColor 100%); 
+  background-image: -webkit-gradient(linear,left bottom,right top, color-stop(0%, $bottomColor),color-stop(100%, $topColor)); 
+  background: -webkit-linear-gradient(45deg,  $bottomColor 0%, $topColor 100%); 
+  background: -o-linear-gradient(45deg,  $bottomColor 0%, $topColor 100%); 
+  background: -ms-linear-gradient(45deg,  $bottomColor 0%, $topColor 100%); 
+  background-image: linear-gradient(45deg, $bottomColor 0%, $topColor 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$bottomColor}', EndColorStr='#{$topColor}',GradientType=1); 
+  }
+}
+
+// Transform: Rotate mixin
+@mixin rotate($degree, $position) {
+	-webkit-transform: rotate(#{$degree}deg); 
+  -moz-transform: rotate(#{$degree}deg);
+  transform: rotate(#{$degree}deg);
+  -webkit-transform-origin: $position;
+  -moz-transform-origin: $position;
+  transform-origin: $position;
+}
+
+// Image replacement - accessibly hides text when you want to use a background image instead
+@mixin image-replace {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+// Sprite
+@mixin sprite-position($x:0, $y:0) {
+  $gridSize:  -32px;
+  $offsetX:   $x * $gridSize;
+  $offsetY:   $y * $gridSize;
+  background-position: $offsetX $offsetY;
+}
+@mixin sprite-image($file, $x:0, $y:0) {
+  display: block;
+  background-image: url("../../images/icons/#{$file}");
+  @include sprite-position($x, $y);
+  @include image-replace;
+}
+
+/* Fonts */
+@mixin font-face($font-family, $fileName) {
+  @font-face {
+    font-family: '#{$font-family}';
+    src: url('font/#{$fileName}.eot');
+    src: url('font/#{$fileName}.eot?#iefix') format('embedded-opentype'),
+         url('font/#{$fileName}.woff') format('woff'),
+         url('font/#{$fileName}.ttf') format('truetype'),
+         url('font/#{$fileName}.svg##{$fileName}') format('svg');
+
+  }
+} 
+@include font-face("EntypoRegular", "Entypo-webfont");
+
+@mixin iconFont {
+  font-family: "EntypoRegular";
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin inner-box-shadow ($horiz_offset, $vert_offset, $blur, $spread: 0, $color: $navy) {
+  box-shadow: inset $horiz_offset $vert_offset $blur $spread $color; 
+  -webkit-box-shadow: inset $horiz_offset $vert_offset $blur $spread $color; 
+  -moz-box-shadow: inset $horiz_offset $vert_offset $blur $spread $color;
+}
+
+@mixin outer-box-shadow ($horiz_offset, $vert_offset, $blur, $spread: 0, $color: $navy) {
+  box-shadow: $horiz_offset $vert_offset $blur $spread $color; 
+  -webkit-box-shadow: $horiz_offset $vert_offset $blur $spread $color; 
+  -moz-box-shadow: $horiz_offset $vert_offset $blur $spread $color;
+}
+
+// $location refers to inner or outer shadow. options: inside, outside
+@mixin super-shadow($location: outside, $horiz_offset: 0, $vert_offset: 0, $blur: 2px, $spread: 2px, $color: #111) {
+  @if $location == outside {
+    box-shadow: $horiz_offset $vert_offset $blur $spread $color; 
+    -webkit-box-shadow: $horiz_offset $vert_offset $blur $spread $color; 
+    -moz-box-shadow: $horiz_offset $vert_offset $blur $spread $color;
+  }
+  @else if $location == inside {
+    box-shadow: inset $horiz_offset $vert_offset $blur $spread $color; 
+    -webkit-box-shadow: inset $horiz_offset $vert_offset $blur $spread $color; 
+    -moz-box-shadow: inset $horiz_offset $vert_offset $blur $spread $color;
+  }
+}
+
+// opacity mixin
+@mixin opacity($opacity: 0.5) {
+  filter: alpha(opacity=$opacity*100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=#{$opacity*100});
+  opacity: $opacity;
+}
+
+// transition mixin
+@mixin transition($property, $value, $length) {
+  -webkit-transition: $property $length;
+  -moz-transition: $property $length;
+  transition: $property $length;
+  &:hover {
+      #{$property}: $value;
+  }
+}
+
+// Right arrow mixin
+@mixin arrow($direction: right, $width: 20px, $height: 20px, $color: #ccc) {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  @if $direction == right {
+    border-top: $height/2 solid transparent;
+    border-bottom: $height/2 solid transparent;
+    border-left: $width solid $color;
+  }
+  @if $direction == left {
+    border-top: $height/2 solid transparent;
+    border-bottom: $height/2 solid transparent;
+    border-right: $width solid $color;
+  }
+  @if $direction == up {
+    border-bottom: $height solid $color;
+    border-right: $width/2 solid transparent;
+    border-left: $width/2 solid transparent;
+  }
+  @if $direction == down {
+    border-top: $height solid $color;
+    border-right: $width/2 solid transparent;
+    border-left: $width/2 solid transparent;
+  }
+}
