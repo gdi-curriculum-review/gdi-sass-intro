@@ -88,3 +88,62 @@ $footerWidth: $headerWidth;
   @include sprite-position($x, $y);
   @include image-replace;
 }
+
+/* Fonts */
+@mixin font-face($font-family, $fileName) {
+  @font-face {
+    font-family: '#{$font-family}';
+    src: url('font/#{$fileName}.eot');
+    src: url('font/#{$fileName}.eot?#iefix') format('embedded-opentype'),
+         url('font/#{$fileName}.woff') format('woff'),
+         url('font/#{$fileName}.ttf') format('truetype'),
+         url('font/#{$fileName}.svg##{$fileName}') format('svg');
+
+  }
+} 
+@include font-face("EntypoRegular", "Entypo-webfont");
+
+@mixin iconFont {
+  font-family: "EntypoRegular";
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin inner-box-shadow ($horiz_offset, $vert_offset, $blur, $spread: 0, $color: $navy) {
+  box-shadow: inset $horiz_offset $vert_offset $blur $spread $color; 
+  -webkit-box-shadow: inset $horiz_offset $vert_offset $blur $spread $color; 
+  -moz-box-shadow: inset $horiz_offset $vert_offset $blur $spread $color;
+}
+
+@mixin outer-box-shadow ($horiz_offset, $vert_offset, $blur, $spread: 0, $color: $navy) {
+  box-shadow: $horiz_offset $vert_offset $blur $spread $color; 
+  -webkit-box-shadow: $horiz_offset $vert_offset $blur $spread $color; 
+  -moz-box-shadow: $horiz_offset $vert_offset $blur $spread $color;
+}
+
+// opacity mixin
+@mixin opacity($opacity: 0.5) {
+  filter: alpha(opacity=$opacity*100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=#{$opacity*100});
+  opacity: $opacity;
+}
+
+// transition mixin
+@mixin transition($property, $value, $length) {
+  -webkit-transition: $property $length;
+  -moz-transition: $property $length;
+  transition: $property $length;
+  &:hover {
+      #{$property}: $value;
+  }
+}
+
+// Right arrow mixin
+@mixin rightArrow($width: 20px, $height: 20px, $color: #ccc) {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: $height/2 solid transparent;
+  border-bottom: $height/2 solid transparent;
+  border-left: $width solid $color;
+}

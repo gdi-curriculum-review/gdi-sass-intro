@@ -1,5 +1,11 @@
+/* Fonts */
+@font-face {
+  font-family: "EntypoRegular";
+  src: url("font/Entypo-webfont.eot");
+  src: url("font/Entypo-webfont.eot?#iefix") format("embedded-opentype"), url("font/Entypo-webfont.woff") format("woff"), url("font/Entypo-webfont.ttf") format("truetype"), url("font/Entypo-webfont.svg#Entypo-webfont") format("svg"); }
+
 /* General Styles */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\000036}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\000036}}
 body {
   background-color: #f1f1f1;
   background-image: -webkit-linear-gradient(#f1f1f1, #009d92, #f1f1f1);
@@ -11,21 +17,21 @@ body {
   line-height: 1.2em;
   margin: 0px auto;
   width: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\0000315}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\0000315}}
   body p {
     margin: 1em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\0000318}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\0000318}}
   body a {
     color: #00847a;
     text-decoration: none;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\0000325}}
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    transition: color 0.3s; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/_utilities\.scss}line{font-family:\00003136}}
     body a:hover {
-      color: #c8000e; }
+      color: #e20010; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\0000327}}
 h1 {
   font-family: "Audiowide", cursive;
   font-size: 2.2em;
@@ -33,7 +39,7 @@ h1 {
   line-height: 75px;
   text-shadow: 2px 2px #00d0c1; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\0000341}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\0000335}}
 h2 {
   background-color: #3e3e3e;
   color: white;
@@ -42,9 +48,12 @@ h2 {
   font-weight: 400;
   line-height: 80px;
   margin: 0 0 0.5em 0;
-  text-align: center; }
+  text-align: center;
+  box-shadow: inset 0px 0px 20px 2px black;
+  -webkit-box-shadow: inset 0px 0px 20px 2px black;
+  -moz-box-shadow: inset 0px 0px 20px 2px black; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\0000352}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\0000347}}
 h3 {
   font-family: "Quicksand", sans-serif;
   font-size: 1.4em;
@@ -52,111 +61,127 @@ h3 {
   margin: 0 0 0.3em 0;
   text-align: center; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\0000360}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\0000355}}
 h4 {
   color: #585858;
   font-size: 1em;
   text-align: center; }
 
 /* Navigation */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\0000368}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\0000363}}
 nav {
   width: 240px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\0000365}}
   nav li {
-    float: left; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\0000372}}
+    float: left;
+    height: 50px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\0000368}}
+    nav li .arrow {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-left: 12px solid #ffeecc; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\0000371}}
     nav li a {
       color: white;
       text-shadow: 2px 2px #cccccc;
       margin: 0 10px;
       padding: 5px 10px;
       text-decoration: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\0000377}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\0000376}}
       nav li a:hover {
-        box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
-        color: #e20010; }
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.5); }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\0000385}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\0000383}}
 .jump {
   color: #585858;
-  font-family: 'EntypoRegular';
+  font-family: "EntypoRegular";
+  font-style: normal;
+  font-weight: normal;
   font-size: 70px;
   line-height: 80px;
   position: absolute;
   text-decoration: none;
   top: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\0000393}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\0000391}}
   .jump.up {
     left: 15px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\0000396}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\0000394}}
   .jump.down {
     right: 15px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\0000399}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\0000397}}
   .jump:hover {
     color: #c8000e; }
 
 /* Header */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003106}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003104}}
 header {
   margin: 0 auto;
+  padding: 10px;
   width: 940px;
   background-color: #009d92;
   background-image: -webkit-linear-gradient(#009d92, #00c6b8, #009d92);
   background-image: -moz-linear-gradient(#009d92, #00c6b8, #009d92);
   background-image: linear-gradient(#009d92, #00c6b8, #009d92);
-  padding: 10px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003112}}
+  filter: alpha(opacity=80);
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=80);
+  opacity: 0.8; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003111}}
   header h1 {
     color: #ffeecc;
     background: url("../images/icons/it.png") no-repeat 0 50%;
     padding-left: 40px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003117}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003116}}
   header nav {
     float: right;
     font-size: 1.2em;
     margin-left: 20px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003121}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003120}}
     header nav li {
       line-height: 36px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003124}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003123}}
     header nav a {
       border-radius: 6px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003126}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003125}}
       header nav a:hover {
-        background-color: white; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003131}}
+        background-color: white;
+        filter: alpha(opacity=50);
+        filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+        opacity: 0.5; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003131}}
   header:after {
     content: "";
     display: table;
     clear: both; }
 
 /* Main */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003137}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003137}}
 #main {
   background: white;
   margin: 0 auto;
   width: 960px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003141}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003141}}
   #main section {
     margin-bottom: 1em;
     position: relative; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003144}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003144}}
     #main section:after {
       content: "";
       display: table;
       clear: both; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003148}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003148}}
   #main div.wrapper {
     width: 100%;
     max-width: 1400px;
     margin: 0 auto; }
 
 /* Famous Women */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003157}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003157}}
 #famous h2 {
   text-shadow: 1px 1px 2px #009d92; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003161}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003161}}
 #famous article.woman {
   background-color: white;
   float: left;
@@ -165,55 +190,51 @@ header {
   opacity: 0.8;
   padding: 10px;
   width: 280px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003170}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003170}}
 #famous article:hover {
   opacity: 1; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003173}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003173}}
 #famous article:nth-child(4n) {
   clear: both; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003176}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003176}}
 #famous article img {
   border-radius: 50%;
   box-shadow: 0px 0px 5px #000;
   display: block;
   margin: 1em auto;
-  width: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003182}}
+  width: 100%;
+  box-shadow: 6px 6px 10px 0 #999999;
+  -webkit-box-shadow: 6px 6px 10px 0 #999999;
+  -moz-box-shadow: 6px 6px 10px 0 #999999; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003183}}
   #famous article img:hover {
     -webkit-transform: rotate(-5deg);
     -moz-transform: rotate(-5deg);
     transform: rotate(-5deg);
     -webkit-transform-origin: 50% 0;
     -moz-transform-origin: 50% 0;
-    transform-origin: 50% 0;
-      /*  -webkit-transform: rotate(-5deg);
-        -moz-transform: rotate(-5deg);
-        transform: rotate(-5deg);
-
-        -webkit-transform-origin: 50% 0;
-        -moz-transform-origin: 50% 0;
-        transform-origin: 50% 0;*/ }
+    transform-origin: 50% 0; }
 
 /* Organizations */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003197}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003191}}
 #organizations, #facts {
   clear: both;
   height: auto; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003200}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003194}}
   #organizations h2, #facts h2 {
     text-shadow: 1px 1px 2px #e20010; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003203}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003197}}
   #organizations ul, #facts ul {
     margin: 50px;
     position: relative; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003206}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003200}}
     #organizations ul li, #facts ul li {
       font-size: 1.2em;
       line-height: 26px;
       margin-bottom: 1em;
       padding-left: 5px;
       max-width: 50%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003212}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003206}}
       #organizations ul li:before, #facts ul li:before {
         color: #e20010;
         content: '6';
@@ -222,50 +243,51 @@ header {
         opacity: 0.5;
         padding-right: 10px;
         text-shadow: 0px 0px 2px #888; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003221}}
-      #organizations ul li:hover:before, #facts ul li:hover:before {
-        opacity: 1; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003224}}
-      #organizations ul li:hover img, #facts ul li:hover img {
-        opacity: 1; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003229}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003217}}
   #organizations img, #facts img {
     border-radius: 20px;
     position: absolute;
     right: 20px;
     top: 0;
     max-width: 40%;
+    filter: alpha(opacity=0);
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
     opacity: 0;
-    -webkit-transition: opacity 1s;
-    -moz-transition: opacity 1s;
-    transition: opacity 1s; }
+    -webkit-transition: opacity 10s;
+    -moz-transition: opacity 10s;
+    transition: opacity 10s; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/_utilities\.scss}line{font-family:\00003136}}
+    #organizations img:hover, #facts img:hover {
+      opacity: 1; }
 
 /* Fun Facts */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003244}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003229}}
 #facts {
   width: 100%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003248}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003233}}
 #facts h2 {
   text-shadow: 1px 1px 2px #ffaa00; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003251}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003236}}
 #facts ul {
   margin: 50px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003254}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003239}}
 #facts ul li {
   max-width: 100%;
-  -webkit-transition: background-color 1s;
-  -moz-transition: background-color 1s;
-  transition: background-color 1s; }
+  -webkit-transition: background-color 2s;
+  -moz-transition: background-color 2s;
+  transition: background-color 2s; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/_utilities\.scss}line{font-family:\00003136}}
+  #facts ul li:hover {
+    background-color: #009d92; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003260}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003243}}
 #facts ul li:hover {
-  background-color: #fff;
   border-radius: 10px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003264}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003246}}
 #facts ul li:before {
   color: #ffaa00;
   content: '7';
@@ -274,29 +296,29 @@ header {
   padding-right: 10px;
   text-shadow: 1px 1px 1px #CCC; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003272}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003254}}
 #facts ul li:hover:before {
   color: #FF6F00; }
 
 /* Footer */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003278}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003260}}
 footer {
   margin: 0 auto;
   width: 960px;
   background-image: -webkit-linear-gradient(#00665f, #1d766f, #00665f);
   background-image: -moz-linear-gradient(#00665f, #1d766f, #00665f);
   background-image: linear-gradient(#00665f, #1d766f, #00665f); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003282}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003264}}
   footer nav {
     float: left;
     font-size: 1.1em;
     padding: 10px;
     width: 940px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003287}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003269}}
     footer nav a:hover {
       box-shadow: none;
       color: #ffeecc; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003291}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003273}}
     footer nav .icon {
       display: block;
       background-image: url("../../images/icons/sprite.png");
@@ -308,101 +330,93 @@ footer {
       width: 32px;
       height: 32px;
       float: left; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003298}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003280}}
     footer nav .youtube {
       background-position: 0px 0px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003301}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003283}}
     footer nav .twitter {
       background-position: -32px 0px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003304}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003286}}
     footer nav .rss {
       background-position: -64px 0px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003307}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003289}}
     footer nav .flickr {
       background-position: -96px 0px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003310}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003292}}
     footer nav .facebook {
       background-position: -128px 0px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003313}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003295}}
     footer nav .print {
       background-position: -160px 0px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003317}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003299}}
   footer:after {
     content: "";
     display: table;
     clear: both; }
 
-/* Fonts */
-@font-face {
-  font-family: 'EntypoRegular';
-  src: url("font/Entypo-webfont.eot");
-  src: url("font/Entypo-webfont.eot?#iefix") format("embedded-opentype"), url("font/Entypo-webfont.woff") format("woff"), url("font/Entypo-webfont.ttf") format("truetype"), url("font/Entypo-webfont.svg#EntypoRegular") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
 /** Tablet view **/
 @media screen and (max-width: 960px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003306}}
   h1 {
     font-size: 1.1em;
     line-height: 40px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003340}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003310}}
   header nav li {
     line-height: 40px; } }
 /** Mobile view **/
 @media screen and (max-width: 480px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003346}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003316}}
   h1 {
     padding: 20px;
     line-height: 40px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003350}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003320}}
   h1 span {
     display: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003353}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003323}}
   header nav {
     margin-left: 5px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003356}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003326}}
   header nav li {
     line-height: 40px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003359}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003329}}
   header nav li a {
     font-size: 0.9em;
     margin: 3px;
     padding: 1px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003364}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003334}}
   #famous article.woman {
     float: none;
     margin: 5px auto;
     padding: 2%;
     width: 80%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003340}}
   h2 {
     font-size: 2.0em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003373}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003343}}
   #organizations, #facts {
     height: auto; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003376}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003346}}
   #organizations ul li, #facts ul li {
     max-width: 100%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003379}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003349}}
   #organizations ul li img, #facts ul li img {
     display: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003382}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003352}}
   footer nav li {
     line-height: 40px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/cfarman\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003385}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/catherine\/Sites\/gdi-sass\/class2-exercises\/completed\/exercise3-css3\/stylesheets\/scss\/styles\.scss}line{font-family:\00003355}}
   footer nav li a {
     font-size: 0.9em;
     margin: 3px;

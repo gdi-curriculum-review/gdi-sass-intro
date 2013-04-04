@@ -18,13 +18,7 @@ body {
   a {
     color: $linkText;
     text-decoration: none;
-
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-    &:hover {
-      color: $linkHover;
-    }
+    @include transition(color, $linkAccent, 0.3s);
   }
 }
 
@@ -47,6 +41,7 @@ h2 {
   line-height: 80px;
   margin: 0 0 0.5em 0;
   text-align: center;
+  @include inner-box-shadow(0px, 0px, 20px, 2px, #000);
 }
 
 h3 {
@@ -69,6 +64,10 @@ nav {
   width: $navWidth;
     li {
     float: left;
+    height: 50px;
+    .arrow {
+      @include rightArrow(12px, 16px, $contrastColor);
+    }
     a {
       @include dropshadow($navLink, 20%);
       margin: 0 10px;
@@ -76,7 +75,6 @@ nav {
       text-decoration: none;
       &:hover {
         box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
-        color: $linkAccent;
       }
     }
   } 
@@ -84,7 +82,7 @@ nav {
 
 .jump {
   color: $jumpIcon;
-  font-family: 'EntypoRegular';
+  @include iconFont;
   font-size: 70px;
   line-height: 80px;
   position: absolute;
@@ -105,10 +103,11 @@ nav {
 /* Header */
 header {
   margin: $centered;
+  padding: 10px;
   width: $headerWidth;
   background-color: $accentBackground;
   @include gradient($accentBackground, lighten($accentBackground, 8%));
-  padding: 10px;
+  @include opacity(0.8);
   h1 {
     color: $contrastColor;
     background: url('../images/icons/it.png') no-repeat 0 50%;
@@ -125,6 +124,7 @@ header {
       border-radius: 6px;
       &:hover {
         background-color: $navLink;
+        @include opacity;
       }
     }
   }
@@ -179,15 +179,9 @@ header {
       display: block;
       margin: 1em auto;
       width: 100%;
+      @include outer-box-shadow(6px, 6px, 10px, 0, #999);
       &:hover {
         @include rotate(-5, 50% 0);
-      /*  -webkit-transform: rotate(-5deg);
-        -moz-transform: rotate(-5deg);
-        transform: rotate(-5deg);
-
-        -webkit-transform-origin: 50% 0;
-        -moz-transform-origin: 50% 0;
-        transform-origin: 50% 0;*/
       }
     }
   }
@@ -218,12 +212,6 @@ header {
         padding-right: 10px;
         text-shadow: 0px 0px 2px #888;
       }
-      &:hover:before {
-        opacity: 1;
-      }
-      &:hover img {
-        opacity: 1;
-      }
     }
   }
   img {
@@ -232,11 +220,8 @@ header {
     right: 20px;
     top: 0;
     max-width: 40%;
-    opacity: 0;
-
-    -webkit-transition: opacity 1s;
-    -moz-transition: opacity 1s;
-    transition: opacity 1s;
+    @include opacity(0);
+    @include transition(opacity, 1.0, 10s);
   }
 }
 
@@ -253,12 +238,9 @@ header {
 }
 #facts ul li {
   max-width: 100%;
-  -webkit-transition: background-color 1s;
-  -moz-transition: background-color 1s;
-  transition: background-color 1s;
+  @include transition(background-color, $accentBackground, 2s);  
 }
 #facts ul li:hover {
-  background-color: #fff;
   border-radius: 10px;
 }
 #facts ul li:before {
@@ -317,18 +299,6 @@ footer {
   &:after {
     @include clearfix;
   }
-}
-
-/* Fonts */
-@font-face {
-  font-family: 'EntypoRegular';
-  src: url('font/Entypo-webfont.eot');
-  src: url('font/Entypo-webfont.eot?#iefix') format('embedded-opentype'),
-       url('font/Entypo-webfont.woff') format('woff'),
-       url('font/Entypo-webfont.ttf') format('truetype'),
-       url('font/Entypo-webfont.svg#EntypoRegular') format('svg');
-  font-weight: normal;
-  font-style: normal;
 }
 
 /** Tablet view **/

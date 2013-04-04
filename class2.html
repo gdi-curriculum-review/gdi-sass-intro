@@ -215,7 +215,7 @@ p {
           <h3>Mixins for UI Elements</h3>
           <div class="left-align">
             <p>Mixins are very useful for common design patterns. A great example is the <a target="_blank" href="http://coding.smashingmagazine.com/2012/04/11/css-sprites-revisited/">CSS sprite</a> design pattern.</p>
-            <p>Here's an example from YouTube:</p>
+            <p>Here's YouTube's icon sprite:</p>
 
            <table class="code-compare">
             <tr><td>
@@ -239,7 +239,7 @@ height: 18px; }</code></pre>
         <section>
           <h3>Sprite Mixins</h3>
           <div class="left-align">
-            <p>If you <a target="_blank" href="http://coding.smashingmagazine.com/2012/04/11/css-sprites-revisited/">set up your Photoshop sprite to use grid lines</a>, you can take advantage of a Sass mixin to easily position your sprite image without lots of trial and error.</p>
+            <p>If you <a target="_blank" href="http://coding.smashingmagazine.com/2012/04/11/css-sprites-revisited/">set up your Photoshop sprite to use grid lines</a>, you can use Sass to easily position your <a target="_blank" href="images/sprite.png">sprite image</a> without lots of trial and error.</p>
             <pre style="width: 850px"><code contenteditable class ="sass css">@mixin sprite-position($x:0, $y:0) {
   $gridSize:  -32px;
   $offsetX:   $x * $gridSize;
@@ -265,7 +265,7 @@ height: 18px; }</code></pre>
               <li><a target="_blank" href="http://codepen.io/seansean11/pen/CKIyf">buttons</a></li>
               <li><a target="_blank" href="http://codepen.io/cfarm/pen/FAgsp">image replacement</a></li>
               <li><a target="_blank" href="http://codepen.io/cfarm/pen/opCjq">error messages</a></li>
-              <li><a target="_blank" href="http://codepen.io/minimalmonkey/pen/KIaGD">CSS shapes (triangles, arrows)</a></li>
+              <li><a target="_blank" href="http://codepen.io/cfarm/pen/qkDAe">CSS shapes (triangles, arrows)</a></li>
             </ul>
         </div>
         </section>  
@@ -319,21 +319,16 @@ height: 18px; }</code></pre>
 
         <!-- Exercise 5: Logic -->
         <section>
-          <h3>If/Else</h3>
+          <h3>If/Else If</h3>
           <div class = "left-align">
-          <p class = "blue">If you haven't already, create these mixins in _utilities:</p>
-          <ul>
-            <li>dropshadow/text-shadow style</li>
-            <li>clearfix</li>
-            <li>gradient</li>
-            <li>transform/rotate</li>
-          </ul>
-          <pre><code class ="php">@mixin example($optionalArgument) {
-  property: value;
-  property: $optionalArgument;
-}
-p {
-  @include example($optionalArgument);
+          <p>Rewrite your existing mixins to use if/else if statements, so that they output different CSS depending on different arguments.</p>
+          <pre><code class ="php">@mixin arrow($direction: right) {
+  @if $direction == right {
+    //right arrow styles
+  }
+  @else if $direction == left {
+    // left arrow styles
+  }
 }
 </code></pre>
           </div>
@@ -382,7 +377,7 @@ p {
             <li><a target="_blank" href="http://incident57.com/codekit/">CodeKit</a>: Compile Sass &amp; more without command line</li>
             <li><a target="_blank" href="http://www.mobify.com/dev/sass-sleuth-debugging-sass-in-webkit-browsers/">Sass Sleuth</a>: See Sass line numbers in your browser</li>
             <li><a target="_blank" href="http://livereload.com/">Live Reload</a>: Compile Sass without refreshing your browser</li>
-            <li>Compass</li>
+            <li><a target="_blank" href="http://compass-style.org">Compass</a></li>
           </ul>
           </div>
         </section>
