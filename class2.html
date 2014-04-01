@@ -118,10 +118,10 @@ p {
           <h3>Interpolation</h3>
           <div class="left-align">
             We do this by using <a target="_blank" href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#interpolation_">interpolations</a>, which is a special syntax for variables that appear inside regular CSS text:
-            <pre><code contenteditable class="sass css">@mixin rotate(<span class="variable">$degree</span>, $position) {
-  -webkit-transform: rotate(<span class="variable">#{$degree}</span>deg);
-  -moz-transform: rotate(<span class="variable">#{$degree}</span>deg);
-  transform: rotate(<span class="variable">#{$degree}</span>deg);
+            <pre><code contenteditable class="sass css">@mixin rotate($degree, $position) {
+  -webkit-transform: rotate(#{$degree}deg);
+  -moz-transform: rotate(#{$degree}deg);
+  transform: rotate(#{$degree}deg);
   -webkit-transform-origin: $position;
   -moz-transform-origin: $position;
   transform-origin: $position;
@@ -169,10 +169,10 @@ p {
           <h3>CSS3: Browser Prefixes</h3>
           <div class="left-align">
             Lots of CSS3 features require browser prefixes or have complex syntaxes. These are perfectly suited to mixins, so we can include them in our styles without having to copy and paste from sites like <a target="_blank" href="http://css3please.com/">CSS3 Please</a>.
-            <pre><code contenteditable class="sass css">@mixin rotate(<span class="variable">$degree</span>, $position) {
-  -webkit-transform: rotate(<span class="variable">#{$degree}</span>deg);
-  -moz-transform: rotate(<span class="variable">#{$degree}</span>deg);
-  transform: rotate(<span class="variable">#{$degree}</span>deg);
+            <pre><code contenteditable class="sass css">@mixin rotate($degree</span>, $position) {
+  -webkit-transform: rotate(#{$degree}</span>deg);
+  -moz-transform: rotate(#{$degree}</span>deg);
+  transform: rotate(#{$degree}</span>deg);
   -webkit-transform-origin: $position;
   -moz-transform-origin: $position;
   transform-origin: $position;
@@ -351,26 +351,7 @@ height: 18px; }</code></pre>
           </div>
         </section>
 
-
-        <!-- Exercise 5: Logic -->
-        <section>
-          <h3>If/Else If</h3>
-          <div class = "left-align">
-          <p>Rewrite your existing mixins to use if/else if statements, so that they output different CSS depending on different arguments.</p>
-          <pre><code class ="php">@mixin arrow($direction: right) {
-  @if $direction == right {
-    //right arrow styles
-  }
-  @else if $direction == left {
-    // left arrow styles
-  }
-}
-</code></pre>
-          </div>
-        </section>
-
-
-        <!-- Exercise 6: Loops -->
+        <!-- Exercise 5: Loops -->
         <section>
           <h3>For Loops</h3>
           <div class = "left-align">
@@ -420,8 +401,6 @@ height: 18px; }</code></pre>
           <h3>@each</h3>
           <div class = "left-align">
             <p>With @each, you can loop through a list of item and create styles for each item in the list.</p>
- <table class="code-compare">
-            <tr><td>
             <p>Sass code:</p>
             <pre style="width: 610px"><code class ="php">@each $icon in youtube, twitter, facebook {
   .icon-$icon {
@@ -429,8 +408,6 @@ height: 18px; }</code></pre>
   }
 }
 </code></pre>
-</td>
-<td>
             <p>CSS output:</p>
             <pre style="width: 560px"><code contenteditable class ="sass css">.icon-youtube {
   background: url('youtube.png');
@@ -442,7 +419,6 @@ height: 18px; }</code></pre>
   background: url('facebook.png');
 }</code></pre>
 
-          </tr></td></table>
 
           </div>
         </section>
@@ -495,8 +471,6 @@ height: 18px; }</code></pre>
         <!-- -->
         <section>
           <h2>Questions?</h2>
-          <div style = "font-size:1200%; height:100%; margin-top:40%" class ="blue">?
-            <div class ="clear"></div></div>
         </section>
       </div>
     </div>
