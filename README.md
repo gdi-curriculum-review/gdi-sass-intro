@@ -4,6 +4,10 @@ This is the Girl Develop It Intro to Sass course. Materials by Catherine Farman,
 
 The course is meant to be taught in 2 two-hour sections. Each of the slides and practice files are customizable according to the needs of a given class or audience.
 
+## Usage
+
+To run locally, you will need to use [Git submodules](http://git-scm.com/book/en/Git-Tools-Submodules) for reveal.js and the website assets.
+
 ## Classes
 
 ### Class 1
@@ -13,7 +17,8 @@ The course is meant to be taught in 2 two-hour sections. Each of the slides and 
 We look at how Sass makes writing CSS easier, and set up our environment. You will install Ruby and Sass, learn basics of the command line and get your files set up to compile Sass into CSS.
 
 #### Part 2: Building Blocks of Sass.
-You'll learn basic Sass concepts including variables, nesting, color functions and mix-ins. Students will create a basic Sass stylesheet with color and font variables, nested styles, and simple mix-ins for reusing CSS. 
+You'll learn basic Sass concepts including variables, nesting, color functions and mix-ins. Students will create a basic Sass stylesheet with color and font variables, nested styles, and simple mix-ins for reusing CSS.
+
 You'll learn the difference between hidden comments and visible comments, and see the output of your Sass experiments.
 
 ### Class 2
