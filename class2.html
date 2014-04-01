@@ -80,7 +80,7 @@ p {
   background-image: -webkit-linear-gradient($color1, $color2, $color1);
   background-image: -moz-linear-gradient($color1, $color2, $color1);
   background-image: linear-gradient($color1, $color2, $color1);
-}</code></pre>  
+}</code></pre>
 </div>
         </section>
 
@@ -93,7 +93,7 @@ p {
   background-image: -webkit-linear-gradient($color1, $color2, $color1);
   background-image: -moz-linear-gradient($color1, $color2, $color1);
   background-image: linear-gradient($color1, $color2, $color1);
-}</code></pre>  
+}</code></pre>
 </div>
         </section>
 
@@ -101,15 +101,15 @@ p {
         <section>
           <h3>Interpolation</h3>
           <div class="left-align">
-            With some styles, we may want to use variables right next to text, like with our image rotate style - try it in _utilities: 
+            With some styles, we may want to use variables right next to text, like with our image rotate style - try it in _utilities:
             <pre><code contenteditable class="sass css">@mixin rotate($degree, $position) {
-  -webkit-transform: rotate(-5deg); 
+  -webkit-transform: rotate(-5deg);
   -moz-transform: rotate(-5deg);
   transform: rotate(-5deg);
   -webkit-transform-origin: $position;
   -moz-transform-origin: $position;
   transform-origin: $position;
-}</code></pre>  
+}</code></pre>
 </div>
         </section>
 
@@ -119,15 +119,15 @@ p {
           <div class="left-align">
             We do this by using <a target="_blank" href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#interpolation_">interpolations</a>, which is a special syntax for variables that appear inside regular CSS text:
             <pre><code contenteditable class="sass css">@mixin rotate(<span class="variable">$degree</span>, $position) {
-  -webkit-transform: rotate(<span class="variable">#{$degree}</span>deg); 
+  -webkit-transform: rotate(<span class="variable">#{$degree}</span>deg);
   -moz-transform: rotate(<span class="variable">#{$degree}</span>deg);
   transform: rotate(<span class="variable">#{$degree}</span>deg);
   -webkit-transform-origin: $position;
   -moz-transform-origin: $position;
   transform-origin: $position;
-}</code></pre>  
+}</code></pre>
 </div>
-        </section>        
+        </section>
 
 
         <!-- @extend -->
@@ -143,9 +143,9 @@ p {
   @extend .headline;
   text-decoration: underline;
   text-transform: uppercase;
-}</code></pre>  
+}</code></pre>
 </div>
-        </section>          
+        </section>
 
         <!-- Exercise 2: Advanced Mixins -->
         <section>
@@ -170,15 +170,15 @@ p {
           <div class="left-align">
             Lots of CSS3 features require browser prefixes or have complex syntaxes. These are perfectly suited to mixins, so we can include them in our styles without having to copy and paste from sites like <a target="_blank" href="http://css3please.com/">CSS3 Please</a>.
             <pre><code contenteditable class="sass css">@mixin rotate(<span class="variable">$degree</span>, $position) {
-  -webkit-transform: rotate(<span class="variable">#{$degree}</span>deg); 
+  -webkit-transform: rotate(<span class="variable">#{$degree}</span>deg);
   -moz-transform: rotate(<span class="variable">#{$degree}</span>deg);
   transform: rotate(<span class="variable">#{$degree}</span>deg);
   -webkit-transform-origin: $position;
   -moz-transform-origin: $position;
   transform-origin: $position;
-}</code></pre>  
+}</code></pre>
 </div>
-        </section>     
+        </section>
 
         <!-- Advanced mixins: CSS3 and UI mixins -->
         <section>
@@ -190,9 +190,9 @@ p {
   background-image: -moz-linear-gradient($color1, $color2, $color1);
   background-image: linear-gradient($color1, $color2, $color1);
 }
-@include gradient(#fff, #000);</code></pre>  
+@include gradient(#fff, #000);</code></pre>
 </div>
-        </section>  
+        </section>
 
         <!-- Advanced mixins: CSS3 and UI mixins -->
         <section>
@@ -206,7 +206,7 @@ p {
               <li><a target="_blank" href="http://codepen.io/cfarm/pen/kcfwH">opacity</a></li>
             </ul>
         </div>
-        </section>  
+        </section>
 
         <!-- Advanced mixins: UI development mixins -->
         <section>
@@ -231,7 +231,7 @@ height: 18px; }</code></pre>
 
           </tr></td></table>
         </div>
-        </section>  
+        </section>
 
         <!-- Advanced mixins: UI development mixins -->
         <section>
@@ -248,9 +248,9 @@ height: 18px; }</code></pre>
   background-image: url("../../images/icons/#{$file}");
   @include sprite-position($x, $y);
 }</code></pre>
-            
+
         </div>
-        </section>  
+        </section>
 
        <!-- Advanced mixins: CSS3 and UI mixins -->
         <section>
@@ -264,7 +264,7 @@ height: 18px; }</code></pre>
               <li><a target="_blank" href="http://codepen.io/cfarm/pen/qkDAe">CSS shapes (triangles, arrows)</a></li>
             </ul>
         </div>
-        </section>  
+        </section>
 
 
         <!-- Exercise 3: CSS3 and UI mixins -->
@@ -330,9 +330,9 @@ height: 18px; }</code></pre>
 }
 @include opacity(transparent);
 </code></pre>
-            
+
         </div>
-        </section>  
+        </section>
 
         <!-- Exercise 4: Logic -->
         <section>
@@ -395,8 +395,8 @@ height: 18px; }</code></pre>
   width: 6em;
 }</code></pre>
 
-          </tr></td></table>            
-         
+          </tr></td></table>
+
           </div>
         </section>
 
@@ -442,8 +442,8 @@ height: 18px; }</code></pre>
   background: url('facebook.png');
 }</code></pre>
 
-          </tr></td></table>            
-         
+          </tr></td></table>
+
           </div>
         </section>
 
