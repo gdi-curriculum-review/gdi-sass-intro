@@ -1,37 +1,35 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="utf-8">
+	<head>
+		<meta charset="utf-8">
 
-    <title>Class 2 (Sass, Girl Develop It)</title>
+		<title>Class 2 (Sass, Girl Develop It)</title>
 
-    <meta name="description" content="This is the official Girl Develop It Intro to Sass course. Materials by Catherine Farman.
-
+		<meta name="description" content="This is the official Girl Develop It Intro to Sass course. Materials by Catherine Farman.
     The course is meant to be taught in 2 two-hour sections. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
-    <meta name="author" content="Girl Develop It">
+		<meta name="author" content="Girl Develop It">
 
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link rel="icon" type="image/png" href="reveal.js/favicon.ico">
+		<link rel="stylesheet" href="reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="reveal.js/css/theme/gdidefault.css" id="theme">
 
-    <link rel="stylesheet" href="reveal.js/css/reveal.css">
-    <link rel="stylesheet" href="reveal.js/css/theme/css/gdisunny.css" id="theme">
+		<!-- For syntax highlighting -->
+		<!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
+		<!-- dark editor--><link rel="stylesheet" href="reveal.js/lib/css/dark.css">
 
-    <!-- For syntax highlighting -->
-    <!-- light editor--><link rel="stylesheet" href="reveal.js/lib/css/light.css">
-    <!-- dark editor<link rel="stylesheet" href="reveal.js/lib/css/dark.css"> -->
+    <!-- For the slides -->
+    <!-- <link rel="stylesheet" href="css/slides.css"> -->
+		<!-- If use the PDF print sheet so students can print slides-->
 
-    <!-- If use the PDF print sheet so students can print slides-->
-    
-    <link rel="stylesheet" href="reveal.js/css/print/pdf.css" type="text/css" media="print">
+		<link rel="stylesheet" href="reveal.js/css/print/pdf.css" type="text/css" media="print">
 
-    <!--[if lt IE 9]>
-    <script src="lib/js/html5shiv.js"></script>
-    <![endif]-->
-  </head>
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
 
   <body>
 
@@ -51,7 +49,7 @@
           <h3>Download Class 2 Files:</h3>
           <p class="blue" style="font-size: 3em; text-decoration: underline;">cfarm.co/sass2</p>
         </section>
-        
+
         <!-- Review/Exercise 1 -->
         <section>
           <h3>Review: Mixins</h3>
@@ -82,7 +80,7 @@ p {
   background-image: -webkit-linear-gradient($color1, $color2, $color1);
   background-image: -moz-linear-gradient($color1, $color2, $color1);
   background-image: linear-gradient($color1, $color2, $color1);
-}</code></pre>  
+}</code></pre>
 </div>
         </section>
 
@@ -95,7 +93,7 @@ p {
   background-image: -webkit-linear-gradient($color1, $color2, $color1);
   background-image: -moz-linear-gradient($color1, $color2, $color1);
   background-image: linear-gradient($color1, $color2, $color1);
-}</code></pre>  
+}</code></pre>
 </div>
         </section>
 
@@ -103,15 +101,15 @@ p {
         <section>
           <h3>Interpolation</h3>
           <div class="left-align">
-            With some styles, we may want to use variables right next to text, like with our image rotate style - try it in _utilities: 
+            With some styles, we may want to use variables right next to text, like with our image rotate style - try it in _utilities:
             <pre><code contenteditable class="sass css">@mixin rotate($degree, $position) {
-  -webkit-transform: rotate(-5deg); 
+  -webkit-transform: rotate(-5deg);
   -moz-transform: rotate(-5deg);
   transform: rotate(-5deg);
   -webkit-transform-origin: $position;
   -moz-transform-origin: $position;
   transform-origin: $position;
-}</code></pre>  
+}</code></pre>
 </div>
         </section>
 
@@ -121,15 +119,15 @@ p {
           <div class="left-align">
             We do this by using <a target="_blank" href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#interpolation_">interpolations</a>, which is a special syntax for variables that appear inside regular CSS text:
             <pre><code contenteditable class="sass css">@mixin rotate(<span class="variable">$degree</span>, $position) {
-  -webkit-transform: rotate(<span class="variable">#{$degree}</span>deg); 
+  -webkit-transform: rotate(<span class="variable">#{$degree}</span>deg);
   -moz-transform: rotate(<span class="variable">#{$degree}</span>deg);
   transform: rotate(<span class="variable">#{$degree}</span>deg);
   -webkit-transform-origin: $position;
   -moz-transform-origin: $position;
   transform-origin: $position;
-}</code></pre>  
+}</code></pre>
 </div>
-        </section>        
+        </section>
 
 
         <!-- @extend -->
@@ -145,9 +143,9 @@ p {
   @extend .headline;
   text-decoration: underline;
   text-transform: uppercase;
-}</code></pre>  
+}</code></pre>
 </div>
-        </section>          
+        </section>
 
         <!-- Exercise 2: Advanced Mixins -->
         <section>
@@ -172,15 +170,15 @@ p {
           <div class="left-align">
             Lots of CSS3 features require browser prefixes or have complex syntaxes. These are perfectly suited to mixins, so we can include them in our styles without having to copy and paste from sites like <a target="_blank" href="http://css3please.com/">CSS3 Please</a>.
             <pre><code contenteditable class="sass css">@mixin rotate(<span class="variable">$degree</span>, $position) {
-  -webkit-transform: rotate(<span class="variable">#{$degree}</span>deg); 
+  -webkit-transform: rotate(<span class="variable">#{$degree}</span>deg);
   -moz-transform: rotate(<span class="variable">#{$degree}</span>deg);
   transform: rotate(<span class="variable">#{$degree}</span>deg);
   -webkit-transform-origin: $position;
   -moz-transform-origin: $position;
   transform-origin: $position;
-}</code></pre>  
+}</code></pre>
 </div>
-        </section>     
+        </section>
 
         <!-- Advanced mixins: CSS3 and UI mixins -->
         <section>
@@ -192,9 +190,9 @@ p {
   background-image: -moz-linear-gradient($color1, $color2, $color1);
   background-image: linear-gradient($color1, $color2, $color1);
 }
-@include gradient(#fff, #000);</code></pre>  
+@include gradient(#fff, #000);</code></pre>
 </div>
-        </section>  
+        </section>
 
         <!-- Advanced mixins: CSS3 and UI mixins -->
         <section>
@@ -208,7 +206,7 @@ p {
               <li><a target="_blank" href="http://codepen.io/cfarm/pen/kcfwH">opacity</a></li>
             </ul>
         </div>
-        </section>  
+        </section>
 
         <!-- Advanced mixins: UI development mixins -->
         <section>
@@ -233,7 +231,7 @@ height: 18px; }</code></pre>
 
           </tr></td></table>
         </div>
-        </section>  
+        </section>
 
         <!-- Advanced mixins: UI development mixins -->
         <section>
@@ -250,9 +248,9 @@ height: 18px; }</code></pre>
   background-image: url("../../images/icons/#{$file}");
   @include sprite-position($x, $y);
 }</code></pre>
-            
+
         </div>
-        </section>  
+        </section>
 
        <!-- Advanced mixins: CSS3 and UI mixins -->
         <section>
@@ -266,7 +264,7 @@ height: 18px; }</code></pre>
               <li><a target="_blank" href="http://codepen.io/cfarm/pen/qkDAe">CSS shapes (triangles, arrows)</a></li>
             </ul>
         </div>
-        </section>  
+        </section>
 
 
         <!-- Exercise 3: CSS3 and UI mixins -->
@@ -332,9 +330,9 @@ height: 18px; }</code></pre>
 }
 @include opacity(transparent);
 </code></pre>
-            
+
         </div>
-        </section>  
+        </section>
 
         <!-- Exercise 4: Logic -->
         <section>
@@ -397,8 +395,8 @@ height: 18px; }</code></pre>
   width: 6em;
 }</code></pre>
 
-          </tr></td></table>            
-         
+          </tr></td></table>
+
           </div>
         </section>
 
@@ -444,8 +442,8 @@ height: 18px; }</code></pre>
   background: url('facebook.png');
 }</code></pre>
 
-          </tr></td></table>            
-         
+          </tr></td></table>
+
           </div>
         </section>
 

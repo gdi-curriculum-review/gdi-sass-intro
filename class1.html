@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 	<head>
@@ -7,25 +7,23 @@
 		<title>Class 1 (Sass, Girl Develop It)</title>
 
 		<meta name="description" content="This is the official Girl Develop It Intro to Sass course. Materials by Catherine Farman.
-
     The course is meant to be taught in 2 two-hour sections. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
 		<meta name="author" content="Girl Develop It">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link rel="icon" type="image/png" href="reveal.js/favicon.ico">
-
 		<link rel="stylesheet" href="reveal.js/css/reveal.css">
-		<link rel="stylesheet" href="reveal.js/css/theme/css/gdisunny.css" id="theme">
+		<link rel="stylesheet" href="reveal.js/css/theme/gdidefault.css" id="theme">
 
 		<!-- For syntax highlighting -->
-		<!-- light editor--><link rel="stylesheet" href="reveal.js/lib/css/light.css">
-		<!-- dark editor<link rel="stylesheet" href="reveal.js/lib/css/dark.css"> -->
+		<!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
+		<!-- dark editor--><link rel="stylesheet" href="reveal.js/lib/css/dark.css">
 
+    <!-- For the slides -->
+    <!-- <link rel="stylesheet" href="css/slides.css"> -->
 		<!-- If use the PDF print sheet so students can print slides-->
-		
+
 		<link rel="stylesheet" href="reveal.js/css/print/pdf.css" type="text/css" media="print">
 
 		<!--[if lt IE 9]>
@@ -72,15 +70,14 @@
         <section>
           <h3>Welcome!</h3>
           <div class = "left-align">
-          <p>I'm Catherine Farman</p>
+          <p>I'm Steve Kinney</p>
           <ul>
-            <li>Front End Developer at WebLinc in Old City</li>
-            <li>I write HTML, CSS and Javascript for eCommerce sites</li>
-            <li>Some of our clients are Free People, BHLDN, Sanrio, The Sak, Brooklyn Industries, The Strand Bookstore...</li>
+            <li>Instructor at the Turing School of Software and Design</li>
+            <li>I teach Ruby, JavaScript, and other fun stuff</li>
           </ul>
           </div>
         </section>
-        
+
         <section>
           <h3>Welcome!</h3>
           <div class = "left-align">
@@ -104,7 +101,7 @@ header {
   background-color: $brandColor;
   color: $accentColor;
 }
-header a { color: $accentColor; }</code></pre>  
+header a { color: $accentColor; }</code></pre>
 </div>
         </section>
 
@@ -112,7 +109,7 @@ header a { color: $accentColor; }</code></pre>
         <section>
           <h3>What does Sass do?</h3>
           <div class="left-align">
-            Nesting:          
+            Nesting:
             <pre><code contenteditable class="sass css">header {
   background-color: $brandColor;
   color: $accentColor;
@@ -127,7 +124,7 @@ header a { color: $accentColor; }</code></pre>
         <section>
           <h3>What does Sass do?</h3>
           <div class="left-align">
-            Mix-ins:          
+            Mix-ins:
             <pre><code contenteditable class="sass css">@mixin visually-hidden {
   text-indent: 100%;
   white-space: nowrap;
@@ -146,7 +143,7 @@ header a { color: $accentColor; }</code></pre>
           <h3>What does Sass do?</h3>
           <div class="left-align">
             More examples:
-            <ul>       
+            <ul>
               <li><a target="_blank" href="http://codepen.io/cfarm/pen/jteAG">Cross-Browser CSS3 Gradients</a></li>
               <li><a target="_blank" href="http://codepen.io/cfarm/pen/rkEIo">Cross-Browser Box-shadow (drop shadow) effects</a></li>
               <li><a target="_blank" href="http://codepen.io/andrewboyd/pen/LmIxi">Inner Text Shadow effect</a></li>
@@ -167,7 +164,7 @@ header a { color: $accentColor; }</code></pre>
              </li>
              <li>
               <span class = "green">Development Toolkit:</span> Chrome Inspector or Firebug for Firefox</li>
-              <li><span class="green">Command Line</span> 
+              <li><span class="green">Command Line</span>
                 <ul>
                   <li>Terminal for Mac (Find in Applications> Utilities)</li>
                   <li>Git for Windows (<a target="_blank" href="https://openhatch.org/missions/windows-setup/install-git-bash">see how to install</a>)
@@ -180,8 +177,8 @@ header a { color: $accentColor; }</code></pre>
                 <a target="_blank" href="http://www.sublimetext.com/2">sublimetext.com/2</a></div>
              </li>
           </ul>
-        </section>        
-        
+        </section>
+
         <!-- Terms-->
         <section>
          <h3>Terms</h3>
@@ -201,7 +198,7 @@ header a { color: $accentColor; }</code></pre>
            </li>
          </ul>
         </section>
-        
+
         <!-- Process: Sass to CSS -->
         <section>
           <h3>Sass and CSS</h3>
@@ -211,7 +208,7 @@ header a { color: $accentColor; }</code></pre>
           2 .You run a command (sass --watch) on the command line <br>
           3. .scss files compile into .css files</div>
         </section>
-        
+
         <!-- Practice: Command Line -->
         <section>
           <h3>Command Line Tips</h3>
@@ -227,7 +224,7 @@ header a { color: $accentColor; }</code></pre>
             </div>
             <span class="blue left-align"><a target="_blank" href="http://files.fosswire.com/2007/08/fwunixref.pdf">Command Line Cheat Sheet!!! (In class1-exercises folder)</a></span>
         </section>
-        
+
         <!-- Install Sass -->
         <section>
           <h3>Installing Sass</h3>
@@ -239,7 +236,7 @@ header a { color: $accentColor; }</code></pre>
           <pre><code contenteditable class ="command-line">ruby -v</code></pre>
           </div>
         </section>
-        
+
         <!-- Variables-->
         <section>
           <h3>Installing Sass</h3>
@@ -250,7 +247,7 @@ header a { color: $accentColor; }</code></pre>
           </div>
             <p class="fragment"><img src="images/confetti.gif" style="border: 0; width: 600px; height: 300px; box-shadow: none;"></p>
         </section>
-        
+
         <section>
           <h3>Setting up our stylesheets</h3>
           <div>
@@ -292,7 +289,7 @@ header a { color: $accentColor; }</code></pre>
             </ul>
           </div>
         </section>
-        
+
         <!-- Sass Watch - Compiling -->
         <section>
           <h3>Compile with the Sass Watch Command</h3>
@@ -318,18 +315,18 @@ header a { color: $accentColor; }</code></pre>
             <p class="fragment">The <strong>css</strong> part is the folder where our .css files will be. These files are the compiled output of our Sass, and are only created when we run the above command.</p>
 
           </div>
-        </section>        
-        
-        
+        </section>
+
+
         <!-- Nesting -->
         <section class="present">
           <h3>Nesting</h3>
           <div>
             <p>Sass input:</p>
-            <pre><code contenteditable class ="sass css">header { 
+            <pre><code contenteditable class ="sass css">header {
   color: black;
-  nav { 
-    background: red; 
+  nav {
+    background: red;
     a { color: white; }
 }
 </code></pre>
@@ -339,18 +336,18 @@ header nav { background: red; }
 header nav a { color: white; }</code></pre>
           </div>
         </section>
-        
- 
-        
-       
+
+
+
+
         <!-- Comparison-->
         <section>
           <h3>Referencing Parent Selectors: &</h3>
           <div>
             <p>Sass input:</p>
-            <pre><code contenteditable class ="sass css">nav { 
-    background: red; 
-    a { 
+            <pre><code contenteditable class ="sass css">nav {
+    background: red;
+    a {
       color: white;
       &:hover { text-decoration: underline; }
     }
@@ -362,7 +359,7 @@ nav a { color: white; }
 nav a:hover { text-decoration: underline; }</code></pre>
           </div>
         </section>
-        
+
         <!-- Exercise - #2? 3? -->
         <section>
           <h3>Let's Develop It!</h3>
@@ -376,9 +373,9 @@ nav a:hover { text-decoration: underline; }</code></pre>
 
           </ul>
         </section>
-        
- 
-        
+
+
+
         <!-- BREAK before Part 2 -->
         <section>
           <h3>Break Time!</h3>
@@ -404,7 +401,7 @@ nav a:hover { text-decoration: underline; }</code></pre>
             </li>
           </ul>
         </section>
-        
+
          <section>
           <h3>Defining Variables</h3>
           <p>Variables with Sass let us reuse values more than once, while only defining them in one place</p>
@@ -435,11 +432,11 @@ footer {
   color: $accentColor;
   background-color: $brandColor;
 }</code></pre>
-        </section>        
+        </section>
         <section>
           <h3>Keep em together</h3>
           <p>Variables are easy to change if you keep them all in one stylesheet, and update or add to the styles as needed</p>
-<pre><code contenteditable class = "php">// Let's define some variables 
+<pre><code contenteditable class = "php">// Let's define some variables
 // Colors
 $favoriteColor: #2a79af;
 $anotherColor: #f05b62;
@@ -453,10 +450,10 @@ $giantLogo: 36px;
 // Margins and Padding
 $defaultMargin: 15px;
 $defaultPadding: $defaultMargin;
-</code></pre>          
+</code></pre>
         </section>
-          
-        
+
+
         <!-- Exercise -->
         <section>
           <h3>Let's Develop It</h3>
@@ -465,13 +462,13 @@ $defaultPadding: $defaultMargin;
             <li>Don't forget to put it in the right folder</li>
             <li>Import your new stylesheet into styles.scss by putting the following code at the top of styles.scss:
 <pre><code contenteditable class = "sass css">@import "_utilities";
-</code></pre>                     
+</code></pre>
             </li>
             <li>In your new stylesheet, make some new variables, and base some variables on your existing styles - look for colors, fonts, and size values</li>
             <li>Run the <a href="#/17" target="_blank">sass --watch command</a> to see your changes in the browser</li>
           </ul>
         </section>
-        
+
         <!-- Syntax highlighting -->
         <section>
           <h3>Syntax highlighting</h3>
@@ -482,7 +479,7 @@ $defaultPadding: $defaultMargin;
             <li>Go to Tools > Command Palette. Type "Package Control".</li>
             <li>Click "Install Package"</li>
             <li>Type "Sass" and click the first result</li>
-            <li>Click: View > Syntax > Sass</li> 
+            <li>Click: View > Syntax > Sass</li>
           </div>
         </section>
 
@@ -553,7 +550,7 @@ footer {
   width: ($layoutWidth - 20px);
 }</code></pre>
         </section>
-        
+
 
         <section class="present">
           <h3>Color Functions</h3>
@@ -645,7 +642,7 @@ grayscale(#2a79af)
 saturate(#2a79af, 40%)
 invert(#2a79af)</code></pre>
         </section>
-        
+
          <section class="present">
           <h3>Comments</h3>
           <p class="left-align">Traditional CSS comments are downloaded by the user. With Sass, we can specify whether comments are left in the final CSS code or are only visible to the developer:</p>
@@ -667,7 +664,7 @@ a { color: blue; }
           </tr></td></table>
         </section>
 
-        
+
          <section class="present">
           <h3>Mixins</h3>
            <p class="left-align">Mixins are really just a collection of one or more styles that are reusable, like variables are reusable values</p>
@@ -699,7 +696,7 @@ p {
           <h3>Mixins</h3>
           <p class="left-align">These are especially useful for CSS3 rules that need browser prefixes, like gradients.</p>
           <p><a target="_blank" href="http://cfarm.co/gradient">cfarm.co/gradient</a></p>
-         
+
         </section>
 
         <!-- Exercise-->
@@ -709,7 +706,7 @@ p {
           <li>Add some mixins to your _utilities.scss file - a good candidate is any style that needs a browser prefix</li>
           <li>Try replacing the footer gradient with a mixin</li>
           <li>Use these mixins in your styles.scss file</li>
-          <li>Add different types of comments that describe what your mixins do, and check the final CSS in the browser inspector to see if they appear</li> 
+          <li>Add different types of comments that describe what your mixins do, and check the final CSS in the browser inspector to see if they appear</li>
         </ul>
           <pre><code class ="sass css">@mixin name {
   property: value;
@@ -720,7 +717,7 @@ p {
 }
 </code></pre>
         </section>
-        
+
 
 
 
