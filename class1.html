@@ -393,17 +393,18 @@ nav a { color: white; }
 nav a:hover { text-decoration: underline; }</code></pre>
           </div>
         </section>
-
+<!-- TODO End edit here -->
         <!-- Exercise - #2? 3? -->
         <section>
           <h3>Let's Develop It!</h3>
           <ul>
-            <li>Open your <span class="blue">styles.scss</span> file</li>
+            <li>Open your fork of the CodePen example #1: <a href='http://bit.ly/gdi-chi-sass-p1'>http://bit.ly/gdi-chi-sass-p1</a></li>
             <li>Rewrite some styles to use nesting and referencing the parent</li>
             <li>Look for selectors that share a common parent HTML element, like header, nav, footer, #main</li>
             <li>Look for hover styles, or add some, to practice referencing the parent with &</li>
             <li>There are lots of possible solutions! Be creative!</li>
-            <li>Run the <a href="#/17" target="_blank">sass --watch command</a> to see your changes in the browser</li>
+            <li>Toggle the CSS view to see what the 'compiled' code looks like</li>
+            <!-- <li>Run the <a href="#/17" target="_blank">sass --watch command</a> to see your changes in the browser</li> -->
 
           </ul>
         </section>
@@ -492,19 +493,21 @@ $defaultPadding: $defaultMargin;
         <section>
           <h3>Let's Develop It</h3>
           <ul>
-            <li>Create a new Sass stylesheet called _utilities.scss</li>
-            <li>Don't forget to put it in the right folder</li>
-            <li>Import your new stylesheet into styles.scss by putting the following code at the top of styles.scss:
+            <!-- <li>Create a new Sass stylesheet called _utilities.scss</li> -->
+            <li>Create a section at the top of your CodePen styles for "Utilities"</li>
+            <!-- <li>Don't forget to put it in the right folder</li> -->
+            <!-- <li>Import your new stylesheet into styles.scss by putting the following code at the top of styles.scss:
 <pre><code contenteditable class = "sass css">@import "_utilities";
 </code></pre>
-            </li>
-            <li>In your new stylesheet, make some new variables, and base some variables on your existing styles - look for colors, fonts, and size values</li>
-            <li>Run the <a href="#/17" target="_blank">sass --watch command</a> to see your changes in the browser</li>
+            </li> -->
+            <li>Under Utilities, make some new variables, and base some variables on your existing styles - look for colors, fonts, and size values</li>
+            <!-- <li>Run the <a href="#/17" target="_blank">sass --watch command</a> to see your changes in the browser</li> -->
           </ul>
         </section>
 
+<!-- TODO move to end -->
         <!-- Syntax highlighting -->
-        <section>
+        <!-- <section>
           <h3>Syntax highlighting</h3>
           <div class="left-align">
           <p>You can download tools to highlight your Sass properly in Sublime Text:</p>
@@ -515,7 +518,7 @@ $defaultPadding: $defaultMargin;
             <li>Type "Sass" and click the first result</li>
             <li>Click: View > Syntax > Sass</li>
           </div>
-        </section>
+        </section> -->
 
 <!-- Math -->
         <section class="present">
@@ -576,7 +579,7 @@ $defaultPadding: 16px;
           <ul>
           <li>Write a math expression in Sass to calculate the width of elements in your page layout instead of declaring a number</li>
           <li>Use a variable to represent the result of your calcuation</li>
-          <li>Compile to CSS and refresh your index page to see your changes</li>
+          <li>Take a look at your page to see your changes, and toggle to CSS to see the output</li>
         </ul>
           <pre><code class ="sass css">$layoutWidth: 960px;
 $navWidth: $layoutWidth/3;
@@ -653,10 +656,10 @@ body {
         <section>
           <h3>Let's Develop It</h3>
           <ul>
-          <li>Edit your variables in _utilities.scss file to use color functions</li>
+          <li>Edit your variables under Utilities to use color functions</li>
           <li>Refer to the <a target="_blank" href="http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html">sass-lang.com docs</a></li>
-          <li>Compile to CSS to see your changes</li>
-          <li class="blue">Bonus - change the color scheme of your website without editing styles.scss!</li>
+          <li>Toggle to CSS to see your changes</li>
+          <li class="blue">Bonus - change the color scheme of your website while only editing the color variables!</li>
         </ul>
           <pre><code class ="sass css">lighten(#000, 20%)
 darken(#eee, 30%)
@@ -709,7 +712,7 @@ p {
          <section class="present">
           <h3>Mixins</h3>
           <p class="left-align">These are especially useful for CSS3 rules that need browser prefixes, like gradients.</p>
-          <p><a target="_blank" href="http://cfarm.co/gradient">cfarm.co/gradient</a></p>
+          <p><a target="_blank" href="http://codepen.io/cfarm/pen/jteAG">http://codepen.io/cfarm/pen/jteAG</a></p>
 
         </section>
 
@@ -717,7 +720,7 @@ p {
         <section>
           <h3>Let's Develop It</h3>
           <ul>
-          <li>Add some mixins to your _utilities.scss file - a good candidate is any style that needs a browser prefix</li>
+          <li>Add some mixins under Utilities file - a good candidate is any style that needs a browser prefix</li>
           <li>Try replacing the footer gradient with a mixin</li>
           <li>Use these mixins in your styles.scss file</li>
           <li>Add different types of comments that describe what your mixins do, and check the final CSS in the browser inspector to see if they appear</li>
