@@ -48,8 +48,8 @@
 
         <!-- Opening slide -->
         <section>
-          <h3>Download Class 1 Files:</h3>
-          <p class="blue" style="font-size: 3em; text-decoration: underline;">cfarm.co/sass1</p>
+          <h3>Fork Class 1 Example on CodePen:</h3>
+          <p class="blue" style="font-size: 3em; text-decoration: underline;">http://bit.ly/gdi-chi-sass-p1</p>
         </section>
 
 
@@ -99,13 +99,15 @@
           <h3>What does Sass do?</h3>
           <div class="left-align">
             Variables:
-            <pre><code contenteditable class="sass css">$brandColor: #f90000;
+            <pre><code contenteditable class="sass">
+$brandColor: #f90000;
 $accentColor: #fff;
 header {
   background-color: $brandColor;
   color: $accentColor;
 }
-header a { color: $accentColor; }</code></pre>
+header a { color: $accentColor; }
+</code></pre>
 </div>
         </section>
 
@@ -151,14 +153,10 @@ header a { color: $accentColor; }</code></pre>
               <li><a target="_blank" href="http://codepen.io/cfarm/pen/jteAG">Cross-Browser CSS3 Gradients</a></li>
               <li><a target="_blank" href="http://codepen.io/cfarm/pen/rkEIo">Cross-Browser Box-shadow (drop shadow) effects</a></li>
               <li><a target="_blank" href="http://codepen.io/andrewboyd/pen/LmIxi">Inner Text Shadow effect</a></li>
-              <li><a target="_blank" href="http://codepen.io/krisbulman/pen/ACnHl">Animated CSS Progress Bars</a></li>
-              <li><a target="_blank" href="http://codepen.io/canarymason/details/BFlHD">Multiple CSS Animations in a sequence</a></li>
-              <li><a target="_blank" href="http://oddbird.net/demos/susy-off-canvas/">Off-Canvas Responsive Layout</a></li>
-
             </ul>
           </div>
         </section>
-
+<!-- TODO Edit starting here -->
         <!-- Tools -->
         <section>
           <h3>Tools</h3>
@@ -167,7 +165,7 @@ header a { color: $accentColor; }</code></pre>
               <div><span class = "green">Browser:</span> Chrome or Firefox</div>
              </li>
              <li>
-              <span class = "green">Development Toolkit:</span> Chrome Inspector or Firebug for Firefox</li>
+              <span class = "green">Dev Tools:</span> In your browser</li>
               <li><span class="green">Command Line</span>
                 <ul>
                   <li>Terminal for Mac (Find in Applications> Utilities)</li>
@@ -177,8 +175,11 @@ header a { color: $accentColor; }</code></pre>
              </li>
              <li>
               <div class = "green">Text Editor:</div>
-              <div><a target="_blank" href="http://www.sublimetext.com/2">Sublime Text - Mac or Windows</a><br>
-                <a target="_blank" href="http://www.sublimetext.com/2">sublimetext.com/2</a></div>
+              <ul>
+                <li><a target="_blank" href="http://www.sublimetext.com">Sublime Text</a></li>
+                <li><a target="_blank" href="https://atom.io/">Atom</a></li>
+                <li><a target="_blank" href="https://code.visualstudio.com/">VS Code</a></li>
+              </ul>
              </li>
           </ul>
         </section>
@@ -273,7 +274,7 @@ gem list sass
           <p>You should see something like this:</p>
           <pre><code class="command-line">
 # *** LOCAL GEMS ***
-# sass (3.3.4)
+# sass (3.4.23)
            </code></pre>
            <p><strong>Raise your hand if Sass is not installed.</strong></p>
            <p><small>
@@ -762,7 +763,7 @@ p {
 					{ src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
 					{ src: 'reveal.js/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
 					{ src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 				]
