@@ -18,14 +18,14 @@
     <link rel="icon" type="image/png" href="reveal.js/favicon.ico">
 
 		<link rel="stylesheet" href="reveal.js/css/reveal.css">
-		<link rel="stylesheet" href="reveal.js/css/theme/css/gdisunny.css" id="theme">
+		<link rel="stylesheet" href="assets/reveal/theme/gdilight.css" id="theme">
 
 		<!-- For syntax highlighting -->
-		<!-- light editor--><link rel="stylesheet" href="reveal.js/lib/css/light.css">
-		<!-- dark editor<link rel="stylesheet" href="reveal.js/lib/css/dark.css"> -->
+    <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+    <link rel="stylesheet" href="assets/reveal/light.css">
+    <link rel="stylesheet" href="assets/reveal/fixes.css">
 
 		<!-- If use the PDF print sheet so students can print slides-->
-		
 		<link rel="stylesheet" href="reveal.js/css/print/pdf.css" type="text/css" media="print">
 
 		<!--[if lt IE 9]>
@@ -80,7 +80,7 @@
           </ul>
           </div>
         </section>
-        
+
         <section>
           <h3>Welcome!</h3>
           <div class = "left-align">
@@ -104,7 +104,7 @@ header {
   background-color: $brandColor;
   color: $accentColor;
 }
-header a { color: $accentColor; }</code></pre>  
+header a { color: $accentColor; }</code></pre>
 </div>
         </section>
 
@@ -112,7 +112,7 @@ header a { color: $accentColor; }</code></pre>
         <section>
           <h3>What does Sass do?</h3>
           <div class="left-align">
-            Nesting:          
+            Nesting:
             <pre><code contenteditable class="sass css">header {
   background-color: $brandColor;
   color: $accentColor;
@@ -127,7 +127,7 @@ header a { color: $accentColor; }</code></pre>
         <section>
           <h3>What does Sass do?</h3>
           <div class="left-align">
-            Mix-ins:          
+            Mix-ins:
             <pre><code contenteditable class="sass css">@mixin visually-hidden {
   text-indent: 100%;
   white-space: nowrap;
@@ -146,7 +146,7 @@ header a { color: $accentColor; }</code></pre>
           <h3>What does Sass do?</h3>
           <div class="left-align">
             More examples:
-            <ul>       
+            <ul>
               <li><a target="_blank" href="http://codepen.io/cfarm/pen/jteAG">Cross-Browser CSS3 Gradients</a></li>
               <li><a target="_blank" href="http://codepen.io/cfarm/pen/rkEIo">Cross-Browser Box-shadow (drop shadow) effects</a></li>
               <li><a target="_blank" href="http://codepen.io/andrewboyd/pen/LmIxi">Inner Text Shadow effect</a></li>
@@ -167,7 +167,7 @@ header a { color: $accentColor; }</code></pre>
              </li>
              <li>
               <span class = "green">Development Toolkit:</span> Chrome Inspector or Firebug for Firefox</li>
-              <li><span class="green">Command Line</span> 
+              <li><span class="green">Command Line</span>
                 <ul>
                   <li>Terminal for Mac (Find in Applications> Utilities)</li>
                   <li>Git for Windows (<a target="_blank" href="https://openhatch.org/missions/windows-setup/install-git-bash">see how to install</a>)
@@ -180,8 +180,8 @@ header a { color: $accentColor; }</code></pre>
                 <a target="_blank" href="http://www.sublimetext.com/2">sublimetext.com/2</a></div>
              </li>
           </ul>
-        </section>        
-        
+        </section>
+
         <!-- Terms-->
         <section>
          <h3>Terms</h3>
@@ -201,7 +201,7 @@ header a { color: $accentColor; }</code></pre>
            </li>
          </ul>
         </section>
-        
+
         <!-- Process: Sass to CSS -->
         <section>
           <h3>Sass and CSS</h3>
@@ -211,24 +211,35 @@ header a { color: $accentColor; }</code></pre>
           2 .You run a command (sass --watch) on the command line <br>
           3. .scss files compile into .css files</div>
         </section>
-        
+
         <!-- Practice: Command Line -->
         <section>
           <h3>Command Line Tips</h3>
           <div class="left-align">
             Up one level:
-            <pre><code contenteditable class="command-line"><span class="variable">$</span> cd ../</code></pre>
+            <pre><code contenteditable class="command-line">
+$ cd ../
+            </code></pre>
             Go to your home directory:
-            <pre><code contenteditable class="command-line"><span class="variable">$</span> cd /</code></pre>
+            <pre><code contenteditable class="command-line">
+$ cd /
+            </code></pre>
             Go to a specific folder:
-            <pre><code contenteditable class="command-line"><span class="variable">$</span> <span class="identifier">cd Users/cfarman/Sites/gdi-sass</span></pre></code>
+            <pre><code contenteditable class="command-line">
+$ cd Users/cfarman/Sites/gdi-sass
+            </pre></code>
             List files in a directory:
-            <pre><code contenteditable class="command-line">$ ls</pre></code>
+            <pre><code contenteditable class="command-line">
+$ ls
+            </pre></code>
             </div>
             <span class="blue left-align"><a target="_blank" href="http://files.fosswire.com/2007/08/fwunixref.pdf">Command Line Cheat Sheet!!! (In class1-exercises folder)</a></span>
         </section>
-        
+
         <!-- Install Sass -->
+        <!-- Students should receive this information -->
+        <!-- in an email prior to class -->
+        <!--
         <section>
           <h3>Installing Sass</h3>
           <div class="left-align">First, we need to install <span class="red">Ruby</span>:
@@ -238,9 +249,6 @@ header a { color: $accentColor; }</code></pre>
           </ul>
           <pre><code contenteditable class ="command-line">ruby -v</code></pre>
           </div>
-        </section>
-        
-        <!-- Variables-->
         <section>
           <h3>Installing Sass</h3>
           <div class = " left-align">
@@ -250,7 +258,28 @@ header a { color: $accentColor; }</code></pre>
           </div>
             <p class="fragment"><img src="images/confetti.gif" style="border: 0; width: 600px; height: 300px; box-shadow: none;"></p>
         </section>
-        
+        </section>
+         -->
+
+         <!-- Sass set up -->
+         <section>
+          <h3>Sass Set Up</h3>
+          <p>You should have installed Sass on your computer prior to this workshop.</p>
+          <p>Check if Sass is installed:</p>
+          <pre><code class="command-line">
+gem list sass
+          </code></pre>
+          <p>You should see something like this:</p>
+          <pre><code class="command-line">
+# *** LOCAL GEMS ***
+# sass (3.3.4)
+           </code></pre>
+           <p><strong>Raise your hand if Sass is not installed.</strong></p>
+           <p><small>
+            If installtion doesn't seem to be working, you can use <a href="http://sassmeister.com/">Sass Meister</a> for now.
+           </small></p>
+         </section>
+
         <section>
           <h3>Setting up our stylesheets</h3>
           <div>
@@ -292,7 +321,7 @@ header a { color: $accentColor; }</code></pre>
             </ul>
           </div>
         </section>
-        
+
         <!-- Sass Watch - Compiling -->
         <section>
           <h3>Compile with the Sass Watch Command</h3>
@@ -318,18 +347,18 @@ header a { color: $accentColor; }</code></pre>
             <p class="fragment">The <strong>css</strong> part is the folder where our .css files will be. These files are the compiled output of our Sass, and are only created when we run the above command.</p>
 
           </div>
-        </section>        
-        
-        
+        </section>
+
+
         <!-- Nesting -->
         <section class="present">
           <h3>Nesting</h3>
           <div>
             <p>Sass input:</p>
-            <pre><code contenteditable class ="sass css">header { 
+            <pre><code contenteditable class ="sass css">header {
   color: black;
-  nav { 
-    background: red; 
+  nav {
+    background: red;
     a { color: white; }
 }
 </code></pre>
@@ -339,18 +368,18 @@ header nav { background: red; }
 header nav a { color: white; }</code></pre>
           </div>
         </section>
-        
- 
-        
-       
+
+
+
+
         <!-- Comparison-->
         <section>
           <h3>Referencing Parent Selectors: &</h3>
           <div>
             <p>Sass input:</p>
-            <pre><code contenteditable class ="sass css">nav { 
-    background: red; 
-    a { 
+            <pre><code contenteditable class ="sass css">nav {
+    background: red;
+    a {
       color: white;
       &:hover { text-decoration: underline; }
     }
@@ -362,7 +391,7 @@ nav a { color: white; }
 nav a:hover { text-decoration: underline; }</code></pre>
           </div>
         </section>
-        
+
         <!-- Exercise - #2? 3? -->
         <section>
           <h3>Let's Develop It!</h3>
@@ -376,9 +405,9 @@ nav a:hover { text-decoration: underline; }</code></pre>
 
           </ul>
         </section>
-        
- 
-        
+
+
+
         <!-- BREAK before Part 2 -->
         <section>
           <h3>Break Time!</h3>
@@ -404,7 +433,7 @@ nav a:hover { text-decoration: underline; }</code></pre>
             </li>
           </ul>
         </section>
-        
+
          <section>
           <h3>Defining Variables</h3>
           <p>Variables with Sass let us reuse values more than once, while only defining them in one place</p>
@@ -435,11 +464,11 @@ footer {
   color: $accentColor;
   background-color: $brandColor;
 }</code></pre>
-        </section>        
+        </section>
         <section>
           <h3>Keep em together</h3>
           <p>Variables are easy to change if you keep them all in one stylesheet, and update or add to the styles as needed</p>
-<pre><code contenteditable class = "php">// Let's define some variables 
+<pre><code contenteditable class = "php">// Let's define some variables
 // Colors
 $favoriteColor: #2a79af;
 $anotherColor: #f05b62;
@@ -453,10 +482,10 @@ $giantLogo: 36px;
 // Margins and Padding
 $defaultMargin: 15px;
 $defaultPadding: $defaultMargin;
-</code></pre>          
+</code></pre>
         </section>
-          
-        
+
+
         <!-- Exercise -->
         <section>
           <h3>Let's Develop It</h3>
@@ -465,13 +494,13 @@ $defaultPadding: $defaultMargin;
             <li>Don't forget to put it in the right folder</li>
             <li>Import your new stylesheet into styles.scss by putting the following code at the top of styles.scss:
 <pre><code contenteditable class = "sass css">@import "_utilities";
-</code></pre>                     
+</code></pre>
             </li>
             <li>In your new stylesheet, make some new variables, and base some variables on your existing styles - look for colors, fonts, and size values</li>
             <li>Run the <a href="#/17" target="_blank">sass --watch command</a> to see your changes in the browser</li>
           </ul>
         </section>
-        
+
         <!-- Syntax highlighting -->
         <section>
           <h3>Syntax highlighting</h3>
@@ -482,7 +511,7 @@ $defaultPadding: $defaultMargin;
             <li>Go to Tools > Command Palette. Type "Package Control".</li>
             <li>Click "Install Package"</li>
             <li>Type "Sass" and click the first result</li>
-            <li>Click: View > Syntax > Sass</li> 
+            <li>Click: View > Syntax > Sass</li>
           </div>
         </section>
 
@@ -506,9 +535,9 @@ $defaultPadding: $defaultMargin;
           <h3>Math Operations</h3>
           <div>
             <p>Sass input:</p>
-            <pre><code contenteditable class ="sass css"><span class="variable">$layoutWidth</span>: 960px;
+            <pre><code contenteditable class ="sass css">$layoutWidth</span>: 960px;
 #sidebar {
-  width: <span class="variable">$layoutWidth</span>/3;
+  width: $layoutWidth</span>/3;
 }
 </code></pre>
             <p>CSS output:</p>
@@ -523,11 +552,11 @@ $defaultPadding: $defaultMargin;
           <h3>Math Operations</h3>
           <div>
             <p>Sass input:</p>
-            <pre><code contenteditable class ="sass css"><span class="variable">$layoutWidth</span>: 960px;
+            <pre><code contenteditable class ="sass css">$layoutWidth</span>: 960px;
 $defaultPadding: 16px;
 #main {
   padding: $defaultPadding;
-  width: <span class="variable">$layoutWidth</span> - $defaultPadding*2;
+  width: $layoutWidth</span> - $defaultPadding*2;
 }
 </code></pre>
             <p>CSS output:</p>
@@ -553,81 +582,69 @@ footer {
   width: ($layoutWidth - 20px);
 }</code></pre>
         </section>
-        
+
 
         <section class="present">
           <h3>Color Functions</h3>
           <p class="left-align">Color functions are built-in to Sass. They let you alter existing color values. This is the <span class="blue">lighten</span> function:</p>
-          <table class="code-compare">
-            <tr><td>
-            <p>Sass input:</p>
-            <pre><code contenteditable class ="sass css"><span class="variable">$linkColor</span>: #000;
-<span class="variable">$linkShadow</span>: lighten(#000, 40%);
+          <p>Sass input:</p>
+          <pre><code contenteditable class ="sass css">
+$linkColor: #000;
+$linkShadow: lighten(#000, 40%);
 a {
-  color: <span class="variable">$linkColor</span>;
-  text-shadow: <span class="variable">$linkShadow</span>;
+  color: $linkColor;
+  text-shadow: $linkShadow;
 }
 </code></pre>
-</td>
-<td>
             <p>CSS output:</p>
-            <pre><code contenteditable class ="sass css">a {
+            <pre><code contenteditable class ="sass css">
+a {
   color: #000;
   text-shadow: #666;
 }</code></pre>
 <p class="output-example" style="color: #000; text-shadow: 3px 2px #666;">Example of output style</p>
-          </tr></td></table>
         </section>
 
-                <section class="present">
+        <section class="present">
           <h3>Color Functions</h3>
           <p class="left-align">This is the <span class="blue">darken</span> function:</p>
-          <table class="code-compare">
-            <tr><td>
             <p>Sass input:</p>
-            <pre><code contenteditable class ="sass css"><span class="variable">$background</span>: #ff0000; // red
-<span class="variable">$text</span>: darken($background,50%);
+            <pre><code contenteditable class ="sass css">
+$background: #ff0000; // red
+$text: darken($background,50%);
 body {
-  color: <span class="variable">$text</span>;
-  background: <span class="variable">$background</span>;
+  color: $text;
+  background: $background;
 }
 </code></pre>
-</td>
-<td>
             <p>CSS output:</p>
             <pre><code contenteditable class ="sass css">body {
   color: #990000;
   background: #ff0000;
 }</code></pre>
           <p class="output-example" style="background-color: #f00; color: #900">Example of output style</p>
-
-          </tr></td></table>
         </section>
 
 
         <section class="present">
           <h3>Color Functions</h3>
           <p class="left-align">This is the <span class="blue">grayscale</span> function:</p>
-          <table class="code-compare">
-            <tr><td>
             <p>Sass input:</p>
-            <pre><code contenteditable class ="sass css"><span class="variable">$background</span>: #ff0000; // red
-<span class="variable">$text</span>: darken($background,50%);
+            <pre><code contenteditable class ="sass css">
+$background: #ff0000; // red
+$text: darken($background,50%);
 body {
-  background: <span class="variable">grayscale(#f00)</span>;
-  color: <span class="variable">grayscale(darken(#f00, 50%))</span>;
+  background: grayscale(#f00);
+  color: grayscale(darken(#f00, 50%));
 }
 </code></pre>
-</td>
-<td>
             <p>CSS output:</p>
-            <pre><code contenteditable class ="sass css">body {
+            <pre><code contenteditable class ="sass css">
+body {
   background: #000;
   color: #808080;
 }</code></pre>
           <p class="output-example grayscale">Example of output style</p>
-
-          </tr></td></table>
         </section>
 
         <!-- Exercise-->
@@ -645,53 +662,45 @@ grayscale(#2a79af)
 saturate(#2a79af, 40%)
 invert(#2a79af)</code></pre>
         </section>
-        
+
          <section class="present">
           <h3>Comments</h3>
           <p class="left-align">Traditional CSS comments are downloaded by the user. With Sass, we can specify whether comments are left in the final CSS code or are only visible to the developer:</p>
-          <table class="code-compare">
-            <tr><td>
             <p>Sass input:</p>
-            <pre><code contenteditable class ="sass css"><span class="comment">/* Multiline comments will appear
- in the final CSS file */</span>
-<span class="value">//This single-line comment won't</span>
+            <pre><code contenteditable class ="sass css">
+/* Multiline comments will appear
+ in the final CSS file */
+//This single-line comment won't
 a { color: blue; }
 </code></pre>
-</td>
-<td>
             <p>CSS output:</p>
-            <pre><code contenteditable class ="sass css"><span class="comment">/* Multiline comments will appear
- in the final CSS file */</span>
-  a { color: blue; }</code></pre>
-
-          </tr></td></table>
+            <pre><code contenteditable class ="sass css">
+/* Multiline comments will appear
+ in the final CSS file */
+a { color: blue; }</code></pre>
         </section>
 
-        
+
          <section class="present">
           <h3>Mixins</h3>
            <p class="left-align">Mixins are really just a collection of one or more styles that are reusable, like variables are reusable values</p>
-          <table class="code-compare">
-            <tr><td>
             <p>Sass input:</p>
-            <pre><code contenteditable class ="sass css"><span class="value">@mixin dropshadow(<span class="variable">$text</span>)</span> {
-  color: <span class="variable">$text</span>;
-  text-shadow: 2px 4px lighten(<span class="variable">$text</span>, 50%);
+            <pre><code contenteditable class ="sass css">
+@mixin dropshadow($text) {
+  color: $text;
+  text-shadow: 2px 4px lighten($text, 50%);
 }
 p {
-  <span class="value">@include dropshadow(black);</span>
+  @include dropshadow(black);
 }
 </code></pre>
-</td>
-<td>
             <p>CSS output:</p>
-            <pre><code contenteditable class ="sass css">p {
+            <pre><code contenteditable class ="sass css">
+p {
   color: black;
   text-shadow: 2px 4px #808080;
 }</code></pre>
           <p class="output-example" style="color: black; text-shadow: 2px 4px #808080; background: transparent;">Example of output style</p>
-
-          </tr></td></table>
         </section>
 
 
@@ -699,7 +708,7 @@ p {
           <h3>Mixins</h3>
           <p class="left-align">These are especially useful for CSS3 rules that need browser prefixes, like gradients.</p>
           <p><a target="_blank" href="http://cfarm.co/gradient">cfarm.co/gradient</a></p>
-         
+
         </section>
 
         <!-- Exercise-->
@@ -709,7 +718,7 @@ p {
           <li>Add some mixins to your _utilities.scss file - a good candidate is any style that needs a browser prefix</li>
           <li>Try replacing the footer gradient with a mixin</li>
           <li>Use these mixins in your styles.scss file</li>
-          <li>Add different types of comments that describe what your mixins do, and check the final CSS in the browser inspector to see if they appear</li> 
+          <li>Add different types of comments that describe what your mixins do, and check the final CSS in the browser inspector to see if they appear</li>
         </ul>
           <pre><code class ="sass css">@mixin name {
   property: value;
@@ -720,28 +729,20 @@ p {
 }
 </code></pre>
         </section>
-        
+
 
 
 
         <!-- -->
         <section>
           <h2>Questions?</h2>
-          <div style = "font-size:1200%; height:100%; margin-top:40%" class ="blue">?
-            <div class ="clear"></div></div>
         </section>
 			</div>
-  		<footer>
-        <div class="copyright">
-          Sass ~ Girl Develop It ~
-          <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
-        </div>
-      </footer>
 		</div>
 
 
 		<script src="reveal.js/lib/js/head.min.js"></script>
-		<script src="reveal.js/js/reveal.min.js"></script>
+		<script src="reveal.js/js/reveal.js"></script>
 
 		<script>
 
