@@ -474,6 +474,160 @@ height: 18px; }</code></pre>
         <section>
           <h2>Questions?</h2>
         </section>
+
+        <section>
+          <img src = "images/gdi_logo_badge.png" class="badge">
+          <h3>Intro to Sass</h3>
+          <h4>Extended Lesson: Installing Ruby and Sass Locally</h4>
+        </section>
+
+        <!-- Process: Sass to CSS -->
+        <section>
+          <h3>Sass and CSS</h3>
+          <p>How Sass compiles into CSS</p>
+          <img src = "images/sass-compile.png"/>
+          <div class="left-align">1. You write Sass (.scss files)<br>
+          2 .You run a command (sass --watch) on the command line <br>
+          3. .scss files compile into .css files</div>
+        </section>
+
+                <!-- Practice: Command Line -->
+                <section>
+                  <h3>Command Line Tips</h3>
+                  <div class="left-align">
+                    Up one level:
+                    <pre><code contenteditable class="command-line">
+        $ cd ../
+                    </code></pre>
+                    Go to your home directory:
+                    <pre><code contenteditable class="command-line">
+        $ cd /
+                    </code></pre>
+                    Go to a specific folder:
+                    <pre><code contenteditable class="command-line">
+        $ cd Users/cfarman/Sites/gdi-sass
+                    </pre></code>
+                    List files in a directory:
+                    <pre><code contenteditable class="command-line">
+        $ ls
+                    </pre></code>
+                    </div>
+                    <span class="blue left-align"><a target="_blank" href="http://files.fosswire.com/2007/08/fwunixref.pdf">Command Line Cheat Sheet!!! (In class1-exercises folder)</a></span>
+                </section>
+
+                <!-- Install Sass -->
+
+                <section>
+                  <h3>Installing Sass</h3>
+                  <div class="left-align">First, we need to install <span class="red">Ruby</span>:
+                  <ul>
+                    <li>Download for Windows: <a target="_blank" href="http://rubyinstaller.org/">rubyinstaller.org</a></li>
+                    <li>Mac users: you're in luck! Mac OS X comes pre-installed with Ruby. Try the following command in Terminal to make sure: </li>
+                  </ul>
+                  <pre><code contenteditable class ="command-line">ruby -v</code></pre>
+                  </div>
+                </section>
+                <section>
+                  <h3>Installing Sass</h3>
+                  <div class = " left-align">
+                    <p>Now that Ruby is installed, we can install the Sass gem.</p>
+                    <p>In Terminal or Git Bash:</p>
+                    <pre><code contenteditable class ="command-line">gem install sass</code></pre>
+                  </div>
+                    <p class="fragment"><img src="images/confetti.gif" style="border: 0; width: 600px; height: 300px; box-shadow: none;"></p>
+                </section>
+
+                 <!-- Sass set up -->
+                 <section>
+                  <h3>Sass Set Up</h3>
+                  <p>You should have installed Sass on your computer prior to this workshop.</p>
+                  <p>Check if Sass is installed:</p>
+                  <pre><code class="command-line">
+        gem list sass
+                  </code></pre>
+                  <p>You should see something like this:</p>
+                  <pre><code class="command-line">
+        # *** LOCAL GEMS ***
+        # sass (3.4.23)
+                   </code></pre>
+                   <p><strong>Raise your hand if Sass is not installed.</strong></p>
+                   <p><small>
+                    If installtion doesn't seem to be working, you can use <a href="http://sassmeister.com/">Sass Meister</a> for now.
+                   </small></p>
+                 </section>
+
+                 <section>
+                   <h3>Setting up our stylesheets</h3>
+                   <div>
+                     <p>We need to structure our stylesheets before we can compile them.</p>
+                     <ul>
+                       <li>open the <span class="blue">"class1-exercises"</span> folder</li>
+                       <li>open the <span class="blue">"practice"</span> folder in Sublime Text</li>
+                       <li>go ahead and open <a href="class1-exercises/practice/index.html" target="_blank">index.html</a> in a browser</li>
+                     </ul>
+                   </div>
+                 </section>
+
+                 <section>
+                   <h3>Setting up our stylesheets</h3>
+                   <div class="left-align">
+                     <ul>
+                       <li>rename CSS files to have a <span class="blue"><strong>.scss</strong></span> file extension</li>
+                       <li>structure them inside the stylesheets folder like so:
+                         <ul class="red">
+                           <li>/stylesheets/
+                             <ul>
+                               <li>/css/
+                                 <ul>
+                                   <li>empty for now</li>
+                                 </ul>
+                               </li>
+                               <li>/scss/
+                                 <ul>
+                                   <li>/font/</li>
+                                   <li>reset.scss</li>
+                                   <li>styles.scss</li>
+                                 </ul>
+                               </li>
+                             </ul>
+                           </li>
+                         </ul>
+                       </li>
+                       <li>Update your index.html stylesheet url in &lt;head&gt; to point to your /css/ folder.</li>
+                     </ul>
+                   </div>
+                 </section>
+
+                 <!-- Sass Watch - Compiling -->
+                 <section>
+                   <h3>Compile with the Sass Watch Command</h3>
+                   <div class = "left-align">
+                     <p>Check out your index.html file in a browser. Looks funky, yes?</p>
+                     <p class="fragment">We need to compile our .scss (Sass) files to make the CSS work in the browser.</p>
+                     <p class="fragment">First, navigate via the command line to your /stylesheets directory in the "practice" folder.</p>
+                     <p class="fragment">Then type:</p>
+
+                     <pre class="fragment"><code contenteditable class ="sass css">$ sass --watch scss:css</code></pre>
+
+                   </div>
+                 </section>
+
+                 <!-- Sass Watch - Compiling -->
+                 <section>
+                   <h3>Compile with the Sass Watch Command</h3>
+                   <div class = "left-align">
+                     <p>Let's break this command down - you're going to use it *a lot*!</p>
+                     <pre><code contenteditable class ="sass css">$ sass --watch scss:css</code></pre>
+                     <p class="fragment"><strong>--watch</strong> tells Sass to look for changes to our .scss files, and to compile them to css if they have updates.</p>
+                     <p class="fragment">The <strong>scss</strong> bit is the folder where our .scss files live. We edit these files only.</p>
+                     <p class="fragment">The <strong>css</strong> part is the folder where our .css files will be. These files are the compiled output of our Sass, and are only created when we run the above command.</p>
+
+                   </div>
+                 </section>
+                 
+                 <section>
+                   <h2>Questions?</h2>
+                 </section>
       </div>
     </div>
 
