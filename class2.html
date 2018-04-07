@@ -103,7 +103,7 @@ p {
         <section>
           <h3>Interpolation</h3>
           <div class="left-align">
-            With some styles, we may want to use variables right next to text, like with our image rotate style - try it in _utilities:
+            With some styles, we may want to use variables right next to text, like with our image rotate style - we'll try it under Utilities:
             <pre><code contenteditable class="sass css">@mixin rotate($degree, $position) {
   -webkit-transform: rotate(-5deg);
   -moz-transform: rotate(-5deg);
@@ -161,8 +161,8 @@ p {
               <li>@extend to include common styles</li>
             </ul>
           </li>
-          <li>Use these mix-ins in your styles.scss file</li>
-          <li>Compile to CSS and refresh your index page to see your changes</li>
+          <li>Use these mix-ins in your styles</li>
+          <li>Toggle to CSS or take a look in Dev Tools</li>
         </ul>
         </section>
 
@@ -202,16 +202,17 @@ p {
           <div class="left-align">
             <p>Other CSS3 features that require browser prefixes to work in most popular browsers include:</p>
             <ul>
-              <li><a target="_blank" href="http://codepen.io/cfarm/pen/arBLb">@font-face</a></li>
-              <li><a target="_blank" href="http://codepen.io/cfarm/pen/BrckG"> transitions</a></li>
-              <li><a target="_blank" href="http://codepen.io/cfarm/pen/rkEIo">box-shadow</a></li>
-              <li><a target="_blank" href="http://codepen.io/cfarm/pen/kcfwH">opacity</a></li>
+              <li><del><a target="_blank" href="http://codepen.io/cfarm/pen/arBLb">@font-face</a></del></li>
+              <li><del><a target="_blank" href="http://codepen.io/cfarm/pen/BrckG"> transitions</a></del></li>
+              <li><del><a target="_blank" href="http://codepen.io/cfarm/pen/rkEIo">box-shadow</a></del></li>
+              <li><del><a target="_blank" href="http://codepen.io/cfarm/pen/kcfwH">opacity</a></del></li>
+              <li><a href="http://shouldiprefix.com/" target="_blank">http://shouldiprefix.com/</a></li>
             </ul>
         </div>
         </section>
 
         <!-- Advanced mixins: UI development mixins -->
-        <section>
+        <!-- <section>
           <h3>Mixins for UI Elements</h3>
           <div class="left-align">
             <p>Mixins are very useful for common design patterns. A great example is the <a target="_blank" href="http://coding.smashingmagazine.com/2012/04/11/css-sprites-revisited/">CSS sprite</a> design pattern.</p>
@@ -233,10 +234,10 @@ height: 18px; }</code></pre>
 
           </tr></td></table>
         </div>
-        </section>
+        </section> -->
 
         <!-- Advanced mixins: UI development mixins -->
-        <section>
+        <!-- <section>
           <h3>Sprite Mixins</h3>
           <div class="left-align">
             <p>If you <a target="_blank" href="http://coding.smashingmagazine.com/2012/04/11/css-sprites-revisited/">set up your Photoshop sprite to use grid lines</a>, you can use Sass to easily position your <a target="_blank" href="images/sprite.png">sprite image</a> without lots of trial and error.</p>
@@ -252,7 +253,7 @@ height: 18px; }</code></pre>
 }</code></pre>
 
         </div>
-        </section>
+        </section> -->
 
        <!-- Advanced mixins: CSS3 and UI mixins -->
         <section>
@@ -273,18 +274,10 @@ height: 18px; }</code></pre>
         <section>
           <h3>Let's Develop It</h3>
           <ul>
-          <li>Create new mixins for the following use cases, combining as many as possible:
-            <ul>
-              <li>Sprite images</li>
-              <li>Opacity for all browsers, including IE</li>
-              <li>CSS3 box-shadow</li>
-              <li>@font-face</li>
-              <li>transitions</li>
-              <li>CSS shapes</li>
-            </ul>
+          <li>Create new mixins for properties that require prefixes, combining as many as possible.
           </li>
-          <li>Use these mix-ins in your styles.scss file</li>
-          <li>Compile to CSS and refresh your index page to see your changes</li>
+          <li>Reference <a href="http://shouldiprefix.com/" target="_blank">http://shouldiprefix.com/</a></li>
+          <li>Take a look at the compiled CSS to check your changes</li>
         </ul>
         </section>
 
@@ -318,7 +311,7 @@ height: 18px; }</code></pre>
 
         <!-- Advanced mixins: If/Else logic -->
         <section>
-          <h3>Sprite Mixins</h3>
+          <h3>If/Else logic</h3>
           <div class="left-align">
             <p>Sass has logic statements that you can use to create conditionals. They are <span class="blue">@if</span>, <span class="blue">@else if</span>, and <span class="blue">@else</span></p>
             <pre style="width: 850px"><code contenteditable class ="sass css">@mixin opacity($value: 0.5) {
@@ -388,7 +381,7 @@ height: 18px; }</code></pre>
           <h3>For Loops</h3>
           <div class = "left-align">
           <ul>
-            <li>Use loops to write classes and styles for you! Use them to make columns that fit within in our layout, and add links to our footer nav in these columns.</li>
+            <li>Use loops to write classes and styles for you! Use them to make columns that fit within our layout, and add links to our footer nav in these columns.</li>
             <li>Experiment with math in your loop's styles - change the width, padding, even font-size</li>
           </ul>
           <pre><code class ="php">@for $i from 1 through 3 {
@@ -402,7 +395,7 @@ height: 18px; }</code></pre>
         <section>
           <h3>@each</h3>
           <div class = "left-align">
-            <p>With @each, you can loop through a list of item and create styles for each item in the list.</p>
+            <p>With @each, you can loop through a list of items and create styles for each item in the list.</p>
             <p>Sass code:</p>
             <pre style="width: 610px"><code class ="php">@each $icon in youtube, twitter, facebook {
   .icon-$icon {
@@ -432,7 +425,7 @@ height: 18px; }</code></pre>
           <div class = "left-align">
           <ul>
             <li>Create background image styles for each Famous Woman article</li>
-            <li>Try SubtlePatterns.com for images to use</li>
+            <li>Try <a href="http://SubtlePatterns.com" target="_blank">SubtlePatterns.com</a> for images to use</li>
             <li>Write these background styles with @each and a list</li>
             <li>Bonus: style your social media icons using @each and @if logic</li>
           </ul>
@@ -551,9 +544,6 @@ height: 18px; }</code></pre>
         # sass (3.4.23)
                    </code></pre>
                    <p><strong>Raise your hand if Sass is not installed.</strong></p>
-                   <p><small>
-                    If installtion doesn't seem to be working, you can use <a href="http://sassmeister.com/">Sass Meister</a> for now.
-                   </small></p>
                  </section>
 
                  <section>
@@ -561,7 +551,7 @@ height: 18px; }</code></pre>
                    <div>
                      <p>We need to structure our stylesheets before we can compile them.</p>
                      <ul>
-                       <li>open the <span class="blue">"class1-exercises"</span> folder</li>
+                       <li>open the <span class="blue">"class1-exercises"</span> folder (<a href="https://github.com/gdichicago/gdi-sass" target="_blank">download or use git</a>)</li>
                        <li>open the <span class="blue">"practice"</span> folder in Sublime Text</li>
                        <li>go ahead and open <a href="class1-exercises/practice/index.html" target="_blank">index.html</a> in a browser</li>
                      </ul>
@@ -624,7 +614,13 @@ height: 18px; }</code></pre>
 
                    </div>
                  </section>
-                 
+                 <section>
+                   <h3>Try it Out!</h3>
+                   <div class = "left-align">
+                   <p>Edit some Sass in the .scss files and see your changes automatically compiled to CSS!</p>
+                 </div>
+                 </section>
+
                  <section>
                    <h2>Questions?</h2>
                  </section>
